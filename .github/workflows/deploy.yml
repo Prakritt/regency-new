@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Install lftp
+      - name: Set up lftp
         run: sudo apt-get install lftp
 
       - name: Deploy to Namecheap
@@ -28,10 +28,8 @@ jobs:
           FTP_PASS: ${{ secrets.FTP_PASS }}
           FTP_REMOTE_DIR: ${{ secrets.FTP_REMOTE_DIR }}
         run: |
-          lftp -f "
-          open $FTP_HOST
-          user $FTP_USER $FTP_PASS
-          lcd .
-          mirror --reverse --delete --verbose . $FTP_REMOTE_DIR
-          bye
-          "
+          lftp -e "set ssl:verify-certificate no; \
+                   open $FTP_HOST; \
+                   user $FTP_USER $FTP_PASS; \
+                   mirror --reverse --delete --verbose . $FTP_REMOTE_DIR; \
+                   bye"
