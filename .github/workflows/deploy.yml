@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Set up lftp
+      - name: Install lftp
         run: sudo apt-get install lftp
 
       - name: Deploy to Namecheap
