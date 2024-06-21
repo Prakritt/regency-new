@@ -6,6 +6,8 @@ import {
   IconButton,
 } from "@material-tailwind/react";
 import NavItem from "./NavItem";
+import { NavLink } from "react-router-dom";
+import StyledNavLink from "./StyledNavLink";
 
 function NavBar() {
   const [openNav, setOpenNav] = useState(false);
@@ -19,10 +21,18 @@ function NavBar() {
 
   const navList = (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-      <NavItem name={"Home"} />
-      <NavItem name={"Tours"} />
-      <NavItem name={"Services"} />
-      <NavItem name={"Contact"} />
+      <StyledNavLink to="/home">
+        <NavItem name={"Home"} />
+      </StyledNavLink>
+      <StyledNavLink to="/tours">
+        <NavItem name={"Tours"} />
+      </StyledNavLink>
+      <StyledNavLink to="/services">
+        <NavItem name={"Services"} />
+      </StyledNavLink>
+      <StyledNavLink to="/contact">
+        <NavItem name={"Contact"} />
+      </StyledNavLink>
     </ul>
   );
 

@@ -6,3 +6,9 @@
 body {
   font-family: "Roboto", sans-serif;
 }
+.active .nav_item {
+  color: green;
+  font-weight: bold;
+  transition-duration: 0.5s;
+  font-size: medium;
+}
