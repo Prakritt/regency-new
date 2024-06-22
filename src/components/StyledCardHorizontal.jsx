@@ -15,7 +15,7 @@ function StyledCardHorizontal({ desc, img, title, subtitle }) {
         className="m-0 w-2/5 shrink-0 rounded-r-none"
       >
         <img
-          src={`images/${img}.jpg`}
+          src={img}
           alt="card-image"
           className="h-full w-full object-cover"
         />

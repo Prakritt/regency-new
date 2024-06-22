@@ -8,6 +8,13 @@ import SectionHeading from "../components/SectionHeading";
 import StyledCard from "../components/StyledCard";
 import StyledCardHorizontal from "../components/StyledCardHorizontal";
 
+import dubai from "./../images/dubai.jpg";
+import maldives from "./../images/maldives.jpg";
+import sri_lanka from "./../images/sri_lanka.jpg";
+
+import car_rental from "./../images/car_rental.jpg";
+import helicopter_charter from "./../images/helicopter_charter.jpg";
+
 function Home() {
   return (
     <>
@@ -45,17 +52,17 @@ function Home() {
         </p>
         <div className="flex flex-col items-center gap-3 md:flex-row md:justify-around md:px-3">
           <StyledCard
-            img="dubai"
+            img={dubai}
             dest="Dubai"
             desc="Discover Dubai's stunning skyline, luxury shopping, and cultural landmarks. Enjoy vibrant nightlife and desert adventures."
           />
           <StyledCard
-            img="maldives"
+            img={maldives}
             dest="Maldives"
             desc="Relax in the Maldives with its crystal-clear waters, white-sand beaches, and luxurious overwater bungalows. Perfect for a serene getaway."
           />
           <StyledCard
-            img="sri_lanka"
+            img={sri_lanka}
             dest="Sri Lanka"
             desc="Explore Sri Lanka's diverse landscapes, ancient temples, and rich culture. From tea plantations to stunning beaches, adventure awaits."
           />
@@ -68,13 +75,13 @@ function Home() {
           <StyledCardHorizontal
             title="Car Rental Services"
             subtitle="Loved by Customers: Our Car Rental Service"
-            img="car_rental"
+            img={car_rental}
             desc="Enjoy the flexibility of exploring your destination with our reliable and affordable car rental service. Whether you're planning a scenic drive or exploring local attractions, we have the perfect vehicle for your journey. Our fares are in accordance with Natta (Nepal Association of Tour and Travels), ensuring transparent pricing and quality service."
           />
           <StyledCardHorizontal
             title="Helicopter Charter Services"
             subtitle="Preferred by Discerning Travelers: Our Helicopter Charter Service"
-            img="helicopter_charter"
+            img={helicopter_charter}
             desc="Elevate your journey with our premier helicopter charter services, tailored for discerning travelers seeking luxury and efficiency. Whether for scenic aerial tours, seamless airport transfers, or exclusive event transport, indulge in unparalleled comfort and safety aboard our state-of-the-art helicopters. Our experienced pilots ensure smooth flights and breathtaking aerial views, promising an unforgettable travel experience."
           />
         </div>
