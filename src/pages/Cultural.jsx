@@ -9,7 +9,7 @@ function Cultural({ data }) {
       <div className="bg-gray-50 py-[3rem]">
         <SectionHeading title={`${data.title_main}`} />
         <div className="flex flex-col items-center px-[4rem] md:flex-row md:items-center gap-4 max-w-screen-lg mx-auto md:p-4">
-          <div className="w-[30rem] h-[20rem] md:w-[40rem] md:h-[30rem] ">
+          <div className="w-[20rem] h-[20rem] md:w-[40rem] md:h-[30rem] ">
             <CarouselDefault />
           </div>
           <div className="flex-1 min-w-[15rem]">
