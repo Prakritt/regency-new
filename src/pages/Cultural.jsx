@@ -1,7 +1,6 @@
 import React from "react";
 import { CarouselDefault } from "../components/CarouselDefault";
 import SectionHeading from "../components/SectionHeading";
-import img from "./../../src/images/tours/pashupatinath.jpg";
 import { FaLocationDot } from "react-icons/fa6";
 
 function Cultural({ data }) {
@@ -31,7 +30,7 @@ function Cultural({ data }) {
               <div className="min-w-64 h-64 relative">
                 <img
                   className="absolute inset-0 w-full h-full object-cover rounded-lg shadow-xl"
-                  src={`./../../src/images/tours/${place.image}`}
+                  src={`/images/tours/${place.image}`}
                   alt={`${place.name}`}
                 />
               </div>
