@@ -9,7 +9,7 @@ import {
 
 function StyledCard({ img, dest, desc }) {
   return (
-    <Card className="mt-6 w-96">
+    <Card className="mt-6 w-96 ">
       <CardHeader color="blue-gray" className="relative h-56">
         <img src={img} alt="card-image" />
       </CardHeader>
