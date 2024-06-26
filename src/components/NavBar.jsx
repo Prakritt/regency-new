@@ -27,12 +27,12 @@ function NavBar() {
       <StyledNavLink to="/tours">
         <NavItem name={"Tours"} />
       </StyledNavLink>
-      <StyledNavLink to="/services">
+      {/* <StyledNavLink to="/services">
         <NavItem name={"Services"} />
       </StyledNavLink>
       <StyledNavLink to="/contact">
         <NavItem name={"Contact"} />
-      </StyledNavLink>
+      </StyledNavLink> */}
     </ul>
   );
 

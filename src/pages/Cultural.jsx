@@ -2,6 +2,7 @@ import React from "react";
 import { CarouselDefault } from "../components/CarouselDefault";
 import SectionHeading from "../components/SectionHeading";
 import { FaLocationDot } from "react-icons/fa6";
+import CustomTimeline from "../UI/CustomTimeline";
 
 function Cultural({ data }) {
   return (
@@ -10,7 +11,7 @@ function Cultural({ data }) {
         <SectionHeading title={`${data.title_main}`} />
         <div className="flex flex-col items-center px-[4rem] md:flex-row md:items-center gap-4 max-w-screen-lg mx-auto md:p-4">
           <div className="w-[20rem] h-[20rem] md:w-[40rem] md:h-[30rem] ">
-            <CarouselDefault />
+            <CarouselDefault images={data.cover} />
           </div>
           <div className="flex-1 min-w-[15rem]">
             <p className="text-justify tracking-wide  text-base">
@@ -45,6 +46,8 @@ function Cultural({ data }) {
           </div>
         ))}
       </div>
+
+      <CustomTimeline itenary={data.itenary} />
     </div>
   );
 }

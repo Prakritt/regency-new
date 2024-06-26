@@ -55,16 +55,24 @@ import { Typography } from "@material-tailwind/react";
 const LINKS = [
   {
     title: "SITE LINKS",
-    items: ["Contact Us", "About"],
+    items: ["Home", "Tours"],
   },
-  {
-    title: "VACATION TYPES",
-    items: ["Family", "Luxury", "Honeymoon", "Cruises"],
-  },
+  // {
+  //   title: "SITE LINKS",
+  //   items: ["Contact Us", "About"],
+  // },
+  // {
+  //   title: "VACATION TYPES",
+  //   items: ["Family", "Luxury", "Honeymoon", "Cruises"],
+  // },
   {
     title: "DESTINATION",
-    items: ["Europe", "Japan", "U.A.E", "Thailand", "Sri Lanka"],
+    items: ["India", "Nepal"],
   },
+  // {
+  //   title: "DESTINATION",
+  //   items: ["Europe", "Japan", "U.A.E", "Thailand", "Sri Lanka"],
+  // },
 ];
 
 const currentYear = new Date().getFullYear();
