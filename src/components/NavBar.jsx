@@ -40,13 +40,20 @@ function NavBar() {
     <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 bg-white text-green-500">
       <div className="flex items-center justify-between text-blue-gray-900">
         <StyledNavLink to="/home">
-          <Typography
-            as="a"
-            href="#"
-            className="mr-4 cursor-pointer py-1.5 text-green-500 font-logo uppercase  text-lg"
-          >
-            Regency Nepal
-          </Typography>
+          <div className="flex gap-5 justify-between">
+            <img
+              src="/logo.png"
+              alt="icon"
+              className="h-[2rem] w-[2rem] items-center"
+            />
+            <Typography
+              as="a"
+              href="#"
+              className="mr-4 cursor-pointer py-1.5 text-green-500 font-logo uppercase  md:block"
+            >
+              Regency Nepal
+            </Typography>
+          </div>
         </StyledNavLink>
         <div className="flex items-center gap-4">
           <div className="mr-4 hidden lg:block">{navList}</div>
