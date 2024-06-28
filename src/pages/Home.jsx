@@ -52,7 +52,7 @@ function Home() {
           {data.slice(1, 4).map((item) => (
             <StyledCard
               to={`/tours/${item.id}`}
-              img={`/public/images/tours/${item.content.cover[1]}`}
+              img={`/images/tours/${item.content.cover[1]}`}
               dest={item.content.country}
               desc={item.content.summary}
             />
