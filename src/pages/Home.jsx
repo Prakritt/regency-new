@@ -8,14 +8,12 @@ import SectionHeading from "../components/SectionHeading";
 import StyledCard from "../components/StyledCard";
 import StyledCardHorizontal from "../components/StyledCardHorizontal";
 
-import dubai from "./../images/dubai.jpg";
-import maldives from "./../images/maldives.jpg";
-import sri_lanka from "./../images/sri_lanka.jpg";
-
 import car_rental from "./../images/car_rental.jpg";
 import helicopter_charter from "./../images/helicopter_charter.jpg";
+import { useTour } from "../context/TourProvider";
 
 function Home() {
+  const { data } = useTour();
   return (
     <>
       <Cover />
@@ -51,7 +49,15 @@ function Home() {
           Here are some of our most sought-after destinations..
         </p>
         <div className="flex flex-col items-center gap-3 md:flex-row md:justify-around md:px-3">
-          <StyledCard
+          {data.slice(1, 4).map((item) => (
+            <StyledCard
+              to={`/tours/${item.id}`}
+              img={`/public/images/tours/${item.content.cover[1]}`}
+              dest={item.content.country}
+              desc={item.content.summary}
+            />
+          ))}
+          {/* <StyledCard
             img={dubai}
             dest="Dubai"
             desc="Discover Dubai's stunning skyline, luxury shopping, and cultural landmarks. Enjoy vibrant nightlife and desert adventures."
@@ -65,7 +71,7 @@ function Home() {
             img={sri_lanka}
             dest="Sri Lanka"
             desc="Explore Sri Lanka's diverse landscapes, ancient temples, and rich culture. From tea plantations to stunning beaches, adventure awaits."
-          />
+          /> */}
         </div>
       </div>
 

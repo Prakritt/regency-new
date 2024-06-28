@@ -6,11 +6,13 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import Cultural from "./pages/Cultural";
 import { TourProvider } from "./context/TourProvider";
+import ScrollToTop from "./utils/ScrollToTop";
 
 function App() {
   return (
     <TourProvider>
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route element={<AppLayout />}>
             <Route index element={<Navigate replace to="home" />} />

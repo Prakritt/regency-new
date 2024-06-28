@@ -6,8 +6,9 @@ import {
   Typography,
   Button,
 } from "@material-tailwind/react";
+import StyledNavLink from "./StyledNavLink";
 
-function StyledCard({ img, dest, desc }) {
+function StyledCard({ img, dest, desc, to = "" }) {
   return (
     <Card className="mt-6 w-96 ">
       <CardHeader color="blue-gray" className="relative h-56">
@@ -20,7 +21,13 @@ function StyledCard({ img, dest, desc }) {
         <Typography className="text-justify">{desc}</Typography>
       </CardBody>
       <CardFooter className="pt-0">
-        <Button>Read More</Button>
+        {to ? (
+          <StyledNavLink to={to}>
+            <Button>Read More</Button>
+          </StyledNavLink>
+        ) : (
+          <Button>Read Less</Button>
+        )}
       </CardFooter>
     </Card>
   );

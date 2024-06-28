@@ -3,6 +3,7 @@ const data = [
     name: "Cultural Nepal Tour",
     id: "0",
     content: {
+      country: "Nepal",
       cover: ["nepal_one.jpg", "nepal_two.jpg", "nepal_three.jpg"],
       title_main: "Cultural Tour In Nepal",
       title_sub: "Discover Nepal's Sacred Hindu Temples",
@@ -142,6 +143,7 @@ const data = [
     name: "Cultural India Tour",
     id: "1",
     content: {
+      country: "India",
       cover: ["india_one.jpg", "india_two.jpg", "india_three.jpg"],
       title_main: "Cultural Tour In India",
       title_sub: "Discover Delhi and Its Surroundings",
@@ -302,6 +304,7 @@ const data = [
     name: "tourPlanDubai6days",
     id: "2",
     content: {
+      country: "Dubai",
       cover: ["dubai_one.jpg", "dubai_two.jpg", "dubai_three.jpg"],
       title_main: "Explore Dubai",
       title_sub: "A Fascinating Journey through the City of Wonders",
@@ -403,6 +406,7 @@ const data = [
     name: "tourPlanMaldives",
     id: "3",
     content: {
+      country: "Maldives",
       cover: ["maldives_one.jpg", "maldives_two.jpg", "maldives_three.jpg"],
       title_main: "Discover the Maldives",
       title_sub: "A Tropical Paradise Escape",
@@ -475,6 +479,7 @@ const data = [
   },
   {
     name: "tourPlanSriLanka",
+    country: "Sri Lanka",
     id: "4",
     content: {
       cover: ["srilanka_one.jpg", "srilanka_two.jpg", "srilanka_three.jpg"],

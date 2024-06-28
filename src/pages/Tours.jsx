@@ -1,9 +1,10 @@
 import React from "react";
-import data from "/public/data";
 import SectionHeading from "../components/SectionHeading";
 import StyledCard from "../components/StyledCard";
 import StyledNavLink from "../components/StyledNavLink";
+import { useTour } from "../context/TourProvider";
 function Tours() {
+  const { data } = useTour();
   return (
     <div className="py-[5rem] mx-auto bg-blue-gray-50">
       <SectionHeading title="Popular Tours " />
