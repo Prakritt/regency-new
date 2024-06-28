@@ -1,7 +1,7 @@
 import { Typography } from "@material-tailwind/react";
 import React from "react";
 
-function NavItem({ name }) {
+function NavItem({ name, onClose }) {
   return (
     <Typography
       as="li"
@@ -12,6 +12,7 @@ function NavItem({ name }) {
       <a
         href="#"
         className="flex items-center nav_item min-w-[4rem] min-h-[2rem]"
+        onClick={onClose}
       >
         {name}
       </a>

@@ -22,10 +22,10 @@ function NavBar() {
   const navList = (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       <StyledNavLink to="/home">
-        <NavItem name={"Home"} />
+        <NavItem onClose={() => setOpenNav(false)} name={"Home"} />
       </StyledNavLink>
       <StyledNavLink to="/tours">
-        <NavItem name={"Tours"} />
+        <NavItem onClose={() => setOpenNav(false)} name={"Tours"} />
       </StyledNavLink>
       {/* <StyledNavLink to="/services">
         <NavItem name={"Services"} />
