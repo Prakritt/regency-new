@@ -1,5 +1,6 @@
 import React from "react";
 import cover from "./../../src/images/cover.jpg";
+import StyledNavLink from "./StyledNavLink";
 
 const Cover = () => {
   return (
@@ -15,9 +16,11 @@ const Cover = () => {
           Travel far enough, you meet yourself.
         </p>
         {/* Optional Call to Action Button */}
-        <button className="bg-green-500 hover:bg-green-600 text-white  font-bold py-2 px-4 mt-4 rounded">
-          Explore Destinations
-        </button>
+        <StyledNavLink to="/tours">
+          <button className="bg-green-500 hover:bg-green-600 text-white  font-bold py-2 px-4 mt-4 rounded">
+            Explore Destinations
+          </button>
+        </StyledNavLink>
       </div>
     </div>
   );
