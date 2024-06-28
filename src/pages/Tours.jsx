@@ -14,15 +14,14 @@ function Tours() {
 
       <div className="flex flex-col items-center sm:flex-col gap-3 md:flex-row md:justify-around md:px-3 md:flex-wrap md:gap-y-8">
         {data.map((tour) => (
-          <StyledNavLink to={`/tours/${tour.id}`}>
-            <StyledCard
-              className="flex flex-col"
-              key={tour.name}
-              img={`/images/tours/${tour.content.cover[0]}`}
-              dest={tour.content.title_main}
-              desc={tour.content.summary}
-            />
-          </StyledNavLink>
+          <StyledCard
+            to={`/tours/${tour.id}`}
+            className="flex flex-col"
+            key={tour.name}
+            img={`/images/tours/${tour.content.cover[0]}`}
+            dest={tour.content.title_main}
+            desc={tour.content.summary}
+          />
         ))}
         {/* <StyledCard
           img={dubai}

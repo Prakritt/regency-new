@@ -26,7 +26,7 @@ function StyledCard({ img, dest, desc, to = "" }) {
             <Button>Read More</Button>
           </StyledNavLink>
         ) : (
-          <Button>Read Less</Button>
+          <Button>Read More</Button>
         )}
       </CardFooter>
     </Card>
