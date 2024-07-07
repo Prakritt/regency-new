@@ -51,11 +51,15 @@
 // export default Footer;
 
 import { Typography } from "@material-tailwind/react";
+import StyledNavLink from "./StyledNavLink";
 
 const LINKS = [
   {
     title: "SITE LINKS",
-    items: ["Home", "Tours"],
+    items: [
+      { title: "Home", to: "/home" },
+      { title: "Tours", to: "/tours" },
+    ],
   },
   // {
   //   title: "SITE LINKS",
@@ -67,7 +71,13 @@ const LINKS = [
   // },
   {
     title: "DESTINATION",
-    items: ["India", "Nepal"],
+    items: [
+      { title: "India", to: "/tours/asia/1" },
+      { title: "Nepal", to: "/tours/asia/0" },
+      { title: "France", to: "/tours/europe/0" },
+      { title: "Germany", to: "/tours/europe/1" },
+      { title: "Greece", to: "/tours/europe/2" },
+    ],
   },
   // {
   //   title: "DESTINATION",
@@ -96,16 +106,18 @@ export function Footer() {
                   {title}
                 </Typography>
                 {items.map((link) => (
-                  <li key={link}>
-                    <Typography
-                      as="a"
-                      href="#"
-                      color="gray"
-                      className="py-1.5 font-normal transition-colors hover:text-blue-gray-900"
-                    >
-                      {link}
-                    </Typography>
-                  </li>
+                  <StyledNavLink to={link.to}>
+                    <li key={link.title}>
+                      <Typography
+                        as="a"
+                        href="#"
+                        color="gray"
+                        className="py-1.5 font-normal transition-colors hover:text-blue-gray-900"
+                      >
+                        {link.title}
+                      </Typography>
+                    </li>
+                  </StyledNavLink>
                 ))}
               </ul>
             ))}
@@ -125,7 +137,7 @@ export function Footer() {
           <div className="flex gap-4 text-blue-gray-900 sm:justify-center">
             <Typography
               as="a"
-              href="#"
+              href="https://www.facebook.com/RegencyNepal/"
               className="opacity-80 transition-opacity hover:opacity-100"
             >
               <svg
@@ -141,7 +153,8 @@ export function Footer() {
                 />
               </svg>
             </Typography>
-            <Typography
+
+            {/* <Typography
               as="a"
               href="#"
               className="opacity-80 transition-opacity hover:opacity-100"
@@ -208,7 +221,7 @@ export function Footer() {
                   clip-rule="evenodd"
                 />
               </svg>
-            </Typography>
+            </Typography> */}
           </div>
         </div>
       </div>

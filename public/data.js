@@ -408,7 +408,7 @@ const data = {
       id: "3",
       content: {
         country: "Maldives",
-        cover: ["maldives_one.jpg", "maldives_two.jpg", "maldives_three.jpg"],
+        cover: ["maldives_two.jpg", "maldives_one.jpg", "maldives_three.jpg"],
         title_main: "Discover the Maldives",
         title_sub: "A Tropical Paradise Escape",
         summary:
@@ -587,7 +587,7 @@ const data = {
       id: "0",
       content: {
         country: "France",
-        cover: ["france_two.jpg", "france_one.jpg", "france_three.jpg"],
+        cover: ["france_three.jpg", "france_two.jpg", "france_one.jpg"],
         title_main: "Discover France",
         title_sub: "An Exquisite Journey through Cultural Treasures",
         summary:
@@ -696,7 +696,7 @@ const data = {
       id: "1",
       content: {
         country: "Germany",
-        cover: ["germany_two.jpg", "germany_one.jpg", "germany_three.jpg"],
+        cover: ["germany_one.jpg", "germany_three.jpg", "germany_two.jpg"],
         title_main: "Discover Germany",
         title_sub: "A Journey through Historic Cities and Scenic Landscapes",
         summary:
@@ -805,7 +805,7 @@ const data = {
       id: "2",
       content: {
         country: "Greece",
-        cover: ["greece_one.jpg", "greece_two.jpg", "greece_three.jpg"],
+        cover: ["greece_three.jpg", "greece_two.jpg", "greece_one.jpg"],
         title_main: "Discover Greece",
         title_sub: "A Journey through Ancient History and Mediterranean Beauty",
         summary:

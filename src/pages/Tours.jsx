@@ -7,10 +7,10 @@ function Tours() {
   const { data } = useTour();
   return (
     <div className="py-[5rem] mx-auto bg-blue-gray-50">
-      <SectionHeading title="Popular Tours " />
-      <p className="text-center mb-[1.5rem] md:mb-[2rem]">
-        Here are some of our most sought-after packages..
-      </p>
+      <SectionHeading title="Destinations In Asia" />
+      {/* <p className="text-center mb-[1.5rem] md:mb-[2rem]">
+        Destinations In Asia
+      </p> */}
 
       <div className="flex flex-col items-center sm:flex-col gap-3 md:flex-row md:justify-around md:px-3 md:flex-wrap md:gap-y-8">
         {data?.asia?.map((tour) => (
@@ -23,21 +23,22 @@ function Tours() {
             desc={tour.content.summary}
           />
         ))}
-        {/* <StyledCard
-          img={dubai}
-          dest="Dubai"
-          desc="Discover Dubai's stunning skyline, luxury shopping, and cultural landmarks. Enjoy vibrant nightlife and desert adventures."
-        />
-        <StyledCard
-          img={maldives}
-          dest="Maldives"
-          desc="Relax in the Maldives with its crystal-clear waters, white-sand beaches, and luxurious overwater bungalows. Perfect for a serene getaway."
-        />
-        <StyledCard
-          img={sri_lanka}
-          dest="Sri Lanka"
-          desc="Explore Sri Lanka's diverse landscapes, ancient temples, and rich culture. From tea plantations to stunning beaches, adventure awaits."
-        /> */}
+      </div>
+
+      <SectionHeading title="Destinations in Europe" className="pt-[5rem]" />
+      {/* <p className="text-center mb-[1.5rem] md:mb-[2rem]"></p> */}
+
+      <div className="flex flex-col items-center sm:flex-col gap-3 md:flex-row md:justify-around md:px-3 md:flex-wrap md:gap-y-8">
+        {data?.europe?.map((tour) => (
+          <StyledCard
+            to={`/tours/europe/${tour.id}`}
+            className="flex flex-col"
+            key={tour.name}
+            img={`/images/tours/${tour.content.cover[0]}`}
+            dest={tour.content.title_main}
+            desc={tour.content.summary}
+          />
+        ))}
       </div>
     </div>
   );
