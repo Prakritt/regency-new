@@ -14,6 +14,7 @@ import { useTour } from "../context/TourProvider";
 
 function Home() {
   const { data } = useTour();
+
   return (
     <>
       <Cover />
@@ -49,9 +50,41 @@ function Home() {
           Here are some of our most sought-after destinations..
         </p>
         <div className="flex flex-col items-center gap-3 md:flex-row md:justify-around md:px-3">
-          {data.slice(1, 4).map((item) => (
+          {data?.asia?.slice(1, 4).map((item) => (
             <StyledCard
-              to={`/tours/${item.id}`}
+              to={`/tours/asia/${item.id}`}
+              img={`/images/tours/${item.content.cover[0]}`}
+              dest={item.content.country}
+              desc={item.content.summary}
+            />
+          ))}
+          {/* <StyledCard
+            img={dubai}
+            dest="Dubai"
+            desc="Discover Dubai's stunning skyline, luxury shopping, and cultural landmarks. Enjoy vibrant nightlife and desert adventures."
+          />
+          <StyledCard
+            img={maldives}
+            dest="Maldives"
+            desc="Relax in the Maldives with its crystal-clear waters, white-sand beaches, and luxurious overwater bungalows. Perfect for a serene getaway."
+          />
+          <StyledCard
+            img={sri_lanka}
+            dest="Sri Lanka"
+            desc="Explore Sri Lanka's diverse landscapes, ancient temples, and rich culture. From tea plantations to stunning beaches, adventure awaits."
+          /> */}
+        </div>
+      </div>
+
+      <div className="py-[5rem] mx-auto ">
+        <SectionHeading title="Europe Tour" />
+        <p className="text-center mb-[1.5rem] md:mb-[2rem]">
+          Popular Destinations In Europe
+        </p>
+        <div className="flex flex-col items-center gap-3 md:flex-row md:justify-around md:px-3">
+          {data?.europe?.slice(0, 3).map((item) => (
+            <StyledCard
+              to={`/tours/europe/${item.id}`}
               img={`/images/tours/${item.content.cover[1]}`}
               dest={item.content.country}
               desc={item.content.summary}
@@ -75,7 +108,7 @@ function Home() {
         </div>
       </div>
 
-      <div className="py-[5rem]">
+      <div className="py-[5rem] bg-blue-gray-50">
         <SectionHeading title="Additional Travel Services" />
         <div className="max-w-[1140px] mx-auto flex flex-col gap-[3rem] px-3">
           <StyledCardHorizontal

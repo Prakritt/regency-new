@@ -13,9 +13,9 @@ function Tours() {
       </p>
 
       <div className="flex flex-col items-center sm:flex-col gap-3 md:flex-row md:justify-around md:px-3 md:flex-wrap md:gap-y-8">
-        {data.map((tour) => (
+        {data?.asia?.map((tour) => (
           <StyledCard
-            to={`/tours/${tour.id}`}
+            to={`/tours/asia/${tour.id}`}
             className="flex flex-col"
             key={tour.name}
             img={`/images/tours/${tour.content.cover[0]}`}

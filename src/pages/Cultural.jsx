@@ -9,12 +9,13 @@ import { useTour } from "../context/TourProvider";
 
 function Cultural() {
   const { data } = useTour();
-  const { id } = useParams();
-  const current_tour = data[id].content;
+  const { dest, id } = useParams();
 
+  const current_tour = data[dest][id].content;
+  console.log("dest,id", dest, id);
   return (
     // <div>
-    //   <h1>{current_tour.title_main}</h1>
+    //   <h1>Tours</h1>
     // </div>
     <div>
       <div className="">
