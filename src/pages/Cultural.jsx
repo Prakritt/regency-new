@@ -11,7 +11,7 @@ function Cultural() {
   const { data } = useTour();
   const { dest, id } = useParams();
 
-  const current_tour = data[dest][id].content;
+  const current_tour = data[dest][id - 1].content;
   console.log("dest,id", dest, id);
   return (
     // <div>

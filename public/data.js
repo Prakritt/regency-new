@@ -1,146 +1,6 @@
 const data = {
   asia: [
     {
-      name: "Cultural Nepal Tour",
-      id: "0",
-      content: {
-        country: "Nepal",
-        cover: ["nepal_two.jpg", "nepal_one.jpg", "nepal_three.jpg"],
-        title_main: "Cultural Tour In Nepal",
-        title_sub: "Discover Nepal's Sacred Hindu Temples",
-        description:
-          "Explore Nepal's spiritual heritage on our Hindu tour. Visit 10 revered temples and sacred sites, from Pashupatinath in Kathmandu to Muktinath in Mustang. Experience ancient marvels like Janaki Mandir and serene spots like Budhanilkantha Temple. Trek to Gosaikunda Lake, discover hidden gems like Manakamana Temple, and witness vibrant rituals at Dakshinkali Temple. Marvel at Changu Narayan's intricate carvings and conclude in Dhangadhi at Tripura Sundari Temple.",
-        summary:
-          "Below are the remarkable destinations that contribute to our comprehensive Cultural Tour, each offering a unique glimpse into Nepal's rich spiritual and cultural heritage:",
-        destinations: [
-          {
-            id: 1,
-            name: "Pashupatinath Temple",
-            location: "Kathmandu",
-            description:
-              "The Pashupatinath Temple, a UNESCO World Heritage Site, is one of the holiest Hindu temples dedicated to Lord Shiva. Situated on the banks of the Bagmati River, this sacred temple complex is a sprawling collection of temples, ashrams, and shrines. It is renowned for its stunning pagoda-style architecture and intricate wood carvings. Pashupatinath is not only a major religious site but also a place of cultural convergence where the traditional rituals and customs of the Hindu faith are observed with great fervor. The temple is especially vibrant during the Maha Shivaratri festival, attracting thousands of devotees and sadhus (holy men) from across Nepal and India.",
-            image: "pashupatinath.jpg",
-          },
-          {
-            id: 2,
-            name: "Muktinath Temple",
-            location: "Mustang",
-            description:
-              "Nestled in the majestic landscapes of the Mustang region, Muktinath Temple is a revered pilgrimage site for both Hindus and Buddhists. Dedicated to Lord Vishnu, this temple stands at an altitude of 3,710 meters, offering breathtaking views of the Himalayas. The temple complex includes 108 sacred water spouts and the eternal flame that miraculously burns on water, earth, and rock. Pilgrims believe that taking a holy dip in the water spouts can cleanse one’s sins and bring salvation. The journey to Muktinath is not just a spiritual quest but also an adventure through some of Nepal’s most spectacular and rugged terrains.",
-            image: "muktinath.jpg",
-          },
-          {
-            id: 3,
-            name: "Janaki Mandir",
-            location: "Janakpur",
-            description:
-              "The Janaki Mandir is a magnificent example of Hindu Rajput architecture, dedicated to Goddess Sita, the consort of Lord Rama. Located in the historic city of Janakpur, the temple is constructed entirely of marble and stone, and it features exquisite carvings and latticework. This three-storied structure is adorned with 60 rooms, each with intricate decoration and mythological murals. Janaki Mandir is a major pilgrimage site, especially during the festivals of Vivah Panchami and Ram Navami, which celebrate the divine marriage of Sita and Rama. Visitors to the temple can immerse themselves in the vibrant local culture and the legends of the Ramayana that are deeply woven into the fabric of Janakpur.",
-            image: "janaki_mandir.jpg",
-          },
-          {
-            id: 4,
-            name: "Manakamana Temple",
-            location: "Gorkha",
-            description:
-              "Situated just outside Kathmandu, Dakshinkali Temple is dedicated to the fierce and powerful Goddess Kali. This temple is known for its ritual animal sacrifices, which are offered to appease the goddess, especially during the Dashain festival. Set in a tranquil forested area, the temple provides a stark contrast between the serene natural surroundings and the intense religious activities. Devotees visit Dakshinkali to perform pujas and seek protection and blessings from the goddess. The temple’s vibrant and somewhat raw energy provides a unique insight into the traditional and unfiltered practices of Hindu worship.",
-            image: "manakamana.jpg",
-          },
-          {
-            id: 5,
-            name: "Dakshinkali Temple",
-            location: "Near Kathmandu",
-            description:
-              "Perched on a ridge in the Gorkha district, the Manakamana Temple is dedicated to Goddess Manakamana, believed to fulfill the wishes of her devotees. The temple is accessible via a scenic cable car ride that offers breathtaking views of the Trishuli River and the surrounding hills. The temple itself is a beautiful example of traditional Nepali architecture with its tiered pagoda structure. Pilgrims come here to offer sacrifices and seek blessings, believing that the goddess grants their heartfelt desires. The journey to Manakamana is both spiritually uplifting and visually spectacular, making it a cherished experience for all who visit.",
-            image: "dakshinkali.jpg",
-          },
-          {
-            id: 6,
-            name: "Budhanilkantha Temple",
-            location: "Kathmandu",
-            description:
-              "The Budhanilkantha Temple, located at the base of the Shivapuri Hill, is famous for its large reclining statue of Lord Vishnu, which is considered the largest stone carving in Nepal. This awe-inspiring statue, measuring about 5 meters in length, depicts Vishnu lying on a bed of coiled serpents in the cosmic ocean. The temple is a serene and meditative place where devotees come to offer prayers and observe the statue’s serene expression. The annual festival of Haribodhini Ekadashi sees thousands of pilgrims visiting the temple, making it a significant event in the local religious calendar.",
-            image: "budhanilkantha.jpg",
-          },
-          {
-            id: 7,
-            name: "Gosaikunda Lake",
-            location: "Langtang National Park",
-            description:
-              "Gosaikunda Lake, situated at an altitude of 4,380 meters in Langtang National Park, is a sacred alpine lake revered by both Hindus and Buddhists. According to legend, the lake was created by Lord Shiva when he struck the ground with his trident to obtain water to cool his burning throat after consuming poison. The lake is a major pilgrimage site, especially during the Janai Purnima festival, when thousands of devotees make the arduous trek to bathe in its holy waters. The trek to Gosaikunda offers not only spiritual fulfillment but also stunning views of the Himalayas, lush forests, and diverse wildlife.",
-            image: "gosaikunda.jpg",
-          },
-          {
-            id: 8,
-            name: "Barahi Temple",
-            location: "Pokhara",
-            description:
-              "The Barahi Temple, located on an island in the middle of Phewa Lake in Pokhara, is dedicated to Goddess Barahi, an incarnation of Goddess Durga. Accessible by boat, this two-story pagoda-style temple is a peaceful sanctuary amidst the bustling tourist town. Visitors can enjoy the serene boat ride across the lake, with the Annapurna Range providing a majestic backdrop. The temple is a popular site for both pilgrims and tourists, offering a tranquil setting for worship and reflection.",
-            image: "barahi.jpg",
-          },
-          {
-            id: 9,
-            name: "Changu Narayan Temple",
-            location: "Bhaktapur",
-            description:
-              "Changu Narayan Temple, situated on a hilltop in Bhaktapur, is one of the oldest Hindu temples in Nepal, dedicated to Lord Vishnu. The temple is renowned for its exquisite stone and wood carvings, intricate sculptures, and ancient inscriptions that date back to the 5th century. This UNESCO World Heritage Site offers a glimpse into the rich artistic and cultural heritage of the Kathmandu Valley. The temple complex also includes a museum showcasing traditional artifacts and relics. Visiting Changu Narayan provides a deep appreciation of Nepal’s historical and architectural legacy.",
-            image: "changunarayan.jpg",
-          },
-          {
-            id: 10,
-            name: "Dhangadhi Tripura Sundari Temple",
-            location: "Dhangadhi",
-            description:
-              "The Tripura Sundari Temple in Dhangadhi is a major site of worship dedicated to Goddess Tripura Sundari, a manifestation of Shakti. This temple is an important spiritual center for the local community and attracts pilgrims from various regions. The temple is known for its vibrant festivals and religious ceremonies, which are celebrated with great enthusiasm and devotion. Visitors to the temple can experience the local traditions and cultural practices that are integral to the worship of the goddess, making it a spiritually enriching and culturally immersive experience.",
-            image: "dhangadhi.jpg",
-          },
-        ],
-        itenary: [
-          {
-            day: "Day 1 - Kathmandu",
-            description:
-              "Arrive in Kathmandu, the capital of Nepal. Visit the Pashupatinath Temple, a UNESCO World Heritage Site, renowned for its stunning pagoda-style architecture and intricate wood carvings. The temple is a major religious site for Hindus, where traditional rituals and customs are observed with great fervor. Explore the temple complex and witness the vibrant atmosphere during the evening aarti (prayer ceremony). Overnight stay in Kathmandu.",
-            image: "pashupatinath.jpg",
-          },
-          {
-            day: "Day 2 - Mustang",
-            description:
-              "Travel to the Mustang region to visit the Muktinath Temple, a revered pilgrimage site for both Hindus and Buddhists. Situated at an altitude of 3,710 meters, the temple offers breathtaking views of the Himalayas. Explore the temple complex, which includes 108 sacred water spouts and the eternal flame. Experience the spiritual ambiance and the serene beauty of the surrounding landscapes. Overnight stay in Mustang.",
-            image: "muktinath.jpg",
-          },
-          {
-            day: "Day 3 - Janakpur",
-            description:
-              "Journey to Janakpur and visit the Janaki Mandir, a magnificent temple dedicated to Goddess Sita. The temple, constructed entirely of marble and stone, features exquisite carvings and latticework. Immerse yourself in the vibrant local culture and explore the mythological murals that adorn the temple. Learn about the legends of the Ramayana deeply woven into the fabric of Janakpur. Overnight stay in Janakpur.",
-            image: "janaki_mandir.jpg",
-          },
-          {
-            day: "Day 4 - Gorkha",
-            description:
-              "Travel to Gorkha to visit the Manakamana Temple, dedicated to Goddess Manakamana, believed to fulfill the wishes of her devotees. Enjoy a scenic cable car ride to the temple, offering breathtaking views of the Trishuli River and the surrounding hills. Explore the traditional Nepali architecture of the temple and participate in the rituals performed by the devotees. Overnight stay in Gorkha.",
-            image: "manakamana.jpg",
-          },
-          {
-            day: "Day 5 - Near Kathmandu",
-            description:
-              "Visit the Dakshinkali Temple, situated just outside Kathmandu. Dedicated to the fierce and powerful Goddess Kali, the temple is known for its ritual animal sacrifices. Set in a tranquil forested area, the temple provides a stark contrast between the serene natural surroundings and the intense religious activities. Experience the vibrant and raw energy of traditional Hindu worship. Overnight stay near Kathmandu.",
-            image: "dakshinkali.jpg",
-          },
-          {
-            day: "Day 6 - Bhaktapur",
-            description:
-              "Explore Bhaktapur and visit the Changu Narayan Temple, one of the oldest Hindu temples in Nepal, dedicated to Lord Vishnu. The temple is renowned for its exquisite stone and wood carvings, intricate sculptures, and ancient inscriptions dating back to the 5th century. The UNESCO World Heritage Site offers a glimpse into the rich artistic and cultural heritage of the Kathmandu Valley. Overnight stay in Bhaktapur.",
-            image: "changunarayan.jpg",
-          },
-          {
-            day: "Day 7 - Pokhara",
-            description:
-              "Proceed to Pokhara and visit the Barahi Temple, located on an island in the middle of Phewa Lake. Dedicated to Goddess Barahi, an incarnation of Goddess Durga, the temple is accessible by boat. Enjoy the serene boat ride across the lake, with the Annapurna Range providing a majestic backdrop. The temple offers a peaceful sanctuary amidst the bustling tourist town. Overnight stay in Pokhara.",
-            image: "barahi.jpg",
-          },
-        ],
-      },
-    },
-    {
       name: "Cultural India Tour",
       id: "1",
       content: {
@@ -576,6 +436,191 @@ const data = {
             description:
               "Galle is a coastal city with a well-preserved Dutch Fort, showcasing colonial architecture, art galleries, and boutique shops. Explore its narrow streets, sandy beaches, and historic lighthouse.",
             image: "srilanka_galle.jpg",
+          },
+        ],
+      },
+    },
+    {
+      name: "Vietnam Tour",
+      id: "5",
+      content: {
+        country: "Vietnam",
+        cover: [
+          "vietnam_hanoi.jpg",
+          "vietnam_halong.jpg",
+          "vietnam_golden_bridge.jpg",
+        ],
+        title_main: "Vietnam",
+        title_sub: "Explore Vietnam's Timeless Beauty",
+        description:
+          "This 3-day cultural tour takes you through Vietnam’s most iconic highlights—experience the historic charm of Hanoi, the natural wonder of Ha Long Bay on a scenic cruise, and the breathtaking heights of the Golden Bridge in Da Nang. It’s a compact yet immersive journey into Vietnam’s spiritual and scenic treasures.",
+        summary:
+          "A journey through Vietnam’s soul, where ancient pagodas, emerald waters, and mountaintop marvels reveal a land steeped in serenity and legend.",
+        destinations: [
+          {
+            id: 1,
+            name: "Hanoi",
+            location: "Northern Vietnam",
+            description:
+              "Hanoi, Vietnam’s vibrant capital, is a rich mix of ancient traditions, colonial architecture, and modern life. Explore the Old Quarter, visit Hoan Kiem Lake, and discover centuries-old pagodas like Tran Quoc. A water puppet show and traditional street food complete the cultural immersion.",
+            image: "hanoi.jpg",
+          },
+          {
+            id: 2,
+            name: "Ha Long Bay Cruise",
+            location: "Quang Ninh Province",
+            description:
+              "A UNESCO World Heritage Site, Ha Long Bay is famous for its emerald waters and towering limestone islands. An overnight cruise reveals hidden caves, floating villages, and breathtaking sunsets. This natural wonder offers peace, beauty, and a spiritual connection to nature.",
+            image: "halong_bay.jpg",
+          },
+          {
+            id: 3,
+            name: "Golden Bridge (Ba Na Hills)",
+            location: "Da Nang",
+            description:
+              "The Golden Bridge is a stunning structure held aloft by giant stone hands, offering panoramic views of Ba Na Hills. Located above the clouds, this surreal site combines modern architecture with spiritual ambiance, making it one of Vietnam’s most iconic cultural landmarks.",
+            image: "golden_bridge.jpg",
+          },
+        ],
+        itenary: [
+          {
+            day: "Day 1 - Hanoi",
+            description:
+              "Arrive in Hanoi. Explore the Old Quarter, visit Hoan Kiem Lake, and enjoy the peaceful setting of Tran Quoc Pagoda. Attend a traditional water puppet show in the evening. Overnight stay in Hanoi.",
+            image: "hanoi.jpg",
+          },
+          {
+            day: "Day 2 - Ha Long Bay",
+            description:
+              "Depart for Ha Long Bay and board a scenic cruise. Discover limestone caves, enjoy onboard dining, and witness a stunning sunset over the bay. Optional kayak or bamboo boat ride available. Overnight stay on the cruise.",
+            image: "halong_bay.jpg",
+          },
+          {
+            day: "Day 3 - Da Nang & Golden Bridge",
+            description:
+              "Fly to Da Nang and ascend to Ba Na Hills to walk along the iconic Golden Bridge. Take in the spectacular mountain scenery and explore the nearby gardens and pagodas. Tour ends with return to Hanoi or onward departure.",
+            image: "golden_bridge.jpg",
+          },
+        ],
+      },
+    },
+    {
+      name: "Cultural Japan Tour",
+      id: "6",
+      content: {
+        country: "Japan",
+        cover: ["japan_kyoto.jpg", "japan_tokyo.jpg", "japan_mt_fuji.jpg"],
+        title_main: "Cultural Tour In Japan",
+        title_sub: "A Journey Through Japan's Timeless Traditions",
+        description:
+          "This 3-day cultural tour of Japan offers a perfect blend of ancient traditions and modern marvels. Experience the spiritual tranquility of Kyoto’s shrines, the vibrant energy of Tokyo, and the iconic beauty of Mount Fuji. This compact journey reveals the essence of Japan’s cultural depth and natural splendor.",
+        summary:
+          "Walk the path of emperors and monks as you explore Japan’s quiet shrines, golden temples, and sacred mountains. This tour bridges Kyoto’s tradition, Tokyo’s rhythm, and Mount Fuji’s eternal grace in a captivating cultural trilogy",
+        destinations: [
+          {
+            id: 1,
+            name: "Kyoto",
+            location: "Kansai Region",
+            description:
+              "Kyoto, Japan’s former imperial capital, is the heart of traditional Japanese culture. Visit iconic temples like Fushimi Inari Shrine with its famous red torii gates, explore the serene Kinkaku-ji (Golden Pavilion), and stroll through the charming Gion district known for geisha culture.",
+            image: "kyoto.jpg",
+          },
+          {
+            id: 2,
+            name: "Tokyo",
+            location: "Kanto Region",
+            description:
+              "Tokyo blends tradition and innovation. Explore Asakusa’s Senso-ji Temple, wander the historic streets of Yanaka, and experience the modern contrasts of Shibuya and Shinjuku. Tokyo is a cultural playground where ancient shrines sit alongside cutting-edge skyscrapers.",
+            image: "tokyo.jpg",
+          },
+          {
+            id: 3,
+            name: "Mount Fuji",
+            location: "Honshu",
+            description:
+              "Mount Fuji, Japan’s sacred mountain, stands as a symbol of national identity and spiritual power. Visit the Fuji Five Lakes region for breathtaking views, and explore nearby shrines like Fujisan Hongu Sengen Taisha. It’s a serene retreat into nature and spirituality.",
+            image: "mount_fuji.jpg",
+          },
+        ],
+        itenary: [
+          {
+            day: "Day 1 - Kyoto",
+            description:
+              "Arrive in Kyoto. Visit Fushimi Inari Shrine, known for its thousands of vermillion torii gates. Explore Kinkaku-ji (Golden Pavilion) and walk through the bamboo groves of Arashiyama. Overnight stay in Kyoto.",
+            image: "kyoto.jpg",
+          },
+          {
+            day: "Day 2 - Tokyo",
+            description:
+              "Travel to Tokyo via bullet train. Visit Senso-ji Temple in Asakusa, explore the Imperial Palace gardens, and experience the bustling nightlife of Shibuya. Optional stop at Meiji Shrine. Overnight stay in Tokyo.",
+            image: "tokyo.jpg",
+          },
+          {
+            day: "Day 3 - Mount Fuji",
+            description:
+              "Take a day trip to the Mount Fuji area. Visit Chureito Pagoda for panoramic views, cruise on Lake Kawaguchi, and stop by sacred shrines around the mountain base. Return to Tokyo or depart from a nearby airport.",
+            image: "mount_fuji.jpg",
+          },
+        ],
+      },
+    },
+
+    {
+      name: "Cultural China Tour",
+      id: "7",
+      content: {
+        country: "China",
+        cover: ["china_beijing.jpg", "china_xian.jpg", "china_greatwall.jpg"],
+        title_main: "Cultural Tour In China",
+        title_sub: "Unveil the Mysteries of Ancient China",
+        description:
+          "This 3-day cultural journey explores the grandeur of ancient China. Walk the Great Wall near Beijing, witness the legendary Terracotta Warriors in Xi’an, and immerse yourself in the palatial elegance of the Forbidden City. Discover the profound history and spiritual heritage that have shaped China for millennia.",
+        summary:
+          "From imperial Beijing to the Great Wall’s majesty and Xi’an’s Terracotta legacy, each step echoes with history’s breath.",
+        destinations: [
+          {
+            id: 1,
+            name: "Beijing",
+            location: "Northern China",
+            description:
+              "Beijing, the capital of China, is a treasure trove of imperial history and cultural grandeur. Visit the Forbidden City, explore the vast Tiananmen Square, and wander through the peaceful Temple of Heaven. Beijing reflects the majesty of dynastic China.",
+            image: "beijing.jpg",
+          },
+          {
+            id: 2,
+            name: "Great Wall of China",
+            location: "Near Beijing",
+            description:
+              "The Great Wall of China is one of the world’s greatest architectural feats and a symbol of China's resilience. Explore the scenic Mutianyu or Badaling sections, offering majestic views and a walk through history spanning thousands of years.",
+            image: "greatwall.jpg",
+          },
+          {
+            id: 3,
+            name: "Xi’an",
+            location: "Shaanxi Province",
+            description:
+              "Xi’an is home to the awe-inspiring Terracotta Warriors—an archaeological marvel dating back to China’s first emperor. The city also boasts the ancient city wall, Big Wild Goose Pagoda, and deep-rooted Silk Road heritage.",
+            image: "xian.jpg",
+          },
+        ],
+        itenary: [
+          {
+            day: "Day 1 - Beijing",
+            description:
+              "Arrive in Beijing. Visit the Forbidden City, Tiananmen Square, and the Temple of Heaven. Experience a traditional Peking duck dinner. Overnight stay in Beijing.",
+            image: "beijing.jpg",
+          },
+          {
+            day: "Day 2 - Great Wall of China",
+            description:
+              "Take a morning excursion to the Great Wall (Mutianyu or Badaling section). Enjoy a scenic hike and explore the watchtowers. Return to Beijing for optional shopping or cultural performance. Overnight in Beijing.",
+            image: "greatwall.jpg",
+          },
+          {
+            day: "Day 3 - Xi’an",
+            description:
+              "Fly or take a high-speed train to Xi’an. Visit the Terracotta Army Museum, Big Wild Goose Pagoda, and walk along the ancient city wall. Tour ends with departure from Xi’an or return to Beijing.",
+            image: "xian.jpg",
           },
         ],
       },

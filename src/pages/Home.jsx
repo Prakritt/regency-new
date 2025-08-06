@@ -50,7 +50,7 @@ function Home() {
           Here are some of our most sought-after destinations..
         </p>
         <div className="flex flex-col items-center gap-3 md:flex-row md:justify-around md:px-3">
-          {data?.asia?.slice(1, 4).map((item) => (
+          {data?.asia?.slice(4, 8).map((item) => (
             <StyledCard
               to={`/tours/asia/${item.id}`}
               img={`/images/tours/${item.content.cover[0]}`}
