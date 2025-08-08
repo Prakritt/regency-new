@@ -554,61 +554,135 @@ const data = {
     },
 
     {
-      name: "Cultural Japan Tour",
+      name: "Japan Tour",
       id: "6",
       content: {
         country: "Japan",
         cover: ["japan_kyoto.jpg", "japan_tokyo.jpg", "japan_mt_fuji.jpg"],
-        title_main: "Cultural Tour In Japan",
+        title_main: "Japan Tour",
         title_sub: "A Journey Through Japan's Timeless Traditions",
         description:
-          "This 3-day cultural tour of Japan offers a perfect blend of ancient traditions and modern marvels. Experience the spiritual tranquility of Kyoto’s shrines, the vibrant energy of Tokyo, and the iconic beauty of Mount Fuji. This compact journey reveals the essence of Japan’s cultural depth and natural splendor.",
+          "This 7–10 day adventure reveals the soul of Japan—from the historic temples of Kyoto and the culinary wonders of Osaka, to the ancient shrines of Nara, the scenic beauty of Mount Fuji, and the vibrant heartbeat of Tokyo. With a carefully planned west-to-east route, the journey blends tradition, modernity, and natural beauty without backtracking, offering flexibility for travelers to linger longer in their favorite spots.",
         summary:
-          "Walk the path of emperors and monks as you explore Japan’s quiet shrines, golden temples, and sacred mountains. This tour bridges Kyoto’s tradition, Tokyo’s rhythm, and Mount Fuji’s eternal grace in a captivating cultural trilogy",
+          "A seamless journey through Japan’s cultural heartlands and modern marvels. Wander through centuries-old temples, savor street food in bustling markets, cruise beside Mount Fuji, and explore Japan’s neon-lit capital—all at your own pace.",
         destinations: [
           {
             id: 1,
             name: "Kyoto",
             location: "Kansai Region",
             description:
-              "Kyoto, Japan’s former imperial capital, is the heart of traditional Japanese culture. Visit iconic temples like Fushimi Inari Shrine with its famous red torii gates, explore the serene Kinkaku-ji (Golden Pavilion), and stroll through the charming Gion district known for geisha culture.",
+              "Japan’s cultural capital, home to over 1,000 temples, tea houses, and gardens. Visit the iconic Fushimi Inari Shrine, the golden splendor of Kinkaku-ji, and the tranquil bamboo groves of Arashiyama.",
             image: "kyoto.jpg",
           },
           {
             id: 2,
-            name: "Tokyo",
-            location: "Kanto Region",
+            name: "Nara",
+            location: "Kansai Region",
             description:
-              "Tokyo blends tradition and innovation. Explore Asakusa’s Senso-ji Temple, wander the historic streets of Yanaka, and experience the modern contrasts of Shibuya and Shinjuku. Tokyo is a cultural playground where ancient shrines sit alongside cutting-edge skyscrapers.",
-            image: "tokyo.jpg",
+              "Just an hour from Kyoto, Nara is famous for its friendly free-roaming deer and the Great Buddha at Todai-ji Temple. Stroll through Nara Park and enjoy the peaceful atmosphere.",
+            image: "nara.jpg",
           },
           {
             id: 3,
-            name: "Mount Fuji",
-            location: "Honshu",
+            name: "Osaka",
+            location: "Kansai Region",
             description:
-              "Mount Fuji, Japan’s sacred mountain, stands as a symbol of national identity and spiritual power. Visit the Fuji Five Lakes region for breathtaking views, and explore nearby shrines like Fujisan Hongu Sengen Taisha. It’s a serene retreat into nature and spirituality.",
-            image: "mount_fuji.jpg",
+              "Known as Japan’s kitchen, Osaka offers vibrant nightlife, historic Osaka Castle, and endless street food in Dotonbori. Try takoyaki and okonomiyaki while soaking up the lively atmosphere.",
+            image: "osaka.jpg",
+          },
+          {
+            id: 4,
+            name: "Hakone & Mount Fuji",
+            location: "Kanagawa Prefecture",
+            description:
+              "A gateway to Mount Fuji, Hakone is known for hot springs, lake cruises, and stunning Fuji views. Visit the Hakone Shrine and enjoy an onsen experience.",
+            image: "japan_mt_fuji.jpg",
+          },
+          {
+            id: 5,
+            name: "Tokyo",
+            location: "Kanto Region",
+            description:
+              "Japan’s bustling capital where ancient shrines meet futuristic skyscrapers. Explore Asakusa’s Senso-ji Temple, Shibuya Crossing, the Meiji Shrine, and the Imperial Palace gardens.",
+            image: "tokyo.jpg",
+          },
+          {
+            id: 6,
+            name: "Kamakura",
+            location: "Kanto Region",
+            description:
+              "A historic seaside town south of Tokyo, famous for the Great Buddha, serene Zen temples, and scenic hiking trails.",
+            image: "Kamakura.jpg",
+          },
+          {
+            id: 7,
+            name: "Nikko",
+            location: "Tochigi Prefecture",
+            description:
+              "A UNESCO World Heritage site north of Tokyo, known for ornate shrines like Toshogu, waterfalls, and mountain scenery.",
+            image: "nikko.jpg",
           },
         ],
         itenary: [
           {
-            day: "Day 1 - Kyoto",
+            day: "Day 1 - Kyoto Arrival",
             description:
-              "Arrive in Kyoto. Visit Fushimi Inari Shrine, known for its thousands of vermillion torii gates. Explore Kinkaku-ji (Golden Pavilion) and walk through the bamboo groves of Arashiyama. Overnight stay in Kyoto.",
+              "Arrive in Kyoto and visit Fushimi Inari Shrine’s thousands of torii gates, the Golden Pavilion (Kinkaku-ji), and Gion district. Overnight in Kyoto.",
             image: "kyoto.jpg",
           },
           {
-            day: "Day 2 - Tokyo",
+            day: "Day 2 - Kyoto Exploration",
             description:
-              "Travel to Tokyo via bullet train. Visit Senso-ji Temple in Asakusa, explore the Imperial Palace gardens, and experience the bustling nightlife of Shibuya. Optional stop at Meiji Shrine. Overnight stay in Tokyo.",
+              "Spend a full day visiting Arashiyama Bamboo Grove, Tenryu-ji Temple, and Kiyomizu-dera Temple. Enjoy a traditional tea ceremony. Overnight in Kyoto.",
+            image: "kyoto_arashiyama.jpg",
+          },
+          {
+            day: "Day 3 - Nara Day Trip",
+            description:
+              "Take a short trip to Nara to see Todai-ji’s Great Buddha, Kasuga Taisha Shrine, and Nara Park’s deer. Return to Kyoto for the night.",
+            image: "nara.jpg",
+          },
+          {
+            day: "Day 4 - Osaka",
+            description:
+              "Travel to Osaka. Visit Osaka Castle, Kuromon Ichiba Market, and enjoy the neon lights and street food of Dotonbori. Overnight in Osaka.",
+            image: "osaka.jpg",
+          },
+          {
+            day: "Day 5 - Hakone & Mount Fuji",
+            description:
+              "Take the bullet train to Hakone. Cruise on Lake Ashi with Mount Fuji views, ride the Hakone Ropeway, and relax in an onsen. Overnight in Hakone.",
+            image: "hakone.jpg",
+          },
+          {
+            day: "Day 6 - Tokyo Arrival",
+            description:
+              "Head to Tokyo. Visit Senso-ji Temple in Asakusa, walk through Ueno Park, and explore Akihabara or Ginza in the evening. Overnight in Tokyo.",
             image: "tokyo.jpg",
           },
           {
-            day: "Day 3 - Mount Fuji",
+            day: "Day 7 - Tokyo & Kamakura",
             description:
-              "Take a day trip to the Mount Fuji area. Visit Chureito Pagoda for panoramic views, cruise on Lake Kawaguchi, and stop by sacred shrines around the mountain base. Return to Tokyo or depart from a nearby airport.",
-            image: "mount_fuji.jpg",
+              "Take a day trip to Kamakura to see the Great Buddha and Hase-dera Temple. Return to Tokyo for nightlife in Shibuya or Shinjuku.",
+            image: "kamakura.jpg",
+          },
+          {
+            day: "Day 8 - Tokyo Highlights",
+            description:
+              "Visit Meiji Shrine, Harajuku’s Takeshita Street, and Shibuya Crossing. Afternoon free for shopping or museum visits. Overnight in Tokyo.",
+            image: "tokyo_shibuya.jpg",
+          },
+          {
+            day: "Day 9 - Nikko Day Trip",
+            description:
+              "Travel to Nikko to explore the ornate Toshogu Shrine, Kegon Falls, and scenic Lake Chuzenji. Return to Tokyo for the night.",
+            image: "nikko.jpg",
+          },
+          {
+            day: "Day 10 - Departure",
+            description:
+              "Enjoy last-minute shopping or sightseeing in Tokyo before departing from Narita or Haneda Airport.",
+            image: "tokyo_departure.jpg",
           },
         ],
       },
