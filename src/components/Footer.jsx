@@ -94,33 +94,43 @@ export function Footer() {
     <footer className="relative w-full pt-[5rem]">
       <div className="mx-auto w-full max-w-7xl px-8">
         <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
-          <div>
-            <Typography variant="h5" className="mb-2 font-logo ">
+          <div className=" flex flex-col justify-center">
+            <Typography
+              variant="h5"
+              className="mb-2 font-logo text-center md:text-left"
+            >
               Regency Nepal Travels
             </Typography>
 
-            <Typography variant="h6" color="gray" className="flex items-center">
-              <HiLocationMarker
-                className="text-green-500"
-                style={{
-                  width: "16px",
-                  height: "16px",
-                  marginRight: "6px",
-                }}
-              />
-              Hattisar, Kathmandu, Nepal
+            <Typography variant="h6" color="gray" className="text-center">
+              <div className="flex items-center justify-center md:justify-start">
+                <HiLocationMarker
+                  className="text-green-500"
+                  style={{
+                    width: "16px",
+                    height: "16px",
+                    marginRight: "6px",
+                  }}
+                />
+                Hattisar, Kathmandu, Nepal
+              </div>
             </Typography>
 
-            <Typography variant="h6" color="gray" className="flex items-center">
-              <PhoneIcon
-                className="text-green-500"
-                style={{
-                  width: "16px",
-                  height: "16px",
-                  marginRight: "6px",
-                }}
-              />{" "}
-              01-4528818, 01-4533455, 01-4516620, 01-4580845
+            <Typography variant="h6" color="gray" className="">
+              <div className="flex flex-col md:flex-row items-center">
+                <PhoneIcon
+                  className="text-green-500"
+                  style={{
+                    width: "16px",
+                    height: "16px",
+                    marginRight: "6px",
+                  }}
+                />{" "}
+                <div className="flex flex-col">
+                  <p>01-4528818, 01-4533455,</p>
+                  <p> 01-4516620, 01-4580845</p>
+                </div>
+              </div>
             </Typography>
 
             {/* <Typography
@@ -132,7 +142,7 @@ export function Footer() {
             </Typography> */}
           </div>
 
-          <div className="grid grid-cols-3 justify-between gap-4">
+          <div className="grid grid-cols-3 justify-between gap-4 mt-6 md:mt-0">
             {LINKS.map(({ title, items }) => (
               <ul key={title}>
                 <Typography

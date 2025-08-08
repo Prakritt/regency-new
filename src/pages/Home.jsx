@@ -12,6 +12,7 @@ import helicopter_charter from "./../images/helicopter_charter.jpg";
 import car_rental from "./../images/car_rental.jpg";
 import norwegian_cruise from "./../images/norwegian_cruise.jpg";
 import { useTour } from "../context/TourProvider";
+import Testimonial from "../components/Testimonial";
 
 function Home() {
   const { data } = useTour();
@@ -76,6 +77,8 @@ function Home() {
           /> */}
         </div>
       </div>
+
+      {/* <Testimonial /> */}
 
       <div className="py-[5rem] mx-auto ">
         <SectionHeading title="Europe Tour" />
