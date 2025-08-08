@@ -59,7 +59,7 @@ function Cultural() {
           ))}
         </div>
 
-        <CustomTimeline itenary={current_tour.itenary} />
+        {/* <CustomTimeline itenary={current_tour.itenary} /> */}
       </div>
     </div>
   );

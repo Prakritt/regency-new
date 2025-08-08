@@ -453,57 +453,106 @@ const data = {
         title_main: "Vietnam",
         title_sub: "Explore Vietnam's Timeless Beauty",
         description:
-          "This 3-day cultural tour takes you through Vietnam’s most iconic highlights—experience the historic charm of Hanoi, the natural wonder of Ha Long Bay on a scenic cruise, and the breathtaking heights of the Golden Bridge in Da Nang. It’s a compact yet immersive journey into Vietnam’s spiritual and scenic treasures.",
+          "This 7-day journey follows a seamless route from the cultural heart of Hanoi to the limestone wonders of Ha Long Bay, down through Vietnam’s imperial city of Hue, the charming lantern-lit town of Hoi An, and ending high above the clouds at Da Nang’s Golden Bridge. The trip blends nature, history, and culture without unnecessary backtracking.",
         summary:
-          "A journey through Vietnam’s soul, where ancient pagodas, emerald waters, and mountaintop marvels reveal a land steeped in serenity and legend.",
+          "A perfectly paced week-long adventure from north to central Vietnam—historic capitals, emerald bays, ancient towns, and mountain marvels await.",
         destinations: [
           {
             id: 1,
             name: "Hanoi",
             location: "Northern Vietnam",
             description:
-              "Hanoi, Vietnam’s vibrant capital, is a rich mix of ancient traditions, colonial architecture, and modern life. Explore the Old Quarter, visit Hoan Kiem Lake, and discover centuries-old pagodas like Tran Quoc. A water puppet show and traditional street food complete the cultural immersion.",
+              "The bustling capital of Vietnam where ancient pagodas, French colonial architecture, and vibrant street life create a dynamic cultural mix. Highlights include the Old Quarter, Hoan Kiem Lake, and the Temple of Literature.",
             image: "hanoi.jpg",
           },
           {
             id: 2,
-            name: "Ha Long Bay Cruise",
-            location: "Quang Ninh Province",
+            name: "Ninh Binh",
+            location: "Northern Vietnam",
             description:
-              "A UNESCO World Heritage Site, Ha Long Bay is famous for its emerald waters and towering limestone islands. An overnight cruise reveals hidden caves, floating villages, and breathtaking sunsets. This natural wonder offers peace, beauty, and a spiritual connection to nature.",
-            image: "halong_bay.jpg",
+              "Known as ‘Ha Long Bay on Land,’ Ninh Binh is home to limestone karsts, rice paddies, and winding rivers. Visitors can enjoy peaceful boat rides and explore historic pagodas.",
+            image: "ninh_binh.jpg",
           },
           {
             id: 3,
+            name: "Ha Long Bay",
+            location: "Quang Ninh Province",
+            description:
+              "A UNESCO World Heritage Site famous for emerald waters and towering limestone formations. A cruise offers breathtaking scenery, caves, and optional kayaking.",
+            image: "halong_bay.jpg",
+          },
+          {
+            id: 4,
+            name: "Hue",
+            location: "Central Vietnam",
+            description:
+              "The former imperial capital of Vietnam, known for its ancient citadel, royal tombs, and Perfume River cruises.",
+            image: "hue.jpg",
+          },
+          {
+            id: 5,
+            name: "Hoi An",
+            location: "Central Vietnam",
+            description:
+              "A UNESCO World Heritage ancient town with lantern-lit streets, riverside cafes, and a blend of Japanese, Chinese, and French architecture.",
+            image: "hoi_an.jpg",
+          },
+          {
+            id: 6,
             name: "Golden Bridge (Ba Na Hills)",
             location: "Da Nang",
             description:
-              "The Golden Bridge is a stunning structure held aloft by giant stone hands, offering panoramic views of Ba Na Hills. Located above the clouds, this surreal site combines modern architecture with spiritual ambiance, making it one of Vietnam’s most iconic cultural landmarks.",
+              "A breathtaking pedestrian bridge held by giant stone hands, offering panoramic views of the surrounding mountains.",
             image: "golden_bridge.jpg",
           },
         ],
         itenary: [
           {
-            day: "Day 1 - Hanoi",
+            day: "Day 1 - Arrival in Hanoi",
             description:
-              "Arrive in Hanoi. Explore the Old Quarter, visit Hoan Kiem Lake, and enjoy the peaceful setting of Tran Quoc Pagoda. Attend a traditional water puppet show in the evening. Overnight stay in Hanoi.",
+              "Arrive in Hanoi. Stroll through the Old Quarter, visit Hoan Kiem Lake, and enjoy a traditional water puppet show. Overnight in Hanoi.",
             image: "hanoi.jpg",
           },
           {
-            day: "Day 2 - Ha Long Bay",
+            day: "Day 2 - Hanoi City Tour",
             description:
-              "Depart for Ha Long Bay and board a scenic cruise. Discover limestone caves, enjoy onboard dining, and witness a stunning sunset over the bay. Optional kayak or bamboo boat ride available. Overnight stay on the cruise.",
+              "Explore Ho Chi Minh Mausoleum, One Pillar Pagoda, Temple of Literature, and the Ethnology Museum. Evening street food tour. Overnight in Hanoi.",
+            image: "hanoi_city.jpg",
+          },
+          {
+            day: "Day 3 - Ninh Binh Excursion",
+            description:
+              "Travel to Ninh Binh for a scenic sampan boat ride in Trang An or Tam Coc, passing through limestone caves and rice paddies. Visit Bai Dinh Pagoda. Return to Hanoi. Overnight in Hanoi.",
+            image: "ninh_binh.jpg",
+          },
+          {
+            day: "Day 4 - Ha Long Bay Cruise",
+            description:
+              "Depart for Ha Long Bay and board a cruise. Visit limestone caves, kayak in calm waters, and watch the sunset over the bay. Overnight on the cruise.",
             image: "halong_bay.jpg",
           },
           {
-            day: "Day 3 - Da Nang & Golden Bridge",
+            day: "Day 5 - Ha Long Bay to Hue",
             description:
-              "Fly to Da Nang and ascend to Ba Na Hills to walk along the iconic Golden Bridge. Take in the spectacular mountain scenery and explore the nearby gardens and pagodas. Tour ends with return to Hanoi or onward departure.",
+              "Enjoy sunrise on the bay before returning to port. Transfer to Hanoi for a flight to Hue. Explore the Imperial Citadel and Perfume River. Overnight in Hue.",
+            image: "hue.jpg",
+          },
+          {
+            day: "Day 6 - Hue to Hoi An",
+            description:
+              "Visit the Royal Tombs and Thien Mu Pagoda. Drive along the scenic Hai Van Pass to Hoi An. Enjoy an evening walking tour with lantern-lit streets. Overnight in Hoi An.",
+            image: "hoi_an.jpg",
+          },
+          {
+            day: "Day 7 - Da Nang & Golden Bridge",
+            description:
+              "Head to Ba Na Hills to walk along the Golden Bridge and explore gardens. Enjoy mountain views before your departure from Da Nang.",
             image: "golden_bridge.jpg",
           },
         ],
       },
     },
+
     {
       name: "Cultural Japan Tour",
       id: "6",
