@@ -2,7 +2,7 @@ const data = {
   asia: [
     {
       name: "Cultural India Tour",
-      id: "1",
+      id: "0",
       content: {
         country: "India",
         cover: ["india_one.jpg", "india_three.jpg", "india_two.jpg"],
@@ -163,7 +163,7 @@ const data = {
     },
     {
       name: "tourPlanDubai6days",
-      id: "2",
+      id: "1",
       content: {
         country: "Dubai",
         cover: ["dubai_one.jpg", "dubai_two.jpg", "dubai_three.jpg"],
@@ -265,7 +265,7 @@ const data = {
     },
     {
       name: "tourPlanMaldives",
-      id: "3",
+      id: "2",
       content: {
         country: "Maldives",
         cover: ["maldives_two.jpg", "maldives_one.jpg", "maldives_three.jpg"],
@@ -341,7 +341,7 @@ const data = {
     {
       name: "tourPlanSriLanka",
       country: "Sri Lanka",
-      id: "4",
+      id: "3",
       content: {
         cover: ["srilanka_one.jpg", "srilanka_two.jpg", "srilanka_three.jpg"],
         title_main: "Explore Sri Lanka",
@@ -442,7 +442,7 @@ const data = {
     },
     {
       name: "Vietnam Tour",
-      id: "5",
+      id: "4",
       content: {
         country: "Vietnam",
         cover: [
@@ -555,7 +555,7 @@ const data = {
 
     {
       name: "Japan Tour",
-      id: "6",
+      id: "5",
       content: {
         country: "Japan",
         cover: ["japan_kyoto.jpg", "japan_tokyo.jpg", "japan_mt_fuji.jpg"],
@@ -690,7 +690,7 @@ const data = {
 
     {
       name: "China Tour",
-      id: "7",
+      id: "6",
       content: {
         country: "China",
         cover: ["china_beijing.jpg", "china_xian.jpg", "china_greatwall.jpg"],
