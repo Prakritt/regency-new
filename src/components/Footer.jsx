@@ -74,8 +74,8 @@ const LINKS = [
   {
     title: "DESTINATION",
     items: [
-      { title: "India", to: "/tours/asia/1" },
-      { title: "Nepal", to: "/tours/asia/0" },
+      { title: "India", to: "/tours/asia/0" },
+      // { title: "Nepal", to: "/tours/asia/1" },
       { title: "France", to: "/tours/europe/0" },
       { title: "Germany", to: "/tours/europe/1" },
       { title: "Greece", to: "/tours/europe/2" },
