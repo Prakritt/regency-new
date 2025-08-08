@@ -689,24 +689,24 @@ const data = {
     },
 
     {
-      name: "Cultural China Tour",
+      name: "China Tour",
       id: "7",
       content: {
         country: "China",
         cover: ["china_beijing.jpg", "china_xian.jpg", "china_greatwall.jpg"],
-        title_main: "Cultural Tour In China",
+        title_main: "China Tour",
         title_sub: "Unveil the Mysteries of Ancient China",
         description:
-          "This 3-day cultural journey explores the grandeur of ancient China. Walk the Great Wall near Beijing, witness the legendary Terracotta Warriors in Xi’an, and immerse yourself in the palatial elegance of the Forbidden City. Discover the profound history and spiritual heritage that have shaped China for millennia.",
+          "This 7–10 day cultural journey traces the story of China from its imperial capitals to its rural beauty and modern skylines. Walk the Great Wall in Beijing, stand face-to-face with the Terracotta Warriors in Xi’an, visit panda sanctuaries in Chengdu, cruise the Li River in Guilin, and end among the bright lights of Shanghai. Designed for smooth travel from north to south, the route blends history, nature, and city life seamlessly.",
         summary:
-          "From imperial Beijing to the Great Wall’s majesty and Xi’an’s Terracotta legacy, each step echoes with history’s breath.",
+          "A sweeping voyage across China—imperial palaces, ancient armies, river landscapes, and futuristic cities—capturing the nation’s spirit in one unforgettable journey.",
         destinations: [
           {
             id: 1,
             name: "Beijing",
             location: "Northern China",
             description:
-              "Beijing, the capital of China, is a treasure trove of imperial history and cultural grandeur. Visit the Forbidden City, explore the vast Tiananmen Square, and wander through the peaceful Temple of Heaven. Beijing reflects the majesty of dynastic China.",
+              "The political and cultural heart of China, filled with imperial landmarks like the Forbidden City, Temple of Heaven, and Tiananmen Square.",
             image: "beijing.jpg",
           },
           {
@@ -714,7 +714,7 @@ const data = {
             name: "Great Wall of China",
             location: "Near Beijing",
             description:
-              "The Great Wall of China is one of the world’s greatest architectural feats and a symbol of China's resilience. Explore the scenic Mutianyu or Badaling sections, offering majestic views and a walk through history spanning thousands of years.",
+              "An awe-inspiring wonder stretching over 13,000 miles. The Mutianyu and Jinshanling sections offer stunning scenery and fewer crowds.",
             image: "greatwall.jpg",
           },
           {
@@ -722,28 +722,102 @@ const data = {
             name: "Xi’an",
             location: "Shaanxi Province",
             description:
-              "Xi’an is home to the awe-inspiring Terracotta Warriors—an archaeological marvel dating back to China’s first emperor. The city also boasts the ancient city wall, Big Wild Goose Pagoda, and deep-rooted Silk Road heritage.",
+              "Ancient Silk Road capital and home to the Terracotta Warriors. Also famous for its city walls, Muslim Quarter, and historic pagodas.",
             image: "xian.jpg",
+          },
+          {
+            id: 4,
+            name: "Chengdu",
+            location: "Sichuan Province",
+            description:
+              "The laid-back capital of Sichuan, known for spicy cuisine, teahouses, and the Chengdu Research Base of Giant Panda Breeding.",
+            image: "chengdu.jpg",
+          },
+          {
+            id: 5,
+            name: "Guilin & Yangshuo",
+            location: "Guangxi Province",
+            description:
+              "A landscape of limestone peaks, winding rivers, and lush countryside. The Li River cruise between Guilin and Yangshuo is one of China’s most scenic experiences.",
+            image: "guilin.jpg",
+          },
+          {
+            id: 6,
+            name: "Shanghai",
+            location: "Eastern China",
+            description:
+              "China’s modern metropolis where colonial Bund architecture meets futuristic skyscrapers like the Shanghai Tower.",
+            image: "shanghai.jpg",
+          },
+          {
+            id: 7,
+            name: "Zhujiajiao Water Town",
+            location: "Near Shanghai",
+            description:
+              "An ancient canal town with stone bridges, narrow alleys, and traditional teahouses, offering a glimpse into old Jiangnan life.",
+            image: "zhujiajiao.jpg",
           },
         ],
         itenary: [
           {
-            day: "Day 1 - Beijing",
+            day: "Day 1 - Beijing Arrival",
             description:
-              "Arrive in Beijing. Visit the Forbidden City, Tiananmen Square, and the Temple of Heaven. Experience a traditional Peking duck dinner. Overnight stay in Beijing.",
+              "Arrive in Beijing. Visit Tiananmen Square, the Forbidden City, and the Temple of Heaven. Overnight in Beijing.",
             image: "beijing.jpg",
           },
           {
-            day: "Day 2 - Great Wall of China",
+            day: "Day 2 - Great Wall & Summer Palace",
             description:
-              "Take a morning excursion to the Great Wall (Mutianyu or Badaling section). Enjoy a scenic hike and explore the watchtowers. Return to Beijing for optional shopping or cultural performance. Overnight in Beijing.",
+              "Morning trip to the Great Wall (Mutianyu section) with panoramic views. Afternoon visit to the Summer Palace. Overnight in Beijing.",
             image: "greatwall.jpg",
           },
           {
-            day: "Day 3 - Xi’an",
+            day: "Day 3 - Beijing to Xi’an",
             description:
-              "Fly or take a high-speed train to Xi’an. Visit the Terracotta Army Museum, Big Wild Goose Pagoda, and walk along the ancient city wall. Tour ends with departure from Xi’an or return to Beijing.",
+              "Fly or take a high-speed train to Xi’an. Explore the Ancient City Wall and Muslim Quarter. Overnight in Xi’an.",
             image: "xian.jpg",
+          },
+          {
+            day: "Day 4 - Terracotta Warriors",
+            description:
+              "Visit the Terracotta Army Museum and Big Wild Goose Pagoda. Enjoy a dumpling banquet in the evening. Overnight in Xi’an.",
+            image: "terracotta.jpg",
+          },
+          {
+            day: "Day 5 - Xi’an to Chengdu",
+            description:
+              "Travel to Chengdu by high-speed train. Visit People’s Park, a traditional teahouse, and enjoy Sichuan hotpot. Overnight in Chengdu.",
+            image: "chengdu.jpg",
+          },
+          {
+            day: "Day 6 - Chengdu Pandas & Guilin",
+            description:
+              "Morning visit to the Chengdu Research Base of Giant Panda Breeding. Afternoon flight to Guilin. Overnight in Guilin.",
+            image: "pandas.jpg",
+          },
+          {
+            day: "Day 7 - Li River Cruise to Yangshuo",
+            description:
+              "Cruise the Li River through stunning karst landscapes to Yangshuo. Explore West Street and countryside by bike. Overnight in Yangshuo.",
+            image: "guilin.jpg",
+          },
+          {
+            day: "Day 8 - Guilin to Shanghai",
+            description:
+              "Return to Guilin and fly to Shanghai. Evening walk along the Bund. Overnight in Shanghai.",
+            image: "shanghai.jpg",
+          },
+          {
+            day: "Day 9 - Shanghai & Zhujiajiao",
+            description:
+              "Morning visit to Zhujiajiao Water Town. Afternoon explore Yuyuan Garden, Nanjing Road, and Pudong skyline. Overnight in Shanghai.",
+            image: "zhujiajiao.jpg",
+          },
+          {
+            day: "Day 10 - Departure",
+            description:
+              "Enjoy free time in Shanghai before departing from Pudong or Hongqiao Airport.",
+            image: "shanghai_departure.jpg",
           },
         ],
       },
