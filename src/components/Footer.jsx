@@ -52,6 +52,8 @@
 
 import { Typography } from "@material-tailwind/react";
 import StyledNavLink from "./StyledNavLink";
+import { PhoneIcon } from "@heroicons/react/16/solid";
+import { HiLocationMarker } from "react-icons/hi";
 
 const LINKS = [
   {
@@ -92,9 +94,44 @@ export function Footer() {
     <footer className="relative w-full pt-[5rem]">
       <div className="mx-auto w-full max-w-7xl px-8">
         <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
-          <Typography variant="h5" className="mb-6 font-logo">
-            Regency Nepal Travels
-          </Typography>
+          <div>
+            <Typography variant="h5" className="mb-2 font-logo ">
+              Regency Nepal Travels
+            </Typography>
+
+            <Typography variant="h6" color="gray" className="flex items-center">
+              <HiLocationMarker
+                className="text-green-500"
+                style={{
+                  width: "16px",
+                  height: "16px",
+                  marginRight: "6px",
+                }}
+              />
+              Hattisar, Kathmandu, Nepal
+            </Typography>
+
+            <Typography variant="h6" color="gray" className="flex items-center">
+              <PhoneIcon
+                className="text-green-500"
+                style={{
+                  width: "16px",
+                  height: "16px",
+                  marginRight: "6px",
+                }}
+              />{" "}
+              01-4528818, 01-4533455, 01-4516620, 01-4580845
+            </Typography>
+
+            {/* <Typography
+              variant="subtitle1"
+              className="mb-4"
+              sx={{ fontStyle: "italic" }}
+            >
+              हामी सबैको ट्राभल
+            </Typography> */}
+          </div>
+
           <div className="grid grid-cols-3 justify-between gap-4">
             {LINKS.map(({ title, items }) => (
               <ul key={title}>
