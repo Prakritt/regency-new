@@ -78,7 +78,7 @@ function Home() {
         </div>
       </div>
 
-      {/* <Testimonial /> */}
+      <Testimonial />
 
       <div className="py-[5rem] mx-auto ">
         <SectionHeading title="Europe Tour" />

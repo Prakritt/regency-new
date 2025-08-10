@@ -4,33 +4,33 @@ export default function Testimonial() {
       {/* Left side: Text */}
       <div className="md:w-2/3">
         <h2 className="text-2xl md:text-3xl font-serif italic text-gray-800 mb-4">
-          “Curating the best experience”
+          About Regency Nepal
         </h2>
 
         <p className="text-gray-700 leading-relaxed mb-6">
-          “Jennifer Roy has extensive firsthand knowledge of the destinations,
-          resorts and amenities, which makes placing our trust in her so much
-          easier! She seriously makes travel enjoyable. You tell her what you
-          are looking for and she knows exactly where to put you. It's about
-          curating the best experience so you will be a forever client. We have
-          used her services for at least 5 trips and I will never return to the
-          stress of booking our adventures again!”
+          At Regency Nepal Travels, we have built our reputation on delivering
+          exceptional travel experiences across Nepal and around the globe. Our
+          expertise spans every continent and every style of travel, from
+          cultural journeys to luxury escapes. As we adapt to the ever-changing
+          world of travel, we set ourselves apart with our commitment to
+          convenience, professionalism, and personalized care — always staying
+          true to our motto: Travel smart, travel with us.
         </p>
 
-        <p className="text-gray-900 font-handwriting text-xl md:text-2xl mb-1">
+        {/* <p className="text-gray-900 font-handwriting text-xl md:text-2xl mb-1">
           — Anniversary Trip Traveler
         </p>
 
         <p className="uppercase text-sm text-gray-500 tracking-wide">
           Playa Mujeres, Mexico
-        </p>
+        </p> */}
       </div>
 
       {/* Right side: Image */}
       <div className="md:w-1/3">
         <div className="w-64 h-64 rounded-[50%_50%_50%_0] border-2 border-teal-300 overflow-hidden shadow-lg mx-auto">
           <img
-            src="/path-to-your-image.jpg"
+            src="./images/tours/yosemite.jpg"
             alt="Playa Mujeres, Mexico"
             className="object-cover w-full h-full"
           />
