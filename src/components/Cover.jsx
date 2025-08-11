@@ -4,20 +4,34 @@ import StyledNavLink from "./StyledNavLink";
 
 const Cover = () => (
   <div
-    className="bg-cover bg-center h-screen flex items-center justify-center"
-    style={{ backgroundImage: `url(${cover})` }}
+    className="relative flex items-center justify-center h-[70vh] sm:h-[80vh] md:h-screen"
+    style={{
+      backgroundImage: `url(${cover})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    }}
   >
-    <div className="text-center text-white px-4 max-w-4xl mx-auto">
-      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight">
+    {/* Overlay */}
+    <div className="absolute inset-0 bg-black/40"></div>
+
+    {/* Content */}
+    <div className="relative text-center text-white px-4 max-w-3xl mx-auto animate-fadeIn">
+      <h1
+        className="text-3xl sm:text-4xl md:text-6xl font-serif font-bold mb-6 leading-tight"
+        style={{ fontFamily: "'Cormorant Garamond', serif" }}
+      >
         Nepal Explores: Beyond Borders
       </h1>
-      <p className="text-base sm:text-lg md:text-xl font-cursive leading-relaxed max-w-xl mx-auto">
+      <p
+        className="text-base sm:text-lg md:text-2xl font-light leading-relaxed mb-8"
+        style={{ fontFamily: "'Poppins', sans-serif" }}
+      >
         Travel far enough, you meet yourself.
       </p>
       <StyledNavLink to="/tours">
         <button
           type="button"
-          className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 mt-6 rounded transition-colors duration-300"
+          className="bg-green-600 hover:bg-green-500 text-white font-medium py-3 px-8 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
           aria-label="Explore Destinations"
         >
           Explore Destinations
