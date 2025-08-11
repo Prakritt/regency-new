@@ -24,7 +24,7 @@ function Home() {
     <>
       <Cover />
       <JourneyCTA />
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-transparent md:bg-gray-50">
         <div className="max-w-[1140px] mx-auto flex flex-col md:flex-row md:gap-8 justify-between">
           {[
             {
@@ -50,7 +50,7 @@ function Home() {
           ].map(({ Icon, title, desc }) => (
             <article
               key={title}
-              className="flex flex-col items-center gap-3 p-8 bg-white rounded-lg shadow-md text-center md:w-1/4"
+              className="flex flex-col items-center gap-3 p-8 bg-white rounded-lg shadow-none md:shadow-md text-center md:w-1/4"
             >
               <Icon className="text-4xl text-green-500" aria-hidden="true" />
               <h3 className="font-semibold text-lg">{title}</h3>
@@ -59,6 +59,7 @@ function Home() {
           ))}
         </div>
       </section>
+
       <div className="py-20 bg-blue-gray-50">
         <div className="max-w-[1140px] mx-auto px-6">
           <SectionHeading title="Traveler's Favorites" animationDelay={0.3} />
