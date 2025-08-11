@@ -13,6 +13,7 @@ import car_rental from "./../images/car_rental.jpg";
 import norwegian_cruise from "./../images/norwegian_cruise.jpg";
 import { useTour } from "../context/TourProvider";
 import Testimonial from "../components/Testimonial";
+import FullWidthSection from "../components/FullWidthSection";
 
 function Home() {
   const { data } = useTour();
@@ -114,38 +115,57 @@ function Home() {
 
       <div className="py-[5rem] bg-blue-gray-50">
         <SectionHeading title="Additional Travel Services" />
-        <div className="max-w-[1140px] mx-auto flex flex-col gap-[3rem] px-3">
-          <StyledCardHorizontal
-            title="Car Rental Services"
-            subtitle="Loved by Customers: Our Car Rental Service"
-            img={car_rental}
-            desc="Enjoy the flexibility of exploring your destination with our reliable and affordable car rental service. Whether you're planning a scenic drive or exploring local attractions, we have the perfect vehicle for your journey. Our fares are in accordance with Natta (Nepal Association of Tour and Travels), ensuring transparent pricing and quality service."
-          />
-          <StyledCardHorizontal
-            title="Helicopter Charter Services"
-            subtitle="Preferred by Discerning Travelers: Our Helicopter Charter Service"
-            img={helicopter_charter}
-            desc="Elevate your journey with our premier helicopter charter services, tailored for discerning travelers seeking luxury and efficiency. Whether for scenic aerial tours, seamless airport transfers, or exclusive event transport, indulge in unparalleled comfort and safety aboard our state-of-the-art helicopters. Our experienced pilots ensure smooth flights and breathtaking aerial views, promising an unforgettable travel experience."
-          />
 
-          <StyledCardHorizontal
-            title="Cruise Services"
-            subtitle="Experience Luxury at Sea with Our Cruise Partners"
-            img={norwegian_cruise} // Replace with your cruise image import
-            desc={
-              <>
-                Set sail on an unforgettable journey with our exclusive cruise
-                offerings. We proudly partner with top cruise liners including{" "}
-                <strong>Resorts World Cruises </strong>
-                and <strong> Norwegian Cruise Line</strong>, ensuring you enjoy
-                world-class amenities, exceptional dining, and breathtaking
-                destinations. Whether you're seeking a romantic getaway, family
-                adventure, or luxury escape, our cruise packages cater to every
-                traveler’s dream. Let the ocean be your next destination.
-              </>
-            }
-          />
-        </div>
+        <FullWidthSection
+          title="Car Rental Services"
+          subtitle="Loved by Customers: Our Car Rental Service"
+          img={car_rental}
+          desc={
+            <>
+              Enjoy the flexibility of exploring your destination with our
+              reliable and affordable car rental service. Whether you're
+              planning a scenic drive or exploring local attractions, we have
+              the perfect vehicle for your journey. Our fares comply with Natta
+              (Nepal Association of Tour and Travels) guidelines, ensuring
+              transparent pricing and quality service you can trust.
+            </>
+          }
+        />
+
+        <FullWidthSection
+          title="Helicopter Charter Services"
+          subtitle="Preferred by Discerning Travelers: Our Helicopter Charter Service"
+          img={helicopter_charter}
+          desc={
+            <>
+              Elevate your journey with our premier helicopter charter services,
+              tailored for discerning travelers seeking luxury and efficiency.
+              Whether for scenic aerial tours, seamless airport transfers, or
+              exclusive event transport, indulge in unparalleled comfort and
+              safety aboard our state-of-the-art helicopters. Our experienced
+              pilots guarantee smooth flights and breathtaking aerial views,
+              promising an unforgettable travel experience.
+            </>
+          }
+        />
+        <FullWidthSection
+          title="Cruise Services"
+          subtitle="Experience Luxury at Sea with Our Cruise Partners"
+          img={norwegian_cruise}
+          desc={
+            <>
+              Set sail on an unforgettable journey with our exclusive cruise
+              offerings. We proudly partner with top cruise liners including{" "}
+              <strong>Resorts World Cruises </strong> and{" "}
+              <strong>Norwegian Cruise Line</strong>, ensuring you enjoy
+              world-class amenities, exceptional dining, and breathtaking
+              destinations. Whether you're seeking a romantic getaway, family
+              adventure, or luxury escape, our cruise packages cater to every
+              traveler’s dream. Let the ocean be your next destination.
+            </>
+          }
+          // Optional: pass any Tailwind bg color class here
+        />
       </div>
     </>
   );
