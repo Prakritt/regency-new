@@ -27,6 +27,11 @@ function NavBar() {
       <StyledNavLink to="/tours">
         <NavItem onClose={() => setOpenNav(false)} name={"Tours"} />
       </StyledNavLink>
+
+      <StyledNavLink to="/contacts">
+        <NavItem onClose={() => setOpenNav(false)} name={"Contacts"} />
+      </StyledNavLink>
+
       {/* <StyledNavLink to="/services">
         <NavItem name={"Services"} />
       </StyledNavLink>
