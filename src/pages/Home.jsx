@@ -15,6 +15,7 @@ import { useTour } from "../context/TourProvider";
 import Testimonial from "../components/Testimonial";
 import FullWidthSection from "../components/FullWidthSection";
 import JourneyCTA from "../components/JourneyCTA";
+import CulturalExperienceHero from "../components/CulturalExperienceHero";
 
 function Home() {
   const { data } = useTour();
@@ -109,10 +110,11 @@ function Home() {
           <StyledCard
             img={sri_lanka}
             dest="Sri Lanka"
-            desc="Explore Sri Lanka's diverse landscapes, ancient temples, and rich culture. From tea plantations to stunning beaches, adventure awaits."
+            desc="Explore Sri CLanka's diverse landscapes, ancient temples, and rich culture. From tea plantations to stunning beaches, adventure awaits."
           /> */}
         </div>
       </div>
+      <CulturalExperienceHero className="bg-emerald-950 text-white" />
 
       <div className="py-[5rem] bg-blue-gray-50">
         <SectionHeading title="Additional Travel Services" />
