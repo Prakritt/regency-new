@@ -7,15 +7,17 @@ import { motion } from "framer-motion";
 function AppLayout() {
   return (
     <>
-      <NavBar />
       <motion.main
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
+        <NavBar />
+
         <Outlet />
+
+        <Footer />
       </motion.main>
-      <Footer />
     </>
   );
 }
