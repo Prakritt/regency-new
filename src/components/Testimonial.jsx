@@ -1,39 +1,38 @@
-export default function Testimonial() {
+import React from "react";
+
+export default function AboutUs() {
   return (
-    <section className="flex flex-col md:flex-row items-center bg-gray-50 p-8 md:p-16 rounded-lg max-w-5xl mx-auto gap-8">
-      {/* Left side: Text */}
-      <div className="md:w-2/3">
-        <h2 className="text-2xl md:text-3xl font-serif italic text-gray-800 mb-4">
-          About Regency Nepal
-        </h2>
+    <section className="bg-white py-16 px-6 md:px-20 max-w-6xl mx-auto rounded-lg shadow-lg">
+      <div className="flex flex-col md:flex-row items-center gap-12">
+        {/* Text Content */}
+        <div className="md:w-2/3 text-center md:text-left">
+          <h3 className="text-green-600 uppercase tracking-widest mb-3 font-semibold text-sm md:text-base">
+            About Us
+          </h3>
+          <h2 className="text-4xl font-serif font-semibold mb-6 text-gray-900 leading-tight">
+            Your Trusted Travel Partner
+          </h2>
+          <p className="text-gray-700 leading-relaxed text-lg max-w-xl mx-auto md:mx-0 mb-6">
+            Regency Nepal Travels is dedicated to crafting unforgettable
+            journeys through Nepal and beyond. With personalized service and
+            deep local expertise, we bring culture, nature, and adventure
+            together for travel experiences you’ll cherish forever.
+          </p>
+          <p className="text-gray-600 italic max-w-lg mx-auto md:mx-0">
+            “Our mission is to empower you to explore the world with confidence,
+            comfort, and care. Travel smart, travel with Regency Nepal.”
+          </p>
+        </div>
 
-        <p className="text-gray-700 leading-relaxed mb-6">
-          At Regency Nepal Travels, we have built our reputation on delivering
-          exceptional travel experiences across Nepal and around the globe. Our
-          expertise spans every continent and every style of travel, from
-          cultural journeys to luxury escapes. As we adapt to the ever-changing
-          world of travel, we set ourselves apart with our commitment to
-          convenience, professionalism, and personalized care — always staying
-          true to our motto: Travel smart, travel with us.
-        </p>
-
-        {/* <p className="text-gray-900 font-handwriting text-xl md:text-2xl mb-1">
-          — Anniversary Trip Traveler
-        </p>
-
-        <p className="uppercase text-sm text-gray-500 tracking-wide">
-          Playa Mujeres, Mexico
-        </p> */}
-      </div>
-
-      {/* Right side: Image */}
-      <div className="md:w-1/3">
-        <div className="w-64 h-64 rounded-[50%_50%_50%_0] border-2 border-teal-300 overflow-hidden shadow-lg mx-auto">
-          <img
-            src="/images/tours/yosemite.jpg"
-            alt="Playa Mujeres, Mexico"
-            className="object-cover w-full h-full"
-          />
+        {/* Image */}
+        <div className="md:w-1/3 flex justify-center md:justify-end">
+          <div className="w-64 h-64 rounded-[50%_50%_50%_0] border-4 border-green-500 overflow-hidden shadow-xl transform transition-transform hover:scale-105 duration-300">
+            <img
+              src="/images/tours/yosemite.jpg"
+              alt="Beautiful travel destination"
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
       </div>
     </section>

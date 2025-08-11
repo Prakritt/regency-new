@@ -7,13 +7,14 @@ import SectionHeading from "../components/SectionHeading";
 
 import StyledCard from "../components/StyledCard";
 import StyledCardHorizontal from "../components/StyledCardHorizontal";
-
+import AnimatedSubtitle from "./../UI/AnimatedSubtitle";
 import helicopter_charter from "./../images/helicopter_charter.jpg";
 import car_rental from "./../images/car_rental.jpg";
 import norwegian_cruise from "./../images/norwegian_cruise.jpg";
 import { useTour } from "../context/TourProvider";
 import Testimonial from "../components/Testimonial";
 import FullWidthSection from "../components/FullWidthSection";
+import JourneyCTA from "../components/JourneyCTA";
 
 function Home() {
   const { data } = useTour();
@@ -21,6 +22,7 @@ function Home() {
   return (
     <>
       <Cover />
+      <JourneyCTA />
       <section className="py-20 bg-gray-50">
         <div className="max-w-[1140px] mx-auto flex flex-col md:flex-row md:gap-8 justify-between">
           {[
@@ -58,10 +60,11 @@ function Home() {
       </section>
       <div className="py-20 bg-blue-gray-50">
         <div className="max-w-[1140px] mx-auto px-6">
-          <SectionHeading title="Traveler's Favorites" />
-          <p className="text-center mb-6 md:mb-8 text-gray-700">
+          <SectionHeading title="Traveler's Favorites" animationDelay={0.3} />
+          <AnimatedSubtitle animationDelay={0.9}>
             Here are some of our most sought-after destinations..
-          </p>
+          </AnimatedSubtitle>
+
           <div className="flex flex-col items-center gap-6 md:flex-row md:justify-between">
             {data?.asia?.slice(4, 7).map((item) => (
               <StyledCard
@@ -80,10 +83,10 @@ function Home() {
       <Testimonial />
 
       <div className="py-[5rem] mx-auto ">
-        <SectionHeading title="Europe Tour" />
-        <p className="text-center mb-[1.5rem] md:mb-[2rem]">
+        <SectionHeading title="Europe Tour" animationDelay={0.3} />
+        <AnimatedSubtitle animationDelay={0.9}>
           Popular Destinations In Europe
-        </p>
+        </AnimatedSubtitle>
         <div className="flex flex-col items-center gap-3 md:flex-row md:justify-around md:px-3">
           {data?.europe?.slice(0, 3).map((item) => (
             <StyledCard
