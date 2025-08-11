@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { CarouselDefault } from "../components/CarouselDefault";
 import SectionHeading from "../components/SectionHeading";
 import { FaLocationDot } from "react-icons/fa6";
-import CustomTimeline from "../UI/CustomTimeline";
-import data from "/public/data";
 import { useParams } from "react-router-dom";
 import { useTour } from "../context/TourProvider";
 
@@ -11,57 +9,68 @@ function Cultural() {
   const { data } = useTour();
   const { dest, id } = useParams();
 
+  if (!data || !data[dest] || !data[dest][id]) {
+    return (
+      <p className="text-center py-10 text-red-500">Tour data not available.</p>
+    );
+  }
+
   const current_tour = data[dest][id].content;
-  console.log("dest,id", dest, id);
+
   return (
-    // <div>
-    //   <h1>Tours</h1>
-    // </div>
-    <div>
-      <div className="">
-        <div className="bg-gray-50 py-[3rem]">
-          <SectionHeading title={`${current_tour.title_main}`} />
-          <div className="flex flex-col items-center px-[4rem] md:flex-row md:items-center gap-4 max-w-screen-lg mx-auto md:p-4">
-            <div className="w-[20rem] h-[20rem] md:w-[40rem] md:h-[30rem] ">
-              <CarouselDefault images={current_tour.cover} />
-            </div>
-            <div className="flex-1 min-w-[15rem]">
-              <p className="text-justify tracking-wide  text-base">
-                {current_tour.description}
-              </p>
-            </div>
+    <main>
+      <section aria-label="Tour overview" className="bg-gray-50 py-12">
+        <SectionHeading title={current_tour.title_main} />
+        <div className="flex flex-col items-center px-6 md:flex-row md:items-center gap-8 max-w-7xl mx-auto md:px-12">
+          <div className="w-full max-w-md h-64 md:h-96 md:max-w-4xl overflow-hidden rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
+            <CarouselDefault images={current_tour.cover} />
           </div>
+          <article className="flex-1 min-w-[15rem] prose prose-green max-w-none text-center md:text-left">
+            <p>{current_tour.description}</p>
+          </article>
         </div>
+      </section>
 
-        <div className="max-w-screen-xl mx-auto p-8 md:p-12 lg:p-20 ">
-          <p className="mb-12">{current_tour.summary}</p>
-          {current_tour.destinations.map((place) => (
-            <div key={place.id} className="pb-5">
-              <h3 className="ms-2 font-semibold">{place.name}</h3>
+      <section
+        aria-label="Tour destinations"
+        className="max-w-7xl mx-auto px-6 py-12 md:px-12 md:py-16"
+      >
+        <p className="mb-16 text-center text-lg text-gray-600 max-w-3xl mx-auto">
+          {current_tour.summary}
+        </p>
 
-              <div className="flex flex-col md:flex-row gap-3 ">
-                <div className="min-w-64 h-64 relative">
-                  <img
-                    className="absolute inset-0 w-full h-full object-cover rounded-lg shadow-xl"
-                    src={`/images/tours/${place.image}`}
-                    alt={`${place.name}`}
-                  />
-                </div>
-                <div className=" flex flex-col">
-                  <p className="text-justify">{place.description}</p>
-                  <div className="flex gap-3 items-center">
-                    <FaLocationDot className="text-green-500 text-lg font-extrabold" />
-                    <span>{place.location}</span>
-                  </div>
+        {current_tour.destinations.map((place) => (
+          <article
+            key={place.id}
+            className="pb-12 border-b border-gray-200 last:border-0"
+          >
+            <h3 className="ml-2 mb-4 text-2xl font-semibold text-gray-800">
+              {place.name}
+            </h3>
+
+            <div className="flex flex-col md:flex-row gap-8 items-center">
+              <figure className="min-w-[16rem] h-64 relative rounded-lg shadow-lg overflow-hidden flex-shrink-0">
+                <img
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                  src={`/images/tours/${place.image}`}
+                  alt={place.name}
+                  loading="lazy"
+                />
+              </figure>
+              <div className="flex flex-col justify-between flex-1 prose prose-green max-w-none">
+                <p className="text-justify text-gray-700">
+                  {place.description}
+                </p>
+                <div className="flex gap-3 items-center mt-6 md:mt-auto text-green-600 font-semibold text-lg">
+                  <FaLocationDot />
+                  <span>{place.location}</span>
                 </div>
               </div>
             </div>
-          ))}
-        </div>
-
-        {/* <CustomTimeline itenary={current_tour.itenary} /> */}
-      </div>
-    </div>
+          </article>
+        ))}
+      </section>
+    </main>
   );
 }
 

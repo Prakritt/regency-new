@@ -21,61 +21,59 @@ function Home() {
   return (
     <>
       <Cover />
-      <div className="py-[5rem]">
-        <div className="max-w-[1140px] mx-auto flex flex-col justify-between md:flex-row md:gap-3 ">
-          <div className="flex flex-col items-center gap-2 py-7 md:py-7 ">
-            <GiTeacher className="text-[2rem] text-green-500 mb-4" />
-            <p className="font-semibold">Guidance</p>
-            <p className="text-justify">Advice tailored to your needs</p>
-          </div>
-          <div className="flex flex-col items-center gap-2 py-7">
-            <FaMoneyBillTrendUp className="text-[2rem] text-green-500 mb-4" />
-            <p className="font-semibold">Value</p>
-            <p className="text-justify">Affordability you can trust</p>
-          </div>
-          <div className="flex flex-col items-center gap-2 py-7">
-            <GiPeaceDove className="text-[2rem] text-green-500 mb-4" />
-            <p className="font-semibold">Peace of Mind</p>
-            <p className="text-justify">Reassurance every step of the way</p>
-          </div>
-          <div className="flex flex-col items-center gap-2 py-7">
-            <FaHandsHelping className="text-[2rem] text-green-500 mb-4" />
-            <p className="font-semibold">Service</p>
-            <p className="text-justify">
-              Exceptional care for your satisfaction
-            </p>
-          </div>
-        </div>
-      </div>
-      <div className="py-[5rem] mx-auto bg-blue-gray-50">
-        <SectionHeading title="Traveler's  Favorites " />
-        <p className="text-center mb-[1.5rem] md:mb-[2rem]">
-          Here are some of our most sought-after destinations..
-        </p>
-        <div className="flex flex-col items-center gap-3 md:flex-row md:justify-around md:px-3">
-          {data?.asia?.slice(4, 7).map((item) => (
-            <StyledCard
-              to={`/tours/asia/${item.id}`}
-              img={`/images/tours/${item.content.cover[0]}`}
-              dest={item.content.country}
-              desc={item.content.summary}
-            />
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-[1140px] mx-auto flex flex-col md:flex-row md:gap-8 justify-between">
+          {[
+            {
+              Icon: GiTeacher,
+              title: "Guidance",
+              desc: "Advice tailored to your needs",
+            },
+            {
+              Icon: FaMoneyBillTrendUp,
+              title: "Value",
+              desc: "Affordability you can trust",
+            },
+            {
+              Icon: GiPeaceDove,
+              title: "Peace of Mind",
+              desc: "Reassurance every step of the way",
+            },
+            {
+              Icon: FaHandsHelping,
+              title: "Service",
+              desc: "Exceptional care for your satisfaction",
+            },
+          ].map(({ Icon, title, desc }) => (
+            <article
+              key={title}
+              className="flex flex-col items-center gap-3 p-8 bg-white rounded-lg shadow-md text-center md:w-1/4"
+            >
+              <Icon className="text-4xl text-green-500" aria-hidden="true" />
+              <h3 className="font-semibold text-lg">{title}</h3>
+              <p className="text-gray-700">{desc}</p>
+            </article>
           ))}
-          {/* <StyledCard
-            img={dubai}
-            dest="Dubai"
-            desc="Discover Dubai's stunning skyline, luxury shopping, and cultural landmarks. Enjoy vibrant nightlife and desert adventures."
-          />
-          <StyledCard
-            img={maldives}
-            dest="Maldives"
-            desc="Relax in the Maldives with its crystal-clear waters, white-sand beaches, and luxurious overwater bungalows. Perfect for a serene getaway."
-          />
-          <StyledCard
-            img={sri_lanka}
-            dest="Sri Lanka"
-            desc="Explore Sri Lanka's diverse landscapes, ancient temples, and rich culture. From tea plantations to stunning beaches, adventure awaits."
-          /> */}
+        </div>
+      </section>
+      <div className="py-20 bg-blue-gray-50">
+        <div className="max-w-[1140px] mx-auto px-6">
+          <SectionHeading title="Traveler's Favorites" />
+          <p className="text-center mb-6 md:mb-8 text-gray-700">
+            Here are some of our most sought-after destinations..
+          </p>
+          <div className="flex flex-col items-center gap-6 md:flex-row md:justify-between">
+            {data?.asia?.slice(4, 7).map((item) => (
+              <StyledCard
+                key={item.id} // <-- add key here
+                to={`/tours/asia/${item.id}`}
+                img={`/images/tours/${item.content.cover[0]}`}
+                dest={item.content.country}
+                desc={item.content.summary}
+                className="max-w-sm md:max-w-xs"
+              />
+            ))}
+          </div>
         </div>
       </div>
 

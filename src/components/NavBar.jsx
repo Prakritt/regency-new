@@ -6,38 +6,36 @@ import {
   IconButton,
 } from "@material-tailwind/react";
 import NavItem from "./NavItem";
-import { NavLink } from "react-router-dom";
 import StyledNavLink from "./StyledNavLink";
 
 function NavBar() {
   const [openNav, setOpenNav] = useState(false);
 
   useEffect(() => {
-    window.addEventListener(
-      "resize",
-      () => window.innerWidth >= 960 && setOpenNav(false)
-    );
+    // Define handler outside for removal
+    const handleResize = () => {
+      if (window.innerWidth >= 960) setOpenNav(false);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup listener on unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   const navList = (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       <StyledNavLink to="/home">
-        <NavItem onClose={() => setOpenNav(false)} name={"Home"} />
+        <NavItem onClose={() => setOpenNav(false)} name="Home" />
       </StyledNavLink>
       <StyledNavLink to="/tours">
-        <NavItem onClose={() => setOpenNav(false)} name={"Tours"} />
+        <NavItem onClose={() => setOpenNav(false)} name="Tours" />
       </StyledNavLink>
-
       <StyledNavLink to="/contacts">
-        <NavItem onClose={() => setOpenNav(false)} name={"Contacts"} />
+        <NavItem onClose={() => setOpenNav(false)} name="Contacts" />
       </StyledNavLink>
-
-      {/* <StyledNavLink to="/services">
-        <NavItem name={"Services"} />
-      </StyledNavLink>
-      <StyledNavLink to="/contact">
-        <NavItem name={"Contact"} />
-      </StyledNavLink> */}
     </ul>
   );
 
@@ -45,16 +43,12 @@ function NavBar() {
     <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 bg-white text-green-500">
       <div className="flex items-center justify-between text-blue-gray-900">
         <StyledNavLink to="/home">
-          <div className="flex gap-5 justify-between">
-            <img
-              src="/logo.png"
-              alt="icon"
-              className="h-[2rem] w-[2rem] items-center"
-            />
+          <div className="flex gap-5 items-center">
+            <img src="/logo.png" alt="Regency Nepal Logo" className="h-8 w-8" />
             <Typography
               as="a"
               href="#"
-              className="mr-4 cursor-pointer py-1.5 text-green-500 font-logo uppercase  md:block"
+              className="mr-4 cursor-pointer py-1.5 text-green-500 font-logo uppercase md:block"
             >
               Regency Nepal
             </Typography>
@@ -67,7 +61,8 @@ function NavBar() {
             variant="text"
             className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
             ripple={false}
-            onClick={() => setOpenNav(!openNav)}
+            onClick={() => setOpenNav((prev) => !prev)}
+            aria-label={openNav ? "Close menu" : "Open menu"}
           >
             {openNav ? (
               <svg
