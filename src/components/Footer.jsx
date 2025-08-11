@@ -61,6 +61,7 @@ const LINKS = [
     items: [
       { title: "Home", to: "/home" },
       { title: "Tours", to: "/tours" },
+      { title: "Contacts", to: "/contacts" },
     ],
   },
   // {
