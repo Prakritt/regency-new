@@ -30,7 +30,7 @@ export default function Testimonial() {
       <div className="md:w-1/3">
         <div className="w-64 h-64 rounded-[50%_50%_50%_0] border-2 border-teal-300 overflow-hidden shadow-lg mx-auto">
           <img
-            src="./images/tours/yosemite.jpg"
+            src="/images/tours/yosemite.jpg"
             alt="Playa Mujeres, Mexico"
             className="object-cover w-full h-full"
           />
