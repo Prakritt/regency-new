@@ -40,7 +40,7 @@ function BulletTrainBooking() {
         {/* Image */}
         <div className="md:w-1/3 flex justify-center">
           <img
-            src="images/tours/euro-train.png"
+            src="/images/tours/euro-train.png"
             alt="European High Speed Train"
             className="rounded-lg shadow-lg object-cover w-full max-h-80"
           />

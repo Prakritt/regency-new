@@ -38,7 +38,7 @@ function CulturalExperienceHero() {
 
         <div className="w-full md:w-1/2 flex justify-center">
           <img
-            src="images/tours/hike.jpg"
+            src="/images/tours/hike.jpg"
             alt="Travel Adventure"
             className="w-full h-64 md:h-[450px] object-cover rounded-2xl shadow-lg"
           />
