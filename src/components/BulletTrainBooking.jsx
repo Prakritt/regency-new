@@ -1,4 +1,5 @@
 import React from "react";
+import SectionHeading from "./SectionHeading";
 
 function BulletTrainBooking() {
   return (
@@ -9,9 +10,14 @@ function BulletTrainBooking() {
           <h3 className="text-green-600 uppercase tracking-widest mb-3 font-semibold text-sm md:text-base">
             European High-Speed Rail
           </h3>
-          <h2 className="text-4xl font-semibold mb-6 text-gray-900 leading-tight">
+
+          <SectionHeading
+            title="Explore Europe with High-Speed Rail Travel"
+            animationDelay={0.3}
+          />
+          {/* <h2 className="text-4xl font-semibold mb-6 text-gray-900 leading-tight">
             Explore Europe with High-Speed Rail Travel
-          </h2>
+          </h2> */}
           <p className="text-gray-700 leading-relaxed text-lg max-w-xl mx-auto md:mx-0 mb-6 text-justify">
             Book your high speed train tickets across Europe with ease. Enjoy
             fast direct connections between vibrant cities like Paris Berlin

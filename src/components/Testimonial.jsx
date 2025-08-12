@@ -1,4 +1,5 @@
 import React from "react";
+import SectionHeading from "./SectionHeading";
 
 export default function AboutUs() {
   return (
@@ -9,23 +10,27 @@ export default function AboutUs() {
           <h3 className="text-green-600 uppercase tracking-widest mb-3 font-semibold text-sm md:text-base">
             About Us
           </h3>
-          <h2 className="text-4xl font-semibold mb-6 text-gray-900 leading-tight">
+          <SectionHeading
+            title="Your Trusted Travel Partner Since 2001"
+            animationDelay={0.3}
+          />
+          {/* <h2 className="text-4xl font-semibold mb-6 text-gray-900 leading-tight">
             Your Trusted Travel Partner Since 2001
-          </h2>
-          <p className="text-gray-700 leading-relaxed text-lg max-w-xl mx-auto md:mx-0 mb-6">
+          </h2> */}
+          <p className="text-gray-700 leading-relaxed text-lg max-w-xl mx-auto md:mx-0 mb-6 text-justify">
             Established in <strong>2001</strong>, Regency Nepal Travels has been
             delivering world-class travel services for over two decades. As an{" "}
             <strong>IATA Accredited Travel Agency</strong>, we are committed to
             the highest global standards in the travel industry, ensuring every
             journey is safe, reliable, and unforgettable.
           </p>
-          <p className="text-gray-700 leading-relaxed text-lg max-w-xl mx-auto md:mx-0 mb-6">
+          <p className="text-gray-700 leading-relaxed text-lg max-w-xl mx-auto md:mx-0 mb-6 text-justify">
             From personalized itineraries to group adventures, our expertise
             spans across Nepal and international destinations. We pride
             ourselves on our deep local knowledge, trusted partnerships, and
             long-standing dedication to making travel dreams a reality.
           </p>
-          <p className="text-gray-600 italic max-w-lg mx-auto md:mx-0">
+          <p className="text-gray-600 italic max-w-lg mx-auto md:mx-0 text-justify">
             “For over 20 years, we’ve been helping travelers explore the world
             with confidence, comfort, and care. Travel smart, travel with
             Regency Nepal.”

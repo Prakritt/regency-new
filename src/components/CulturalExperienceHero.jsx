@@ -23,7 +23,7 @@ function CulturalExperienceHero() {
             </span>
           </h1>
 
-          <p className="text-base md:text-lg leading-relaxed text-gray-100 mb-6">
+          <p className="text-base md:text-lg leading-relaxed text-gray-100 mb-6 text-justify">
             We craft journeys that go beyond the ordinary — from serene escapes
             to grand adventures, each trip is tailored to your unique desires.
             With our expertise, you can explore new horizons without the stress
