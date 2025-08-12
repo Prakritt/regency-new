@@ -47,3 +47,5 @@ function CulturalExperienceHero() {
     </section>
   );
 }
+
+export default CulturalExperienceHero;

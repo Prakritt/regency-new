@@ -16,6 +16,7 @@ import Testimonial from "../components/Testimonial";
 import FullWidthSection from "../components/FullWidthSection";
 import JourneyCTA from "../components/JourneyCTA";
 import CulturalExperienceHero from "../components/CulturalExperienceHero";
+import BulletTrainBooking from "../components/BulletTrainBooking";
 
 function Home() {
   const { data } = useTour();
@@ -171,6 +172,7 @@ function Home() {
           // Optional: pass any Tailwind bg color class here
         />
       </div>
+      <BulletTrainBooking />
     </>
   );
 }
