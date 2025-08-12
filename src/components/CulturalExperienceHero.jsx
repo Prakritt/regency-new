@@ -3,19 +3,16 @@ import React from "react";
 function CulturalExperienceHero() {
   return (
     <section
-      className="w-full text-white"
+      className="w-full text-white font-roboto"
       style={{
         backgroundColor: "#064e3b", // deep emerald green
-        fontFamily: "'Lora', serif",
       }}
     >
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:gap-12 px-6 md:px-8 py-8 md:py-16">
-        {/* TEXT CONTENT */}
         <div className="w-full md:w-1/2 mt-6 md:mt-0">
           <h1
             className="text-3xl sm:text-4xl md:text-5xl font-light mb-6"
             style={{
-              fontFamily: "'Cormorant Garamond', serif",
               letterSpacing: "0.3px",
               lineHeight: "1.2",
             }}
@@ -39,7 +36,6 @@ function CulturalExperienceHero() {
           </p>
         </div>
 
-        {/* IMAGE */}
         <div className="w-full md:w-1/2 flex justify-center">
           <img
             src="images/tours/hike.jpg"
@@ -51,5 +47,3 @@ function CulturalExperienceHero() {
     </section>
   );
 }
-
-export default CulturalExperienceHero;

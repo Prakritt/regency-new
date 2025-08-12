@@ -2,14 +2,14 @@ import React from "react";
 
 export default function AboutUs() {
   return (
-    <section className="bg-white py-16 px-6 md:px-20 max-w-6xl mx-auto rounded-lg shadow-lg">
+    <section className="bg-white py-16 px-6 md:px-20 max-w-6xl mx-auto rounded-lg shadow-lg font-roboto">
       <div className="flex flex-col md:flex-row items-center gap-12">
         {/* Text Content */}
         <div className="md:w-2/3 text-center md:text-left">
           <h3 className="text-green-600 uppercase tracking-widest mb-3 font-semibold text-sm md:text-base">
             About Us
           </h3>
-          <h2 className="text-4xl font-serif font-semibold mb-6 text-gray-900 leading-tight">
+          <h2 className="text-4xl font-semibold mb-6 text-gray-900 leading-tight">
             Your Trusted Travel Partner Since 2001
           </h2>
           <p className="text-gray-700 leading-relaxed text-lg max-w-xl mx-auto md:mx-0 mb-6">
@@ -38,7 +38,7 @@ export default function AboutUs() {
             <img
               src="/images/tours/iata-logo.png"
               alt="IATA Accredited Agency Logo"
-              className="w-full h-full object-contain p-4 bg-red"
+              className="w-full h-full object-contain p-4"
             />
           </div>
         </div>

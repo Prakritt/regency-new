@@ -86,7 +86,11 @@ function App() {
     <TourProvider>
       <BrowserRouter>
         <ScrollToTop />
-        <AnimatedRoutes />
+        <div className="font-roboto">
+          {" "}
+          {/* ✅ Global font applied here */}
+          <AnimatedRoutes />
+        </div>
       </BrowserRouter>
     </TourProvider>
   );
