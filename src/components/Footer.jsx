@@ -89,27 +89,27 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex w-full flex-col items-center justify-center border-t border-gray-700 py-4 md:flex-row md:justify-between">
+        {/* Bottom bar */}
+        <div className="mt-12 flex w-full flex-col items-center justify-center border-t border-gray-700 py-4 md:flex-row md:justify-between gap-4">
+          {/* Left side */}
           <Typography
             variant="small"
-            className="mb-4 text-center font-normal md:mb-0 text-gray-400"
+            className="text-center font-normal text-gray-400"
           >
             &copy; {currentYear} Regency Nepal Travels And Tours. All Rights
             Reserved.
           </Typography>
 
-          <div className="flex gap-4 text-gray-400 sm:justify-center">
-            <Typography
-              as="a"
-              href="https://www.facebook.com/RegencyNepal/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-              className="opacity-80 transition-opacity hover:opacity-100 hover:text-white"
-            >
-              {/* Facebook SVG icon */}
-            </Typography>
-            {/* Add other social icons here */}
+          {/* Right side: IATA logo + text */}
+          <div className="flex items-center gap-2">
+            <img
+              src="/images/tours/iata-logo.jpg" // Replace with your IATA logo path
+              alt="IATA Logo"
+              className="h-6 w-auto"
+            />
+            <span className="text-xs text-gray-400">
+              IATA Accredited Agency
+            </span>
           </div>
         </div>
       </div>

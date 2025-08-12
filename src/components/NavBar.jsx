@@ -59,9 +59,9 @@ function NavBar() {
                   Established 2001 |
                 </span>
                 <img
-                  src="/images/tours/iata-logo.jpg"
+                  src="/images/tours/iata-logo.png"
                   alt="IATA Logo"
-                  className="h-4 w-auto"
+                  className="h-5 w-auto"
                 />
               </div>
             </div>
