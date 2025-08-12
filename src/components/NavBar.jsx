@@ -12,17 +12,11 @@ function NavBar() {
   const [openNav, setOpenNav] = useState(false);
 
   useEffect(() => {
-    // Define handler outside for removal
     const handleResize = () => {
       if (window.innerWidth >= 960) setOpenNav(false);
     };
-
     window.addEventListener("resize", handleResize);
-
-    // Cleanup listener on unmount
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const navList = (
@@ -42,18 +36,39 @@ function NavBar() {
   return (
     <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 bg-white text-green-500">
       <div className="flex items-center justify-between text-blue-gray-900">
+        {/* Brand logo + text block */}
         <StyledNavLink to="/home">
-          <div className="flex gap-5 items-center">
-            <img src="/logo.png" alt="Regency Nepal Logo" className="h-8 w-8" />
-            <Typography
-              as="a"
-              href="#"
-              className="mr-4 cursor-pointer py-1.5 text-green-500 font-logo uppercase md:block"
-            >
-              Regency Nepal
-            </Typography>
+          <div className="flex items-center gap-3">
+            {/* Tall main logo */}
+            <img
+              src="/logo.png"
+              alt="Regency Nepal Logo"
+              className="h-14 w-auto"
+            />
+
+            {/* Right side text */}
+            <div className="flex flex-col">
+              <Typography
+                as="span"
+                className="text-green-500 font-logo uppercase leading-tight"
+              >
+                Regency Nepal
+              </Typography>
+              <div className="flex items-center gap-2 mt-0.5">
+                <span className="text-xs text-gray-500 tracking-wide">
+                  Established 2001 |
+                </span>
+                <img
+                  src="/images/tours/iata-logo.jpg"
+                  alt="IATA Logo"
+                  className="h-4 w-auto"
+                />
+              </div>
+            </div>
           </div>
         </StyledNavLink>
+
+        {/* Desktop nav + mobile toggle */}
         <div className="flex items-center gap-4">
           <div className="mr-4 hidden lg:block">{navList}</div>
 
@@ -97,6 +112,8 @@ function NavBar() {
           </IconButton>
         </div>
       </div>
+
+      {/* Mobile nav */}
       <MobileNav open={openNav}>{navList}</MobileNav>
     </Navbar>
   );
