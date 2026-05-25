@@ -21,14 +21,14 @@ function NavBar() {
 
   const navList = (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-      <StyledNavLink to="/home">
-        <NavItem onClose={() => setOpenNav(false)} name="Home" />
+      <StyledNavLink to="/home" onClick={() => setOpenNav(false)}>
+        <NavItem name="Home" />
       </StyledNavLink>
-      <StyledNavLink to="/tours">
-        <NavItem onClose={() => setOpenNav(false)} name="Tours" />
+      <StyledNavLink to="/tours" onClick={() => setOpenNav(false)}>
+        <NavItem name="Tours" />
       </StyledNavLink>
-      <StyledNavLink to="/contacts">
-        <NavItem onClose={() => setOpenNav(false)} name="Contacts" />
+      <StyledNavLink to="/contacts" onClick={() => setOpenNav(false)}>
+        <NavItem name="Contacts" />
       </StyledNavLink>
     </ul>
   );

@@ -6,7 +6,6 @@ import { GiPeaceDove, GiTeacher } from "react-icons/gi";
 import SectionHeading from "../components/SectionHeading";
 
 import StyledCard from "../components/StyledCard";
-import StyledCardHorizontal from "../components/StyledCardHorizontal";
 import AnimatedSubtitle from "./../UI/AnimatedSubtitle";
 import helicopter_charter from "./../images/helicopter_charter.jpg";
 import car_rental from "./../images/car_rental.jpg";
@@ -83,6 +82,29 @@ function Home() {
         </div>
       </div>
 
+      <div className="py-20 bg-white">
+        <div className="max-w-[1140px] mx-auto px-6">
+          <SectionHeading title="Explore Nepal With Us" animationDelay={0.3} />
+          <AnimatedSubtitle animationDelay={0.9}>
+            Discover our internal tours crafted for Nepal's mountains, culture,
+            and sacred destinations.
+          </AnimatedSubtitle>
+
+          <div className="flex flex-col items-center gap-6 md:flex-row md:justify-center">
+            {data?.internal?.map((item) => (
+              <StyledCard
+                key={item.id}
+                to={`/tours/internal/${item.id}`}
+                img={`/images/tours/${item.content.cover[0]}`}
+                dest={item.content.title_main}
+                desc={item.content.summary}
+                className="max-w-sm md:max-w-xs"
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+
       <Testimonial />
 
       <div className="py-[5rem] mx-auto ">
@@ -93,6 +115,7 @@ function Home() {
         <div className="flex flex-col items-center gap-3 md:flex-row md:justify-around md:px-3">
           {data?.europe?.slice(0, 3).map((item) => (
             <StyledCard
+              key={item.id}
               to={`/tours/europe/${item.id}`}
               img={`/images/tours/${item.content.cover[0]}`}
               dest={item.content.country}

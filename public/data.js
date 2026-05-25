@@ -1157,5 +1157,201 @@ const data = {
       },
     },
   ],
+  internal: [
+    {
+      name: "Annapurna Base Camp Tour",
+      id: "0",
+      content: {
+        country: "Nepal",
+        cover: [
+          "annapurna_base_camp.jpg",
+          "machhapuchhre_base_camp.jpg",
+          "abc_trek.jpg",
+        ],
+        title_main: "Annapurna Base Camp Tour",
+        title_sub: "A 7-Day Himalayan Trek to Annapurna Sanctuary",
+        summary:
+          "A balanced 7-day Pokhara-to-Pokhara trek through Chhomrong, Bamboo, Deurali, Machhapuchhre Base Camp, Annapurna Base Camp, and Jhinu Danda.",
+        description:
+          "The Annapurna Base Camp Tour is one of Nepal's most loved Himalayan journeys, blending natural beauty, Gurung villages, forest trails, and close-up mountain views. This 7-day route is designed as a practical Pokhara-to-Pokhara itinerary, giving travelers time to follow the classic trail through Chhomrong, Bamboo, Deurali, Machhapuchhre Base Camp, and Annapurna Base Camp before descending through Jhinu Danda.",
+        itenary: [
+          {
+            day: "Day 1 - Pokhara to Chhomrong",
+            description:
+              "Drive from Pokhara toward the trek starting point near Jhinu Danda or Siwai, then begin the walk through terraced hillsides and village trails to Chhomrong. Overnight at a local teahouse with views toward Annapurna South and Machhapuchhre.",
+            image: "chhomrong.jpg",
+          },
+          {
+            day: "Day 2 - Chhomrong to Bamboo",
+            description:
+              "Descend to Chhomrong Khola, climb through Sinuwa, and continue along forested trails of bamboo, oak, and rhododendron. Overnight at Bamboo, a peaceful stop in the Modi Khola valley.",
+            image: "abc_trek.jpg",
+          },
+          {
+            day: "Day 3 - Bamboo to Deurali",
+            description:
+              "Follow the trail past Dovan and Himalaya, gradually gaining elevation as the valley narrows and the scenery becomes more alpine. Overnight at Deurali, an important stop before entering the higher sanctuary area.",
+            image: "abc_trek.jpg",
+          },
+          {
+            day: "Day 4 - Deurali to Annapurna Base Camp via MBC",
+            description:
+              "Trek through the high valley to Machhapuchhre Base Camp, then continue to Annapurna Base Camp at 4,130 meters. Enjoy the natural amphitheater of Annapurna I, Annapurna South, Hiunchuli, Gangapurna, and Machhapuchhre.",
+            image: "annapurna_base_camp.jpg",
+          },
+          {
+            day: "Day 5 - Annapurna Base Camp to Bamboo",
+            description:
+              "Wake early for sunrise views over the Annapurna Sanctuary, then descend carefully past Machhapuchhre Base Camp, Deurali, Himalaya, and Dovan to reach Bamboo for the night.",
+            image: "machhapuchhre_base_camp.jpg",
+          },
+          {
+            day: "Day 6 - Bamboo to Jhinu Danda",
+            description:
+              "Retrace the trail through Sinuwa and Chhomrong, then descend toward Jhinu Danda. Travelers can relax in the natural hot spring area when conditions and timing allow.",
+            image: "abc_trek.jpg",
+          },
+          {
+            day: "Day 7 - Jhinu Danda to Pokhara",
+            description:
+              "Walk down to the road access point near Matque or Siwai, then drive back to Pokhara. The tour ends with free time beside Phewa Lake or onward travel arrangements.",
+            image: "abc_trek.jpg",
+          },
+        ],
+        destinations: [
+          {
+            id: 1,
+            name: "Pokhara",
+            location: "Gandaki Province",
+            description:
+              "Pokhara is the gateway to the Annapurna region, known for its calm lakeside setting, mountain views, and relaxed travel atmosphere before and after the trek.",
+            image: "barahi.jpg",
+          },
+          {
+            id: 2,
+            name: "Chhomrong",
+            location: "Annapurna Region",
+            description:
+              "Chhomrong is one of the key villages on the Annapurna Base Camp route, offering traditional hospitality, stone stairways, and views toward Annapurna South and Machhapuchhre.",
+            image: "chhomrong.jpg",
+          },
+          {
+            id: 3,
+            name: "Bamboo and Deurali",
+            location: "Modi Khola Valley",
+            description:
+              "Bamboo and Deurali are important overnight stops on the ascent, taking travelers from lush forest trails into a narrower, more dramatic high valley.",
+            image: "abc_trek.jpg",
+          },
+          {
+            id: 4,
+            name: "Machhapuchhre Base Camp",
+            location: "Annapurna Sanctuary",
+            description:
+              "Machhapuchhre Base Camp offers a dramatic approach to Annapurna Base Camp, with close views of the sacred fishtail-shaped Machhapuchhre peak and surrounding ridgelines.",
+            image: "machhapuchhre_base_camp.jpg",
+          },
+          {
+            id: 5,
+            name: "Annapurna Base Camp",
+            location: "Annapurna Sanctuary",
+            description:
+              "Annapurna Base Camp sits in a natural amphitheater of snow-covered peaks, giving travelers one of Nepal's most memorable mountain panoramas.",
+            image: "annapurna_base_camp.jpg",
+          },
+          {
+            id: 6,
+            name: "Jhinu Danda",
+            location: "Annapurna Region",
+            description:
+              "Jhinu Danda is a popular descent stop known for its relaxed village setting and nearby natural hot spring area, making it a rewarding final night on the trek.",
+            image: "abc_trek.jpg",
+          },
+        ],
+      },
+    },
+    {
+      name: "Mustang and Muktinath Tour",
+      id: "1",
+      content: {
+        country: "Nepal",
+        cover: ["mustang_valley.jpg", "muktinath.jpg", "kagbeni.jpg"],
+        title_main: "Mustang and Muktinath Tour",
+        title_sub: "Sacred Pilgrimage and Trans-Himalayan Landscapes",
+        summary:
+          "Explore the windswept valleys of Mustang, traditional Himalayan settlements, and the sacred Muktinath Temple on a memorable journey through Nepal.",
+        description:
+          "The Mustang and Muktinath Tour combines spiritual importance, rugged mountain scenery, and the unique culture of Nepal's trans-Himalayan region. Travelers experience Pokhara, Jomsom, Kagbeni, and Muktinath while enjoying dramatic landscapes shaped by cliffs, river valleys, and views of the Annapurna and Dhaulagiri ranges.",
+        itenary: [
+          {
+            day: "Day 1 - Pokhara",
+            description:
+              "Begin in Pokhara, a peaceful lakeside city and the main starting point for the journey toward Mustang and Muktinath.",
+            image: "barahi.jpg",
+          },
+          {
+            day: "Day 2 - Jomsom and Mustang Valley",
+            description:
+              "Travel toward Jomsom and experience the dry mountain landscapes, river valleys, and traditional settlements of Lower Mustang.",
+            image: "mustang_valley.jpg",
+          },
+          {
+            day: "Day 3 - Kagbeni",
+            description:
+              "Visit Kagbeni, a historic village near the Kali Gandaki river with traditional architecture and a gateway feeling to Upper Mustang.",
+            image: "kagbeni.jpg",
+          },
+          {
+            day: "Day 4 - Muktinath Temple",
+            description:
+              "Visit Muktinath Temple, a sacred pilgrimage site for Hindu and Buddhist devotees, before returning through the Mustang valley.",
+            image: "muktinath.jpg",
+          },
+        ],
+        destinations: [
+          {
+            id: 1,
+            name: "Pokhara",
+            location: "Gandaki Province",
+            description:
+              "Pokhara offers a relaxed start to the journey with lakeside views, mountain scenery, and easy access to the road and flight routes toward Mustang.",
+            image: "barahi.jpg",
+          },
+          {
+            id: 2,
+            name: "Jomsom",
+            location: "Lower Mustang",
+            description:
+              "Jomsom is a major settlement in the Kali Gandaki valley, known for its windy landscapes, mountain views, and role as a gateway to Mustang.",
+            image: "jomsom.jpg",
+          },
+          {
+            id: 3,
+            name: "Kagbeni",
+            location: "Mustang",
+            description:
+              "Kagbeni is a historic village with narrow lanes, traditional homes, and striking views across Mustang's dry and rugged terrain.",
+            image: "kagbeni.jpg",
+          },
+          {
+            id: 4,
+            name: "Muktinath Temple",
+            location: "Mustang",
+            description:
+              "Muktinath Temple is one of Nepal's most sacred pilgrimage destinations, respected by both Hindu and Buddhist devotees and surrounded by high mountain scenery.",
+            image: "muktinath.jpg",
+          },
+          {
+            id: 5,
+            name: "Kali Gandaki Valley",
+            location: "Mustang",
+            description:
+              "The Kali Gandaki Valley shapes much of the Mustang journey, with dramatic river corridors, dry mountain scenery, and views toward the Annapurna and Dhaulagiri ranges.",
+            image: "kali_gandaki.jpg",
+          },
+        ],
+      },
+    },
+  ],
 };
 export default data;
