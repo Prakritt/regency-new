@@ -81,7 +81,7 @@ export default function Footer() {
                   Regency Nepal
                 </span>
                 <span className="text-xs font-medium uppercase tracking-wide text-green-300">
-                  Travels And Tours
+                  Regency Nepal Travels And Tours
                 </span>
               </span>
             </StyledNavLink>
