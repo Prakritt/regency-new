@@ -7,14 +7,13 @@ function Tours() {
   const { data } = useTour();
 
   return (
-    <div className="py-[5rem] mx-auto bg-blue-gray-50">
+    <div className="mx-auto bg-blue-gray-50 py-12 sm:py-16 lg:py-20">
       <SectionHeading title="Internal Tours in Nepal" />
 
-      <div className="flex flex-col items-center sm:flex-col gap-3 md:flex-row md:justify-around md:px-3 md:flex-wrap md:gap-y-8">
+      <div className="mx-auto grid max-w-[1140px] grid-cols-1 gap-6 px-4 sm:grid-cols-2 sm:px-6">
         {data?.internal?.map((tour) => (
           <StyledCard
             to={`/tours/internal/${tour.id}`}
-            className="flex flex-col"
             key={tour.name}
             img={`/images/tours/${tour.content.cover[0]}`}
             dest={tour.content.title_main}
@@ -28,11 +27,10 @@ function Tours() {
         Destinations In Asia
       </p> */}
 
-      <div className="flex flex-col items-center sm:flex-col gap-3 md:flex-row md:justify-around md:px-3 md:flex-wrap md:gap-y-8">
+      <div className="mx-auto grid max-w-[1140px] grid-cols-1 gap-6 px-4 sm:grid-cols-2 sm:px-6 lg:grid-cols-3">
         {data?.asia?.map((tour) => (
           <StyledCard
             to={`/tours/asia/${tour.id}`}
-            className="flex flex-col"
             key={tour.name}
             img={`/images/tours/${tour.content.cover[0]}`}
             dest={tour.content.title_main}
@@ -44,11 +42,10 @@ function Tours() {
       <SectionHeading title="Destinations in Europe" className="pt-[5rem]" />
       {/* <p className="text-center mb-[1.5rem] md:mb-[2rem]"></p> */}
 
-      <div className="flex flex-col items-center sm:flex-col gap-3 md:flex-row md:justify-around md:px-3 md:flex-wrap md:gap-y-8">
+      <div className="mx-auto grid max-w-[1140px] grid-cols-1 gap-6 px-4 sm:grid-cols-2 sm:px-6 lg:grid-cols-3">
         {data?.europe?.map((tour) => (
           <StyledCard
             to={`/tours/europe/${tour.id}`}
-            className="flex flex-col"
             key={tour.name}
             img={`/images/tours/${tour.content.cover[0]}`}
             dest={tour.content.title_main}

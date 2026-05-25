@@ -1,91 +1,75 @@
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Typography,
-  Button,
-} from "@material-tailwind/react";
+import { ArrowRightIcon, MapPinIcon } from "@heroicons/react/24/outline";
+import { Card, Typography } from "@material-tailwind/react";
 import StyledNavLink from "./StyledNavLink";
 
-function truncateText(
-  text,
-  maxLength,
-  minLengthForNewLines = 80,
-  extraLines = 2
-) {
-  if (text.length > maxLength) {
-    return text.slice(0, maxLength) + "...";
-  } else if (text.length < minLengthForNewLines) {
-    // Add extra new lines to ensure consistent height for short texts
-    const newLines = "\n".repeat(extraLines);
-    return text + newLines;
-  } else {
-    return text;
-  }
+function getShortText(text = "", maxLength = 140) {
+  if (text.length <= maxLength) return text;
+  return `${text.slice(0, maxLength).trim()}...`;
 }
 
-function StyledCard({ img, dest, desc, to = "" }) {
-  return (
+function getEyebrow(dest = "") {
+  if (!dest) return "Featured Tour";
+  if (dest === "Nepal") return "Internal Tour";
+  if (dest.length <= 16) return dest;
+  return "Curated Tour";
+}
+
+function StyledCard({ img, dest, desc, to = "", className = "" }) {
+  const card = (
     <Card
-      className="mt-6 w-full max-w-sm md:w-96 transition-transform duration-300
-                 hover:shadow-lg hover:scale-[1.05] focus-within:scale-[1.05] focus-within:shadow-lg
-                 outline-none flex flex-col"
-      tabIndex={0}
+      className={`group h-full w-full overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm
+        transition duration-300 hover:-translate-y-1 hover:border-green-200 hover:shadow-xl ${className}`}
+      tabIndex={to ? undefined : 0}
       role="group"
     >
-      <CardHeader
-        color="blue-gray"
-        className="relative h-56 overflow-hidden rounded-t-lg"
-      >
+      <div className="relative aspect-[4/3] min-h-[13rem] overflow-hidden bg-gray-100 sm:aspect-[16/11]">
         <img
           src={img}
-          alt={dest ? `${dest} image` : "card image"}
-          className="object-cover w-full h-full transition-transform duration-500
-                     group-hover:scale-105 group-focus-within:scale-105"
+          alt={dest ? `${dest} tour` : "Travel tour"}
+          className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
         />
-      </CardHeader>
+        <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/55 to-transparent" />
+        <span className="absolute left-4 top-4 inline-flex max-w-[calc(100%-2rem)] items-center gap-1 rounded-md bg-white/95 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-green-700 shadow-sm">
+          <MapPinIcon className="h-4 w-4 shrink-0" aria-hidden="true" />
+          <span className="truncate">{getEyebrow(dest)}</span>
+        </span>
+      </div>
 
-      <CardBody className="flex-1 flex flex-col">
+      <div className="flex min-h-[15rem] flex-1 flex-col p-5 sm:p-6">
         <Typography
+          as="h3"
           variant="h5"
           color="blue-gray"
-          className="mb-2 truncate"
+          className="mb-3 line-clamp-2 text-xl font-bold leading-snug"
           title={dest}
         >
           {dest}
         </Typography>
 
-        {/* Add padding bottom here to avoid overlap with button */}
-        <Typography className="text-justify pb-4">
-          {truncateText(desc, 150)} {/* 150 chars, adjust as needed */}
+        <Typography className="line-clamp-3 flex-1 text-sm leading-6 text-gray-600 sm:text-base">
+          {getShortText(desc)}
         </Typography>
-      </CardBody>
 
-      <CardFooter className="pt-2">
-        {to ? (
-          <StyledNavLink to={to}>
-            <Button
-              fullWidth
-              size="md"
-              ripple
-              className="bg-green-500 hover:bg-green-600 text-white"
-            >
-              Read More
-            </Button>
-          </StyledNavLink>
-        ) : (
-          <Button
-            fullWidth
-            size="md"
-            ripple
-            className="bg-green-500 hover:bg-green-600 text-white"
-          >
-            Read More
-          </Button>
-        )}
-      </CardFooter>
+        <div className="mt-6 inline-flex items-center justify-between border-t border-gray-100 pt-4 text-sm font-semibold text-green-700">
+          <span>View tour</span>
+          <span className="grid h-9 w-9 place-items-center rounded-md bg-green-50 text-green-700 transition group-hover:bg-green-600 group-hover:text-white">
+            <ArrowRightIcon className="h-4 w-4" aria-hidden="true" />
+          </span>
+        </div>
+      </div>
     </Card>
+  );
+
+  if (!to) return card;
+
+  return (
+    <StyledNavLink
+      to={to}
+      className="block h-full w-full outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2"
+      aria-label={`View ${dest}`}
+    >
+      {card}
+    </StyledNavLink>
   );
 }
 

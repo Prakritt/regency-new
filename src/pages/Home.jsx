@@ -24,8 +24,8 @@ function Home() {
     <>
       <Cover />
       <JourneyCTA />
-      <section className="py-20 bg-transparent md:bg-gray-50">
-        <div className="max-w-[1140px] mx-auto flex flex-col md:flex-row md:gap-8 justify-between">
+      <section className="bg-white py-14 sm:py-16 md:bg-gray-50 md:py-20">
+        <div className="mx-auto grid max-w-[1140px] grid-cols-1 gap-4 px-4 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:gap-6">
           {[
             {
               Icon: GiTeacher,
@@ -50,7 +50,7 @@ function Home() {
           ].map(({ Icon, title, desc }) => (
             <article
               key={title}
-              className="flex flex-col items-center gap-3 p-8 bg-white rounded-lg shadow-none md:shadow-md text-center md:w-1/4"
+              className="flex min-h-[11rem] flex-col items-center justify-center gap-3 rounded-lg border border-gray-100 bg-white p-6 text-center shadow-sm"
             >
               <Icon className="text-4xl text-green-500" aria-hidden="true" />
               <h3 className="font-semibold text-lg">{title}</h3>
@@ -60,37 +60,36 @@ function Home() {
         </div>
       </section>
 
-      <div className="py-20 bg-blue-gray-50">
-        <div className="max-w-[1140px] mx-auto px-6">
+      <div className="bg-blue-gray-50 py-14 sm:py-20">
+        <div className="mx-auto max-w-[1140px] px-4 sm:px-6">
           <SectionHeading title="Traveler's Favorites" animationDelay={0.3} />
           <AnimatedSubtitle animationDelay={0.9}>
             Here are some of our most sought-after destinations..
           </AnimatedSubtitle>
 
-          <div className="flex flex-col items-center gap-6 md:flex-row md:justify-between">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {data?.asia?.slice(4, 7).map((item) => (
               <StyledCard
-                key={item.id} // <-- add key here
+                key={item.id}
                 to={`/tours/asia/${item.id}`}
                 img={`/images/tours/${item.content.cover[0]}`}
                 dest={item.content.country}
                 desc={item.content.summary}
-                className="max-w-sm md:max-w-xs"
               />
             ))}
           </div>
         </div>
       </div>
 
-      <div className="py-20 bg-white">
-        <div className="max-w-[1140px] mx-auto px-6">
+      <div className="bg-white py-14 sm:py-20">
+        <div className="mx-auto max-w-[1140px] px-4 sm:px-6">
           <SectionHeading title="Explore Nepal With Us" animationDelay={0.3} />
           <AnimatedSubtitle animationDelay={0.9}>
             Discover our internal tours crafted for Nepal's mountains, culture,
             and sacred destinations.
           </AnimatedSubtitle>
 
-          <div className="flex flex-col items-center gap-6 md:flex-row md:justify-center">
+          <div className="mx-auto grid max-w-4xl grid-cols-1 gap-6 sm:grid-cols-2">
             {data?.internal?.map((item) => (
               <StyledCard
                 key={item.id}
@@ -98,7 +97,6 @@ function Home() {
                 img={`/images/tours/${item.content.cover[0]}`}
                 dest={item.content.title_main}
                 desc={item.content.summary}
-                className="max-w-sm md:max-w-xs"
               />
             ))}
           </div>
@@ -107,12 +105,12 @@ function Home() {
 
       <Testimonial />
 
-      <div className="py-[5rem] mx-auto ">
+      <div className="mx-auto py-14 sm:py-20">
         <SectionHeading title="Europe Tour" animationDelay={0.3} />
         <AnimatedSubtitle animationDelay={0.9}>
           Popular Destinations In Europe
         </AnimatedSubtitle>
-        <div className="flex flex-col items-center gap-3 md:flex-row md:justify-around md:px-3">
+        <div className="mx-auto grid max-w-[1140px] grid-cols-1 gap-6 px-4 sm:grid-cols-2 sm:px-6 lg:grid-cols-3">
           {data?.europe?.slice(0, 3).map((item) => (
             <StyledCard
               key={item.id}
