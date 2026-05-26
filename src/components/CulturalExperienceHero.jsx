@@ -3,44 +3,36 @@ import React from "react";
 function CulturalExperienceHero() {
   return (
     <section
-      className="w-full text-white font-roboto"
+      className="w-full font-roboto text-white"
       style={{
-        backgroundColor: "#064e3b", // deep emerald green
+        backgroundColor: "#064e3b",
       }}
     >
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:gap-12 px-6 md:px-8 py-8 md:py-16">
-        <div className="w-full md:w-1/2 mt-6 md:mt-0">
-          <h1
-            className="text-3xl sm:text-4xl md:text-5xl font-light mb-6"
-            style={{
-              letterSpacing: "0.3px",
-              lineHeight: "1.2",
-            }}
-          >
+      <div className="mx-auto flex max-w-7xl flex-col items-center gap-10 px-4 py-14 sm:px-6 sm:py-20 md:flex-row md:px-8">
+        <div className="w-full md:w-1/2">
+          <h2 className="mb-6 text-2xl font-bold leading-tight sm:text-3xl lg:text-4xl">
             Experience the World with{" "}
-            <span className="text-green-300 font-semibold">
-              Regency Nepal Travels
-            </span>
-          </h1>
+            <span className="text-green-300">Regency Nepal Travels</span>
+          </h2>
 
-          <p className="text-base md:text-lg leading-relaxed text-gray-100 mb-6 text-justify">
-            We craft journeys that go beyond the ordinary — from serene escapes
+          <p className="mb-5 text-base leading-7 text-emerald-50">
+            We craft journeys that go beyond the ordinary, from serene escapes
             to grand adventures, each trip is tailored to your unique desires.
             With our expertise, you can explore new horizons without the stress
             of planning.
           </p>
 
-          <p className="text-base md:text-lg leading-relaxed text-gray-100 mb-8 md:mb-0">
+          <p className="text-base leading-7 text-emerald-100">
             Let Regency Nepal Travels handle the details, so you can focus on
             creating memories that last a lifetime.
           </p>
         </div>
 
-        <div className="w-full md:w-1/2 flex justify-center">
+        <div className="flex w-full justify-center md:w-1/2">
           <img
             src="/images/tours/hike.jpg"
             alt="Travel Adventure"
-            className="w-full h-64 md:h-[450px] object-cover rounded-2xl shadow-lg"
+            className="h-64 w-full rounded-2xl object-cover shadow-lg md:h-[450px]"
           />
         </div>
       </div>

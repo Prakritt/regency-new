@@ -24,7 +24,7 @@ function Home() {
     <>
       <Cover />
       <JourneyCTA />
-      <section className="bg-white py-14 sm:py-16 md:bg-gray-50 md:py-20">
+      <section className="border-y border-zinc-800 bg-zinc-900 py-14 sm:py-16 md:py-20">
         <div className="mx-auto grid max-w-[1140px] grid-cols-1 gap-4 px-4 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:gap-6">
           {[
             {
@@ -50,17 +50,19 @@ function Home() {
           ].map(({ Icon, title, desc }) => (
             <article
               key={title}
-              className="flex min-h-[11rem] flex-col items-center justify-center gap-3 rounded-lg border border-gray-100 bg-white p-6 text-center shadow-sm"
+              className="flex min-h-[11rem] flex-col items-center justify-center gap-3 rounded-lg border border-white/10 bg-white p-6 text-center shadow-sm"
             >
               <Icon className="text-4xl text-green-500" aria-hidden="true" />
-              <h3 className="font-semibold text-lg">{title}</h3>
-              <p className="text-gray-700">{desc}</p>
+              <h3 className="text-base font-semibold text-gray-950">
+                {title}
+              </h3>
+              <p className="text-sm leading-6 text-gray-700">{desc}</p>
             </article>
           ))}
         </div>
       </section>
 
-      <div className="bg-blue-gray-50 py-14 sm:py-20">
+      <section className="bg-white py-14 sm:py-20">
         <div className="mx-auto max-w-[1140px] px-4 sm:px-6">
           <SectionHeading title="Traveler's Favorites" animationDelay={0.3} />
           <AnimatedSubtitle animationDelay={0.9}>
@@ -79,12 +81,16 @@ function Home() {
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="bg-white py-14 sm:py-20">
+      <section className="border-y border-emerald-900 bg-emerald-900 py-14 sm:py-20">
         <div className="mx-auto max-w-[1140px] px-4 sm:px-6">
-          <SectionHeading title="Explore Nepal With Us" animationDelay={0.3} />
-          <AnimatedSubtitle animationDelay={0.9}>
+          <SectionHeading
+            title="Explore Nepal With Us"
+            className="text-white"
+            animationDelay={0.3}
+          />
+          <AnimatedSubtitle animationDelay={0.9} className="text-emerald-50">
             Discover our internal tours crafted for Nepal's mountains, culture,
             and sacred destinations.
           </AnimatedSubtitle>
@@ -101,11 +107,11 @@ function Home() {
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
       <Testimonial />
 
-      <div className="mx-auto py-14 sm:py-20">
+      <section className="mx-auto bg-white py-14 sm:py-20">
         <SectionHeading title="Europe Tour" animationDelay={0.3} />
         <AnimatedSubtitle animationDelay={0.9}>
           Popular Destinations In Europe
@@ -136,11 +142,17 @@ function Home() {
             desc="Explore Sri CLanka's diverse landscapes, ancient temples, and rich culture. From tea plantations to stunning beaches, adventure awaits."
           /> */}
         </div>
-      </div>
+      </section>
       <CulturalExperienceHero className="bg-emerald-950 text-white" />
 
-      <div className="py-[5rem] bg-blue-gray-50">
-        <SectionHeading title="Additional Travel Services" />
+      <section className="border-y border-zinc-200 bg-zinc-100 py-14 sm:py-20">
+        <div className="mx-auto max-w-[1140px] px-4 sm:px-6">
+          <SectionHeading title="Additional Travel Services" />
+          <AnimatedSubtitle animationDelay={0.4}>
+            Reliable support for comfortable ground transport, premium charter
+            options, and cruise planning.
+          </AnimatedSubtitle>
+        </div>
 
         <FullWidthSection
           title="Car Rental Services"
@@ -162,6 +174,7 @@ function Home() {
           title="Helicopter Charter Services"
           subtitle="Preferred by Discerning Travelers: Our Helicopter Charter Service"
           img={helicopter_charter}
+          reverse
           desc={
             <>
               Elevate your journey with our premier helicopter charter services,
@@ -190,9 +203,8 @@ function Home() {
               traveler’s dream. Let the ocean be your next destination.
             </>
           }
-          // Optional: pass any Tailwind bg color class here
         />
-      </div>
+      </section>
       <BulletTrainBooking />
     </>
   );

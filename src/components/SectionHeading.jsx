@@ -8,9 +8,7 @@ function SectionHeading({ title, className = "", animationDelay = 0 }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay: animationDelay }}
-      className={`text-center font-extrabold mb-6
-        text-xl sm:text-2xl md:text-3xl lg:text-4xl 
-        leading-tight tracking-wide ${className}`}
+      className={`mb-6 text-center text-2xl font-bold leading-tight text-gray-950 sm:text-3xl lg:text-4xl ${className}`}
     >
       {title}
     </motion.h2>
