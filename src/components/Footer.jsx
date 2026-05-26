@@ -50,7 +50,7 @@ function FooterLinkList({ title, items }) {
           <li key={link.title}>
             <StyledNavLink
               to={link.to}
-              className="text-sm font-medium text-zinc-200 transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-900"
+              className="text-sm font-medium text-zinc-200 transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-800"
             >
               {link.title}
             </StyledNavLink>
@@ -63,13 +63,13 @@ function FooterLinkList({ title, items }) {
 
 export default function Footer() {
   return (
-    <footer className="border-t border-zinc-700 bg-zinc-900 text-zinc-200">
+    <footer className="border-t border-zinc-700 bg-zinc-800 text-zinc-200">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <div className="grid gap-10 lg:grid-cols-[1.35fr_1fr_1fr_1.2fr]">
           <section className="max-w-md">
             <StyledNavLink
               to="/home"
-              className="inline-flex items-center gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-900"
+              className="inline-flex items-center gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-800"
             >
               <img
                 src="/logo.png"
@@ -120,7 +120,7 @@ export default function Footer() {
                   {href ? (
                     <a
                       href={href}
-                      className="break-words font-medium text-zinc-200 transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-900"
+                      className="break-words font-medium text-zinc-200 transition hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-800"
                     >
                       {label}
                     </a>
@@ -133,7 +133,7 @@ export default function Footer() {
 
             <a
               href="tel:+9779840069409"
-              className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-md bg-green-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-green-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-300 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-900 sm:w-auto"
+              className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-md bg-green-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-green-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-300 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-800 sm:w-auto"
             >
               <PhoneIcon className="h-4 w-4" aria-hidden="true" />
               Call 24-hour service

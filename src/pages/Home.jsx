@@ -62,7 +62,7 @@ function Home() {
         </div>
       </section>
 
-      <section className="bg-white py-14 sm:py-20">
+      <section className="bg-zinc-50 py-14 sm:py-20">
         <div className="mx-auto max-w-[1140px] px-4 sm:px-6">
           <SectionHeading title="Traveler's Favorites" animationDelay={0.3} />
           <AnimatedSubtitle animationDelay={0.9}>
@@ -83,14 +83,14 @@ function Home() {
         </div>
       </section>
 
-      <section className="border-y border-emerald-900 bg-emerald-900 py-14 sm:py-20">
+      <section className="border-y border-emerald-900 bg-emerald-950 py-14 sm:py-20">
         <div className="mx-auto max-w-[1140px] px-4 sm:px-6">
           <SectionHeading
             title="Explore Nepal With Us"
-            className="text-white"
+            tone="dark"
             animationDelay={0.3}
           />
-          <AnimatedSubtitle animationDelay={0.9} className="text-emerald-50">
+          <AnimatedSubtitle animationDelay={0.9} tone="dark">
             Discover our internal tours crafted for Nepal's mountains, culture,
             and sacred destinations.
           </AnimatedSubtitle>

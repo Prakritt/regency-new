@@ -11,10 +11,10 @@ const railBenefits = [
 
 function BulletTrainBooking() {
   return (
-    <section className="border-t border-emerald-100 bg-emerald-50 px-4 py-14 font-roboto sm:px-6 sm:py-20">
+    <section className="border-t border-zinc-200 bg-zinc-50 px-4 py-14 font-roboto sm:px-6 sm:py-20">
       <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
         <div>
-          <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-green-700">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-zinc-600">
             European High-Speed Rail
           </p>
 
@@ -38,7 +38,7 @@ function BulletTrainBooking() {
                 className="flex gap-3 rounded-lg border border-zinc-200 bg-white p-4 text-sm font-medium leading-6 text-gray-700"
               >
                 <CheckCircleIcon
-                  className="mt-0.5 h-5 w-5 shrink-0 text-green-600"
+                  className="mt-0.5 h-5 w-5 shrink-0 text-zinc-700"
                   aria-hidden="true"
                 />
                 {benefit}
