@@ -517,7 +517,7 @@ const data = {
             day: "Day 2 - Hanoi City Tour",
             description:
               "Explore Ho Chi Minh Mausoleum, One Pillar Pagoda, Temple of Literature, and the Ethnology Museum. Evening street food tour. Overnight in Hanoi.",
-            image: "hanoi_city.jpg",
+            image: "vietnam_hanoi.jpg",
           },
           {
             day: "Day 3 - Ninh Binh Excursion",
@@ -634,7 +634,7 @@ const data = {
             day: "Day 2 - Kyoto Exploration",
             description:
               "Spend a full day visiting Arashiyama Bamboo Grove, Tenryu-ji Temple, and Kiyomizu-dera Temple. Enjoy a traditional tea ceremony. Overnight in Kyoto.",
-            image: "kyoto_arashiyama.jpg",
+            image: "kyoto.jpg",
           },
           {
             day: "Day 3 - Nara Day Trip",
@@ -652,7 +652,7 @@ const data = {
             day: "Day 5 - Hakone & Mount Fuji",
             description:
               "Take the bullet train to Hakone. Cruise on Lake Ashi with Mount Fuji views, ride the Hakone Ropeway, and relax in an onsen. Overnight in Hakone.",
-            image: "hakone.jpg",
+            image: "mount_fuji.jpg",
           },
           {
             day: "Day 6 - Tokyo Arrival",
@@ -664,13 +664,13 @@ const data = {
             day: "Day 7 - Tokyo & Kamakura",
             description:
               "Take a day trip to Kamakura to see the Great Buddha and Hase-dera Temple. Return to Tokyo for nightlife in Shibuya or Shinjuku.",
-            image: "kamakura.jpg",
+            image: "Kamakura.jpg",
           },
           {
             day: "Day 8 - Tokyo Highlights",
             description:
               "Visit Meiji Shrine, Harajuku’s Takeshita Street, and Shibuya Crossing. Afternoon free for shopping or museum visits. Overnight in Tokyo.",
-            image: "tokyo_shibuya.jpg",
+            image: "tokyo.jpg",
           },
           {
             day: "Day 9 - Nikko Day Trip",
@@ -682,7 +682,7 @@ const data = {
             day: "Day 10 - Departure",
             description:
               "Enjoy last-minute shopping or sightseeing in Tokyo before departing from Narita or Haneda Airport.",
-            image: "tokyo_departure.jpg",
+            image: "japan_tokyo.jpg",
           },
         ],
       },
@@ -781,7 +781,7 @@ const data = {
             day: "Day 4 - Terracotta Warriors",
             description:
               "Visit the Terracotta Army Museum and Big Wild Goose Pagoda. Enjoy a dumpling banquet in the evening. Overnight in Xi’an.",
-            image: "terracotta.jpg",
+            image: "china_xian.jpg",
           },
           {
             day: "Day 5 - Xi’an to Chengdu",
@@ -793,7 +793,7 @@ const data = {
             day: "Day 6 - Chengdu Pandas & Guilin",
             description:
               "Morning visit to the Chengdu Research Base of Giant Panda Breeding. Afternoon flight to Guilin. Overnight in Guilin.",
-            image: "pandas.jpg",
+            image: "chengdu.jpg",
           },
           {
             day: "Day 7 - Li River Cruise to Yangshuo",
@@ -817,7 +817,7 @@ const data = {
             day: "Day 10 - Departure",
             description:
               "Enjoy free time in Shanghai before departing from Pudong or Hongqiao Airport.",
-            image: "shanghai_departure.jpg",
+            image: "shanghai.jpg",
           },
         ],
       },
