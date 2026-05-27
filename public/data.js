@@ -1157,6 +1157,1019 @@ const data = {
       },
     },
   ],
+  nepal_tours: [
+    {
+      id: 1,
+      name: "Everest Base Camp Trek",
+      region: "Khumbu / Solukhumbu",
+      days: 14,
+      difficulty: "strenuous",
+      max_altitude: "5,545m",
+      best_season: "Mar-May, Sep-Nov",
+      route: "Kathmandu to Lukla to Kathmandu",
+      itinerary: [
+        {
+          day: 1,
+          place: "Kathmandu",
+          description: "Arrive, permits briefing, gear check. Stay in Thamel.",
+          altitude: "1,400m",
+          highlight: false,
+        },
+        {
+          day: 2,
+          place: "Fly to Lukla to Phakding",
+          description:
+            "Scenic 35-minute mountain flight, then trek 3-4 hours through Sherpa villages.",
+          altitude: "2,610m",
+          highlight: false,
+        },
+        {
+          day: 3,
+          place: "Phakding to Namche Bazaar",
+          description:
+            "Cross suspension bridges over the Dudh Koshi River. First views of Everest.",
+          altitude: "3,440m",
+          highlight: true,
+        },
+        {
+          day: 4,
+          place: "Namche Bazaar acclimatisation",
+          description:
+            "Rest day. Hike to Everest View Hotel for panoramic views of Everest, Lhotse, and Ama Dablam.",
+          altitude: "3,440m",
+          highlight: false,
+        },
+        {
+          day: 5,
+          place: "Namche to Tengboche",
+          description:
+            "Trek through rhododendron forests to the famous Tengboche Monastery.",
+          altitude: "3,860m",
+          highlight: false,
+        },
+        {
+          day: 6,
+          place: "Tengboche to Dingboche",
+          description:
+            "Enter the upper Khumbu. Views of Ama Dablam dominate the trail.",
+          altitude: "4,410m",
+          highlight: false,
+        },
+        {
+          day: 7,
+          place: "Dingboche acclimatisation",
+          description:
+            "Hike to Nagarjun Hill for views of Island Peak, Lhotse, and Makalu.",
+          altitude: "4,410m",
+          highlight: false,
+        },
+        {
+          day: 8,
+          place: "Dingboche to Lobuche",
+          description:
+            "Trek along the lateral moraine of Khumbu Glacier past memorial chortens.",
+          altitude: "4,940m",
+          highlight: false,
+        },
+        {
+          day: 9,
+          place: "Lobuche to Gorak Shep to EBC",
+          description:
+            "Reach Everest Base Camp at 5,364m and see the Khumbu Icefall up close.",
+          altitude: "5,364m",
+          highlight: true,
+        },
+        {
+          day: 10,
+          place: "Gorak Shep to Kala Patthar to Lobuche",
+          description:
+            "Pre-dawn climb to Kala Patthar at 5,545m for iconic Everest sunrise views.",
+          altitude: "5,545m",
+          highlight: true,
+        },
+        {
+          day: 11,
+          place: "Lobuche to Namche Bazaar",
+          description: "Long descent through Pheriche and Pangboche.",
+          altitude: "3,440m",
+          highlight: false,
+        },
+        {
+          day: 12,
+          place: "Namche to Lukla",
+          description:
+            "Final full trekking day, followed by a celebratory dinner with the trekking team.",
+          altitude: "2,860m",
+          highlight: false,
+        },
+        {
+          day: 13,
+          place: "Fly Lukla to Kathmandu",
+          description:
+            "Return flight. Rest, explore Thamel, and enjoy souvenir shopping.",
+          altitude: "1,400m",
+          highlight: false,
+        },
+        {
+          day: 14,
+          place: "Kathmandu departure",
+          description: "Transfer to airport. Tour ends.",
+          altitude: "1,400m",
+          highlight: false,
+        },
+      ],
+      tips: [
+        "Trekking permit and TIMS card required",
+        "Carry Diamox for altitude after medical guidance",
+        "Book Lukla flights early",
+        "Teahouse accommodation throughout",
+      ],
+    },
+    {
+      id: 2,
+      name: "Annapurna Base Camp Trek",
+      region: "Annapurna Sanctuary",
+      days: 12,
+      difficulty: "moderate",
+      max_altitude: "4,130m",
+      best_season: "Mar-May, Sep-Nov",
+      route: "Pokhara to Nayapul to Pokhara",
+      itinerary: [
+        {
+          day: 1,
+          place: "Kathmandu to Pokhara",
+          description:
+            "Fly or drive to Pokhara. Spend the evening around Phewa Lake.",
+          altitude: "820m",
+          highlight: false,
+        },
+        {
+          day: 2,
+          place: "Pokhara to Nayapul to Tikhedhunga",
+          description:
+            "Drive to Nayapul and begin the trek on stone-paved trails through Gurung villages.",
+          altitude: "1,540m",
+          highlight: false,
+        },
+        {
+          day: 3,
+          place: "Tikhedhunga to Ghorepani",
+          description:
+            "Climb through rhododendron forests, especially beautiful during the March bloom.",
+          altitude: "2,860m",
+          highlight: false,
+        },
+        {
+          day: 4,
+          place: "Poon Hill sunrise to Tadapani",
+          description:
+            "Pre-dawn walk to Poon Hill for panoramic Dhaulagiri and Annapurna views.",
+          altitude: "2,630m",
+          highlight: true,
+        },
+        {
+          day: 5,
+          place: "Tadapani to Chhomrong",
+          description:
+            "Trek through bamboo and oak forests with first views of Annapurna South.",
+          altitude: "2,170m",
+          highlight: false,
+        },
+        {
+          day: 6,
+          place: "Chhomrong to Dovan",
+          description:
+            "Enter the Annapurna Sanctuary and cross the Modi Khola river.",
+          altitude: "2,600m",
+          highlight: false,
+        },
+        {
+          day: 7,
+          place: "Dovan to Machhapuchhre Base Camp",
+          description:
+            "Trek through the bamboo zone as views of Fishtail, or Machhapuchhre, emerge.",
+          altitude: "3,700m",
+          highlight: false,
+        },
+        {
+          day: 8,
+          place: "MBC to Annapurna Base Camp",
+          description:
+            "Arrive at ABC surrounded by Annapurna I, II, III, IV, Annapurna South, and Machhapuchhre.",
+          altitude: "4,130m",
+          highlight: true,
+        },
+        {
+          day: 9,
+          place: "ABC to Bamboo",
+          description: "Sunrise at base camp, then begin the descent.",
+          altitude: "2,310m",
+          highlight: false,
+        },
+        {
+          day: 10,
+          place: "Bamboo to Jhinu Danda",
+          description:
+            "Relax at the natural hot springs at Jhinu, a welcome reward for tired legs.",
+          altitude: "1,780m",
+          highlight: true,
+        },
+        {
+          day: 11,
+          place: "Jhinu to Nayapul to Pokhara",
+          description: "Final trek to Nayapul, then drive back to Pokhara.",
+          altitude: "820m",
+          highlight: false,
+        },
+        {
+          day: 12,
+          place: "Pokhara to Kathmandu",
+          description: "Fly back to Kathmandu, depart, or extend the journey.",
+          altitude: "1,400m",
+          highlight: false,
+        },
+      ],
+      tips: [
+        "ACAP permit required",
+        "Best rhododendrons in March-April",
+        "Hot springs at Jhinu Danda",
+        "Guides recommended in the Sanctuary",
+      ],
+    },
+    {
+      id: 3,
+      name: "Annapurna Circuit Trek",
+      region: "Annapurna region",
+      days: 15,
+      difficulty: "strenuous",
+      max_altitude: "5,416m",
+      best_season: "Mar-May, Oct-Nov",
+      route: "Besisahar to Nayapul circular route",
+      itinerary: [
+        {
+          day: 1,
+          place: "Kathmandu to Besisahar",
+          description:
+            "Drive 7-8 hours to the trailhead and stay overnight at a lodge.",
+          altitude: "760m",
+          highlight: false,
+        },
+        {
+          day: 2,
+          place: "Besisahar to Bahundanda",
+          description:
+            "Trek through subtropical lowlands, rice paddies, and waterfalls.",
+          altitude: "1,310m",
+          highlight: false,
+        },
+        {
+          day: 3,
+          place: "Bahundanda to Chamje",
+          description:
+            "The trail narrows through deep gorges of the Marsyangdi River.",
+          altitude: "1,430m",
+          highlight: false,
+        },
+        {
+          day: 4,
+          place: "Chamje to Bagarchhap",
+          description:
+            "Landscape shifts to pine forest and the first Tibetan-style villages appear.",
+          altitude: "2,160m",
+          highlight: false,
+        },
+        {
+          day: 5,
+          place: "Bagarchhap to Chame",
+          description:
+            "Reach the district headquarters of Manang, a useful acclimatisation base.",
+          altitude: "2,710m",
+          highlight: false,
+        },
+        {
+          day: 6,
+          place: "Chame to Pisang",
+          description:
+            "Enjoy views of Annapurna II and Pisang Peak along the route.",
+          altitude: "3,300m",
+          highlight: false,
+        },
+        {
+          day: 7,
+          place: "Pisang to Manang",
+          description:
+            "Wide open valley, Tibetan culture, yak herds, and a visit to Gangapurna Lake.",
+          altitude: "3,519m",
+          highlight: false,
+        },
+        {
+          day: 8,
+          place: "Manang acclimatisation",
+          description:
+            "Hike toward Ice Lake for acclimatisation and panoramic mountain views.",
+          altitude: "3,519m",
+          highlight: false,
+        },
+        {
+          day: 9,
+          place: "Manang to Yak Kharka",
+          description: "Ascend through barren high-altitude terrain.",
+          altitude: "4,050m",
+          highlight: false,
+        },
+        {
+          day: 10,
+          place: "Yak Kharka to Thorong Phedi",
+          description:
+            "Short acclimatisation day and rest before crossing the high pass.",
+          altitude: "4,450m",
+          highlight: false,
+        },
+        {
+          day: 11,
+          place: "Thorong La Pass to Muktinath",
+          description:
+            "Cross Thorong La Pass at dawn, then descend to sacred Muktinath Temple.",
+          altitude: "5,416m",
+          highlight: true,
+        },
+        {
+          day: 12,
+          place: "Muktinath to Marpha",
+          description:
+            "Descend the dramatic Kali Gandaki gorge and try local apple products in Marpha.",
+          altitude: "2,670m",
+          highlight: false,
+        },
+        {
+          day: 13,
+          place: "Marpha to Tatopani",
+          description:
+            "Long descent through Jomsom and Ghasa with hot springs waiting at Tatopani.",
+          altitude: "1,190m",
+          highlight: true,
+        },
+        {
+          day: 14,
+          place: "Tatopani to Ghorepani to Nayapul",
+          description:
+            "Final climb to Ghorepani, optional Poon Hill sunrise, then descend to Nayapul.",
+          altitude: "820m",
+          highlight: false,
+        },
+        {
+          day: 15,
+          place: "Nayapul to Pokhara to Kathmandu",
+          description: "Drive to Pokhara, then fly back to Kathmandu.",
+          altitude: "1,400m",
+          highlight: false,
+        },
+      ],
+      tips: [
+        "Thorong La can be icy, so start before dawn",
+        "Carry enough cash after Besisahar",
+        "ACAP and TIMS permits needed",
+        "15-21 days is ideal; 15 is the minimum",
+      ],
+    },
+    {
+      id: 4,
+      name: "Ghorepani Poon Hill Trek",
+      region: "Annapurna foothills",
+      days: 6,
+      difficulty: "easy",
+      max_altitude: "3,210m",
+      best_season: "Year-round, best Mar-Apr",
+      route: "Pokhara to Nayapul to Pokhara",
+      itinerary: [
+        {
+          day: 1,
+          place: "Pokhara to Tikhedhunga",
+          description:
+            "Drive to Nayapul and trek to Tikhedhunga through Birethanti.",
+          altitude: "1,540m",
+          highlight: false,
+        },
+        {
+          day: 2,
+          place: "Tikhedhunga to Ghorepani",
+          description:
+            "Steep climb through lush rhododendron and oak forest. Arrive before dark.",
+          altitude: "2,860m",
+          highlight: false,
+        },
+        {
+          day: 3,
+          place: "Poon Hill sunrise to Tadapani",
+          description:
+            "Pre-dawn climb to Poon Hill for a panorama of Himalayan peaks including Dhaulagiri.",
+          altitude: "2,630m",
+          highlight: true,
+        },
+        {
+          day: 4,
+          place: "Tadapani to Ghandruk",
+          description:
+            "Trek through dense forest to Ghandruk, a large Gurung village with beautiful stone houses.",
+          altitude: "1,940m",
+          highlight: false,
+        },
+        {
+          day: 5,
+          place: "Ghandruk to Nayapul to Pokhara",
+          description:
+            "Descend to Kimche, continue by jeep or trail to Nayapul, then drive back to Pokhara.",
+          altitude: "820m",
+          highlight: false,
+        },
+        {
+          day: 6,
+          place: "Pokhara to Kathmandu",
+          description:
+            "Fly back to Kathmandu or continue exploring Pokhara's lakeside.",
+          altitude: "1,400m",
+          highlight: false,
+        },
+      ],
+      tips: [
+        "Best beginner trek in Nepal",
+        "Peak rhododendron season is March-April",
+        "Low altitude sickness risk",
+        "Can be arranged with or without a guide depending on current rules",
+      ],
+    },
+    {
+      id: 5,
+      name: "Langtang Valley Trek",
+      region: "Langtang National Park",
+      days: 10,
+      difficulty: "moderate",
+      max_altitude: "4,984m",
+      best_season: "Mar-May, Oct-Dec",
+      route: "Kathmandu to Syabrubesi to Kathmandu",
+      itinerary: [
+        {
+          day: 1,
+          place: "Kathmandu to Syabrubesi",
+          description:
+            "Scenic 7-8 hour drive north of Kathmandu through the Trishuli valley.",
+          altitude: "1,550m",
+          highlight: false,
+        },
+        {
+          day: 2,
+          place: "Syabrubesi to Lama Hotel",
+          description:
+            "Trek through dense bamboo and rhododendron forest along the Langtang Khola river.",
+          altitude: "2,380m",
+          highlight: false,
+        },
+        {
+          day: 3,
+          place: "Lama Hotel to Langtang Village",
+          description:
+            "The valley opens dramatically with yak meadows and reminders of the 2015 earthquake.",
+          altitude: "3,430m",
+          highlight: false,
+        },
+        {
+          day: 4,
+          place: "Langtang to Kyanjin Gompa",
+          description:
+            "Visit the traditional monastery and cheese factory as Langtang Lirung dominates the skyline.",
+          altitude: "3,870m",
+          highlight: true,
+        },
+        {
+          day: 5,
+          place: "Kyanjin Gompa acclimatisation",
+          description:
+            "Hike to Kyanjin Ri or Tserko Ri for sweeping glacier views.",
+          altitude: "4,984m",
+          highlight: true,
+        },
+        {
+          day: 6,
+          place: "Kyanjin to Lama Hotel",
+          description: "Begin the descent back down the valley.",
+          altitude: "2,380m",
+          highlight: false,
+        },
+        {
+          day: 7,
+          place: "Lama Hotel to Syabrubesi",
+          description: "Return through forest trails to the road head.",
+          altitude: "1,550m",
+          highlight: false,
+        },
+        {
+          day: 8,
+          place: "Syabrubesi to Kathmandu",
+          description: "Return drive to Kathmandu for rest and debrief.",
+          altitude: "1,400m",
+          highlight: false,
+        },
+        {
+          day: 9,
+          place: "Kathmandu heritage day",
+          description:
+            "Optional visits to Boudhanath Stupa, Pashupatinath Temple, and Swayambhunath.",
+          altitude: "1,400m",
+          highlight: false,
+        },
+        {
+          day: 10,
+          place: "Departure",
+          description: "Transfer to airport.",
+          altitude: "1,400m",
+          highlight: false,
+        },
+      ],
+      tips: [
+        "Closest major trek to Kathmandu",
+        "Langtang cheese is a local must-try",
+        "Carries emotional significance after the 2015 earthquake",
+        "Langtang National Park entry permit required",
+      ],
+    },
+    {
+      id: 6,
+      name: "Manaslu Circuit Trek",
+      region: "Gorkha / Manaslu Conservation Area",
+      days: 14,
+      difficulty: "strenuous",
+      max_altitude: "5,160m",
+      best_season: "Mar-May, Sep-Nov",
+      route: "Kathmandu to Soti Khola to Kathmandu",
+      itinerary: [
+        {
+          day: 1,
+          place: "Kathmandu to Soti Khola",
+          description:
+            "Drive 8-9 hours to the trailhead via Arughat, with permits checked on the way.",
+          altitude: "710m",
+          highlight: false,
+        },
+        {
+          day: 2,
+          place: "Soti Khola to Machhakhola",
+          description:
+            "Trek through subtropical vegetation along the Budhi Gandaki gorge.",
+          altitude: "930m",
+          highlight: false,
+        },
+        {
+          day: 3,
+          place: "Machhakhola to Jagat",
+          description:
+            "Cross suspension bridges and pass waterfalls and narrow gorge sections.",
+          altitude: "1,340m",
+          highlight: false,
+        },
+        {
+          day: 4,
+          place: "Jagat to Deng",
+          description:
+            "Landscape and culture begin shifting toward Tibetan influence.",
+          altitude: "1,860m",
+          highlight: false,
+        },
+        {
+          day: 5,
+          place: "Deng to Namrung",
+          description:
+            "Manaslu becomes visible and prayer flags begin to appear on ridges.",
+          altitude: "2,630m",
+          highlight: true,
+        },
+        {
+          day: 6,
+          place: "Namrung to Samagaon",
+          description:
+            "Reach a large Tibetan-influenced village used as an acclimatisation base.",
+          altitude: "3,530m",
+          highlight: false,
+        },
+        {
+          day: 7,
+          place: "Samagaon rest day",
+          description:
+            "Day hike to Manaslu Base Camp or Birendra Lake for close-up views of Manaslu.",
+          altitude: "4,480m",
+          highlight: true,
+        },
+        {
+          day: 8,
+          place: "Samagaon to Samdo",
+          description:
+            "Short trek into the Nupri region, known for its strong Tibetan feel.",
+          altitude: "3,875m",
+          highlight: false,
+        },
+        {
+          day: 9,
+          place: "Samdo to Dharmasala",
+          description:
+            "Move to Larkya High Camp and rest well before the early pass crossing.",
+          altitude: "4,460m",
+          highlight: false,
+        },
+        {
+          day: 10,
+          place: "Larkya La Pass to Bhimthang",
+          description:
+            "Cross Larkya La, the dramatic high point, then descend to Bhimthang.",
+          altitude: "5,160m",
+          highlight: true,
+        },
+        {
+          day: 11,
+          place: "Bhimthang to Dharapani",
+          description:
+            "Exit the restricted zone and continue through Tibetan-style villages.",
+          altitude: "1,960m",
+          highlight: false,
+        },
+        {
+          day: 12,
+          place: "Dharapani to Tal to Besisahar",
+          description:
+            "Enter the Annapurna Circuit road corridor and drive or trek toward Besisahar.",
+          altitude: "760m",
+          highlight: false,
+        },
+        {
+          day: 13,
+          place: "Besisahar to Kathmandu",
+          description: "Drive back to Kathmandu.",
+          altitude: "1,400m",
+          highlight: false,
+        },
+        {
+          day: 14,
+          place: "Kathmandu departure",
+          description: "Tour concludes.",
+          altitude: "1,400m",
+          highlight: false,
+        },
+      ],
+      tips: [
+        "Restricted area special permit required",
+        "Organised group or licensed guide mandatory",
+        "Far quieter than Everest and Annapurna",
+        "Remote medical facilities make travel insurance essential",
+      ],
+    },
+    {
+      id: 7,
+      name: "Upper Mustang Trek",
+      region: "Mustang, Trans-Himalayan region",
+      days: 12,
+      difficulty: "moderate",
+      max_altitude: "3,840m",
+      best_season: "May-Oct, rain-shadow region",
+      route: "Pokhara to Jomsom to Pokhara",
+      itinerary: [
+        {
+          day: 1,
+          place: "Pokhara to Jomsom",
+          description:
+            "Fly to Jomsom, complete permit checks, and stay overnight in Jomsom.",
+          altitude: "2,720m",
+          highlight: false,
+        },
+        {
+          day: 2,
+          place: "Jomsom to Kagbeni",
+          description:
+            "Trek the Kali Gandaki riverbed and enter the restricted zone at Kagbeni.",
+          altitude: "2,810m",
+          highlight: false,
+        },
+        {
+          day: 3,
+          place: "Kagbeni to Chele",
+          description:
+            "Dramatic red canyon landscapes begin, with stronger wind in the afternoon.",
+          altitude: "3,050m",
+          highlight: false,
+        },
+        {
+          day: 4,
+          place: "Chele to Syangboche",
+          description:
+            "Cross high passes and spot ancient cave dwellings along the route.",
+          altitude: "3,800m",
+          highlight: true,
+        },
+        {
+          day: 5,
+          place: "Syangboche to Ghami",
+          description:
+            "Cross Nepal's longest mani wall with views of Nilgiri and Tilicho Peak.",
+          altitude: "3,520m",
+          highlight: false,
+        },
+        {
+          day: 6,
+          place: "Ghami to Tsarang",
+          description:
+            "Visit the old Charang Dzong fortress and monastery.",
+          altitude: "3,560m",
+          highlight: false,
+        },
+        {
+          day: 7,
+          place: "Tsarang to Lo Manthang",
+          description:
+            "Arrive at the walled medieval capital of the former Kingdom of Lo.",
+          altitude: "3,840m",
+          highlight: true,
+        },
+        {
+          day: 8,
+          place: "Lo Manthang exploration",
+          description:
+            "Visit Thubchen Gompa, Jampa Lhakhang, the Royal Palace, and nearby sky caves.",
+          altitude: "3,840m",
+          highlight: true,
+        },
+        {
+          day: 9,
+          place: "Lo Manthang to Ghami",
+          description:
+            "Begin the return journey, with alternate-route options through Yara and Luri Gompa.",
+          altitude: "3,520m",
+          highlight: false,
+        },
+        {
+          day: 10,
+          place: "Ghami to Kagbeni",
+          description: "Return south through the canyon landscape.",
+          altitude: "2,810m",
+          highlight: false,
+        },
+        {
+          day: 11,
+          place: "Kagbeni to Jomsom",
+          description:
+            "Exit the restricted zone and enjoy a final Mustang evening in Jomsom.",
+          altitude: "2,720m",
+          highlight: false,
+        },
+        {
+          day: 12,
+          place: "Jomsom to Pokhara to Kathmandu",
+          description: "Fly to Pokhara, then continue to Kathmandu.",
+          altitude: "1,400m",
+          highlight: false,
+        },
+      ],
+      tips: [
+        "Restricted area permit required",
+        "Trekking is possible during monsoon because Mustang is in the rain shadow",
+        "Unique Tibetan Buddhist culture",
+        "Bring cash because ATMs are limited beyond Jomsom",
+      ],
+    },
+    {
+      id: 8,
+      name: "Gokyo Lakes and Renjo La Trek",
+      region: "Khumbu / Everest region",
+      days: 13,
+      difficulty: "strenuous",
+      max_altitude: "5,360m",
+      best_season: "Mar-May, Oct-Nov",
+      route: "Kathmandu to Lukla to Kathmandu",
+      itinerary: [
+        {
+          day: 1,
+          place: "Kathmandu to Lukla to Phakding",
+          description: "Fly to Lukla and trek to Phakding.",
+          altitude: "2,610m",
+          highlight: false,
+        },
+        {
+          day: 2,
+          place: "Phakding to Namche Bazaar",
+          description:
+            "Cross suspension bridges with first Everest views on the ascent.",
+          altitude: "3,440m",
+          highlight: false,
+        },
+        {
+          day: 3,
+          place: "Namche acclimatisation",
+          description: "Rest and explore the bustling Sherpa capital.",
+          altitude: "3,440m",
+          highlight: false,
+        },
+        {
+          day: 4,
+          place: "Namche to Dole",
+          description:
+            "Branch off the Everest Base Camp trail toward Gokyo on a quieter scenic route.",
+          altitude: "4,200m",
+          highlight: false,
+        },
+        {
+          day: 5,
+          place: "Dole to Machhermo",
+          description: "Walk through a wide open valley with yak pastures.",
+          altitude: "4,470m",
+          highlight: false,
+        },
+        {
+          day: 6,
+          place: "Machhermo to Gokyo",
+          description:
+            "Arrive at the turquoise Gokyo Lake in a breathtaking high mountain setting.",
+          altitude: "4,790m",
+          highlight: true,
+        },
+        {
+          day: 7,
+          place: "Gokyo Ri and 5th Lake",
+          description:
+            "Climb Gokyo Ri for major Everest views and continue toward the 5th lake if conditions allow.",
+          altitude: "5,360m",
+          highlight: true,
+        },
+        {
+          day: 8,
+          place: "Gokyo to Renjo La Pass to Lungden",
+          description:
+            "Cross Renjo La with views of Everest, Cho Oyu, and the Gokyo Lakes.",
+          altitude: "5,360m",
+          highlight: true,
+        },
+        {
+          day: 9,
+          place: "Lungden to Thame",
+          description: "Descend past glacier landscapes toward Thame village.",
+          altitude: "3,800m",
+          highlight: false,
+        },
+        {
+          day: 10,
+          place: "Thame to Namche Bazaar",
+          description: "Final high-altitude trekking day.",
+          altitude: "3,440m",
+          highlight: false,
+        },
+        {
+          day: 11,
+          place: "Namche to Lukla",
+          description: "Long descent back to Lukla via Phakding.",
+          altitude: "2,860m",
+          highlight: false,
+        },
+        {
+          day: 12,
+          place: "Lukla to Kathmandu",
+          description: "Morning flight back to Kathmandu.",
+          altitude: "1,400m",
+          highlight: false,
+        },
+        {
+          day: 13,
+          place: "Kathmandu departure",
+          description: "Tour concludes.",
+          altitude: "1,400m",
+          highlight: false,
+        },
+      ],
+      tips: [
+        "Less crowded than the standard Everest Base Camp route",
+        "Gokyo Ri is famous for wide Everest views",
+        "Can combine with EBC via Cho La Pass for a longer itinerary",
+        "Ngozumpa is Nepal's largest glacier",
+      ],
+    },
+    {
+      id: 9,
+      name: "Chitwan Jungle Safari",
+      region: "Chitwan National Park, Terai",
+      days: 5,
+      difficulty: "easy",
+      max_altitude: "415m",
+      best_season: "Oct-Mar",
+      route: "Kathmandu to Sauraha to Kathmandu",
+      itinerary: [
+        {
+          day: 1,
+          place: "Kathmandu to Sauraha",
+          description:
+            "Drive or fly to Bharatpur, continue to Sauraha, and enjoy sunset around the Rapti River.",
+          altitude: "415m",
+          highlight: false,
+        },
+        {
+          day: 2,
+          place: "Elephant breeding centre and jungle walk",
+          description:
+            "Morning visit to the elephant breeding centre and afternoon guided walk in the buffer zone.",
+          altitude: "415m",
+          highlight: false,
+        },
+        {
+          day: 3,
+          place: "Jeep safari in core zone",
+          description:
+            "Full-day jeep safari in search of one-horned rhinos, tigers, sloth bears, gharials, and birds.",
+          altitude: "415m",
+          highlight: true,
+        },
+        {
+          day: 4,
+          place: "Canoe safari and Tharu cultural show",
+          description:
+            "Morning canoe safari to spot crocodiles, followed by an evening Tharu cultural performance.",
+          altitude: "415m",
+          highlight: true,
+        },
+        {
+          day: 5,
+          place: "Sauraha to Kathmandu",
+          description: "Morning bird walk, then drive or fly back to Kathmandu.",
+          altitude: "1,400m",
+          highlight: false,
+        },
+      ],
+      tips: [
+        "One-horned rhino sightings are common",
+        "Tiger sightings are possible but not guaranteed",
+        "Avoid April-June if extreme heat is a concern",
+        "Chitwan National Park is a UNESCO World Heritage Site",
+      ],
+    },
+    {
+      id: 10,
+      name: "Kathmandu Valley Heritage Tour",
+      region: "Kathmandu Valley",
+      days: 6,
+      difficulty: "easy",
+      max_altitude: "2,195m",
+      best_season: "Year-round",
+      route: "Kathmandu based",
+      itinerary: [
+        {
+          day: 1,
+          place: "Kathmandu arrival",
+          description:
+            "Settle in Thamel and visit Swayambhunath for city views if time allows.",
+          altitude: "1,400m",
+          highlight: false,
+        },
+        {
+          day: 2,
+          place: "Kathmandu Durbar Square and Pashupatinath",
+          description:
+            "Morning at Kathmandu Durbar Square and afternoon at Pashupatinath Temple on the Bagmati River.",
+          altitude: "1,400m",
+          highlight: true,
+        },
+        {
+          day: 3,
+          place: "Boudhanath and Patan Durbar Square",
+          description:
+            "Morning circuit of Boudhanath Stupa, then afternoon in Patan for Newari architecture and metalwork.",
+          altitude: "1,400m",
+          highlight: true,
+        },
+        {
+          day: 4,
+          place: "Bhaktapur Durbar Square and Changu Narayan",
+          description:
+            "Full day in medieval Bhaktapur and a visit to Changu Narayan, one of Nepal's oldest temples.",
+          altitude: "1,500m",
+          highlight: true,
+        },
+        {
+          day: 5,
+          place: "Nagarkot sunrise and Dhulikhel hike",
+          description:
+            "Early drive to Nagarkot for Himalayan sunrise views, followed by an easy hike toward Dhulikhel.",
+          altitude: "2,195m",
+          highlight: false,
+        },
+        {
+          day: 6,
+          place: "Kirtipur and departure",
+          description:
+            "Morning visit to hilltop Kirtipur town, then transfer to airport.",
+          altitude: "1,395m",
+          highlight: false,
+        },
+      ],
+      tips: [
+        "Seven UNESCO World Heritage Sites sit within the valley",
+        "Ideal add-on before or after a trek",
+        "Hire a local guide for Durbar Squares",
+        "Festival dates can change the pace and crowd levels",
+      ],
+    },
+  ],
   internal: [
     {
       name: "Annapurna Base Camp Tour",

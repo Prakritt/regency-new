@@ -1,6 +1,5 @@
 import React from "react";
-import { ArrowRightIcon, PhoneIcon } from "@heroicons/react/24/outline";
-import StyledNavLink from "./StyledNavLink";
+import { PhoneIcon } from "@heroicons/react/24/outline";
 
 export default function JourneyCTA() {
   return (

@@ -4,11 +4,15 @@ import {
   MapIcon,
   SparklesIcon,
 } from "@heroicons/react/24/outline";
+import NepalTourAccordion from "../components/NepalTourAccordion";
 import StyledCard from "../components/StyledCard";
 import { useTour } from "../context/TourProvider";
 
 function Tours() {
   const { data } = useTour();
+  const nepalTourOptions = data?.nepal_tours || [];
+  const nepalCatalogueCount =
+    (data?.internal?.length || 0) + nepalTourOptions.length;
 
   const sections = [
     {
@@ -46,7 +50,9 @@ function Tours() {
     },
   ];
 
-  const totalTours = sections.reduce((count, section) => count + section.tours.length, 0);
+  const totalTours =
+    sections.reduce((count, section) => count + section.tours.length, 0) +
+    nepalTourOptions.length;
 
   return (
     <main className="bg-white">
@@ -68,7 +74,7 @@ function Tours() {
 
             <div className="grid gap-3 sm:grid-cols-3 lg:max-w-xl lg:justify-self-end">
               {[
-                { icon: MapIcon, value: data?.internal?.length || 0, label: "Nepal tours" },
+                { icon: MapIcon, value: nepalCatalogueCount, label: "Nepal options" },
                 { icon: GlobeAltIcon, value: data?.asia?.length || 0, label: "Asia tours" },
                 { icon: SparklesIcon, value: totalTours, label: "Total options" },
               ].map(({ icon: Icon, value, label }) => (
@@ -126,6 +132,10 @@ function Tours() {
                 />
               ))}
             </div>
+
+            {section.key === "internal" && (
+              <NepalTourAccordion tours={nepalTourOptions} />
+            )}
           </div>
         </section>
       ))}
