@@ -7,9 +7,9 @@ export default function JourneyCTA() {
     <section className="w-full border-y border-emerald-800 bg-emerald-900">
       <div className="mx-auto flex max-w-7xl flex-col gap-6 px-4 py-8 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
         <div className="max-w-2xl text-center lg:text-left">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-emerald-100">
+          {/* <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-emerald-100">
             IATA Accredited | Established 2001 | Kathmandu, Nepal
-          </p>
+          </p> */}
           <h2 className="text-2xl font-bold leading-tight text-white sm:text-3xl">
             Ready to plan your next journey?
           </h2>
@@ -28,13 +28,13 @@ export default function JourneyCTA() {
             <span>Call 24-hour service</span>
           </a>
 
-          <StyledNavLink
+          {/* <StyledNavLink
             to="/tours"
             className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-white/20 px-5 py-3 text-sm font-semibold text-white transition hover:border-white/40 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-emerald-900"
           >
             <span>Explore tours</span>
             <ArrowRightIcon className="h-4 w-4" aria-hidden="true" />
-          </StyledNavLink>
+          </StyledNavLink> */}
         </div>
       </div>
     </section>

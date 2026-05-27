@@ -39,16 +39,14 @@ export default function AboutUs() {
         <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
           {[
             { value: "2001", label: "Established in Kathmandu" },
-            { value: "IATA", label: "Accredited travel agency" },
+            // { value: "IATA", label: "Accredited travel agency" },
             { value: "24/7", label: "Customer service support" },
           ].map((item) => (
             <div
               key={item.value}
               className="rounded-lg border border-zinc-200 bg-white p-6"
             >
-              <p className="text-3xl font-bold text-green-700">
-                {item.value}
-              </p>
+              <p className="text-3xl font-bold text-green-700">{item.value}</p>
               <p className="mt-2 text-sm font-medium leading-6 text-gray-700">
                 {item.label}
               </p>
