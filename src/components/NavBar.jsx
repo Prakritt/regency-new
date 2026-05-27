@@ -1,15 +1,28 @@
 import { useEffect, useState } from "react";
+import { Navbar, MobileNav, Typography } from "@material-tailwind/react";
 import {
-  Navbar,
-  MobileNav,
-  Typography,
-  IconButton,
-} from "@material-tailwind/react";
-import NavItem from "./NavItem";
+  Bars3Icon,
+  XMarkIcon,
+} from "@heroicons/react/24/outline";
+import { useLocation } from "react-router-dom";
 import StyledNavLink from "./StyledNavLink";
+
+const navLinks = [
+  { name: "Home", to: "/home" },
+  { name: "Tours", to: "/tours" },
+  { name: "Contacts", to: "/contacts" },
+];
+
+const getNavLinkClassName = ({ isActive }) =>
+  `inline-flex min-h-11 items-center justify-center rounded-lg px-4 py-2 text-sm font-semibold transition ${
+    isActive
+      ? "bg-green-50 text-green-700"
+      : "text-zinc-700 hover:bg-zinc-100 hover:text-green-700"
+  }`;
 
 function NavBar() {
   const [openNav, setOpenNav] = useState(false);
+  const { pathname } = useLocation();
 
   useEffect(() => {
     const handleResize = () => {
@@ -19,102 +32,82 @@ function NavBar() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const navList = (
-    <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-      <StyledNavLink to="/home" onClick={() => setOpenNav(false)}>
-        <NavItem name="Home" />
-      </StyledNavLink>
-      <StyledNavLink to="/tours" onClick={() => setOpenNav(false)}>
-        <NavItem name="Tours" />
-      </StyledNavLink>
-      <StyledNavLink to="/contacts" onClick={() => setOpenNav(false)}>
-        <NavItem name="Contacts" />
-      </StyledNavLink>
-    </ul>
-  );
+  useEffect(() => {
+    setOpenNav(false);
+  }, [pathname]);
+
+  const navList = navLinks.map((link) => (
+    <StyledNavLink key={link.to} to={link.to} className={getNavLinkClassName}>
+      {link.name}
+    </StyledNavLink>
+  ));
 
   return (
-    <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 bg-white text-green-500">
-      <div className="flex items-center justify-between text-blue-gray-900">
-        {/* Brand logo + text block */}
-        <StyledNavLink to="/home">
-          <div className="flex items-center gap-3">
-            {/* Tall main logo */}
+    <Navbar className="sticky top-0 z-50 h-max max-w-full rounded-none border-b border-zinc-200 bg-white/95 px-4 py-2 text-zinc-900 shadow-sm backdrop-blur lg:px-8 lg:py-3">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4">
+        <StyledNavLink
+          to="/home"
+          className="flex min-w-0 items-center gap-3 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-400 focus-visible:ring-offset-2"
+        >
+          <div className="flex min-w-0 items-center gap-3">
             <img
               src="/logo.png"
               alt="Regency Nepal Logo"
-              className="h-14 w-auto"
+              className="h-11 w-auto shrink-0 sm:h-12"
             />
 
-            {/* Right side text */}
-            <div className="flex flex-col">
+            <div className="flex min-w-0 flex-col">
               <Typography
                 as="span"
-                className="text-green-500 font-logo uppercase leading-tight"
+                className="truncate font-logo text-base uppercase leading-tight text-green-600 sm:text-lg"
               >
                 Regency Nepal
               </Typography>
-              <div className="flex items-center gap-2 mt-0.5">
-                <span className="text-xs text-gray-500 tracking-wide">
+              <div className="mt-0.5 flex items-center gap-2">
+                <span className="hidden text-xs tracking-wide text-gray-500 sm:inline">
                   Established 2001 |
                 </span>
                 <img
                   src="/images/tours/iata-logo.png"
                   alt="IATA Logo"
-                  className="h-5 w-auto"
+                  className="h-4 w-auto sm:h-5"
                 />
               </div>
             </div>
           </div>
         </StyledNavLink>
 
-        {/* Desktop nav + mobile toggle */}
-        <div className="flex items-center gap-4">
-          <div className="mr-4 hidden lg:block">{navList}</div>
+        <div className="flex items-center gap-2">
+          <nav
+            aria-label="Primary navigation"
+            className="hidden items-center gap-1 lg:flex"
+          >
+            {navList}
+          </nav>
 
-          <IconButton
-            variant="text"
-            className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
-            ripple={false}
+          <button
+            type="button"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-zinc-200 text-zinc-800 transition hover:bg-zinc-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-400 focus-visible:ring-offset-2 lg:hidden"
             onClick={() => setOpenNav((prev) => !prev)}
             aria-label={openNav ? "Close menu" : "Open menu"}
+            aria-expanded={openNav}
           >
             {openNav ? (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                className="h-6 w-6"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
+              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
             ) : (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
+              <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             )}
-          </IconButton>
+          </button>
         </div>
       </div>
 
-      {/* Mobile nav */}
-      <MobileNav open={openNav}>{navList}</MobileNav>
+      <MobileNav open={openNav} className="lg:hidden">
+        <div className="mx-auto mt-3 max-w-7xl rounded-lg border border-zinc-200 bg-white p-3 shadow-sm">
+          <nav aria-label="Mobile navigation" className="grid gap-2">
+            {navList}
+          </nav>
+        </div>
+      </MobileNav>
     </Navbar>
   );
 }
