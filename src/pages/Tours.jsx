@@ -4,6 +4,7 @@ import {
   MapIcon,
   SparklesIcon,
 } from "@heroicons/react/24/outline";
+import CustomTourCallout from "../components/CustomTourCallout";
 import NepalTourAccordion from "../components/NepalTourAccordion";
 import StyledCard from "../components/StyledCard";
 import { useTour } from "../context/TourProvider";
@@ -139,6 +140,12 @@ function Tours() {
           </div>
         </section>
       ))}
+
+      <section className="bg-zinc-950 py-12 sm:py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <CustomTourCallout tone="dark" />
+        </div>
+      </section>
     </main>
   );
 }

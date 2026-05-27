@@ -7,6 +7,7 @@ import {
   PaperAirplaneIcon,
   PhoneIcon,
 } from "@heroicons/react/24/outline";
+import CustomTourCallout from "../components/CustomTourCallout";
 
 const contactCards = [
   {
@@ -173,6 +174,8 @@ function Contact() {
               </p>
             </div>
 
+            <CustomTourCallout compact />
+
             <div className="rounded-lg border border-zinc-200 bg-white p-6 shadow-sm">
               <p className="mb-4 text-sm font-semibold uppercase tracking-wide text-green-700">
                 Phone numbers
@@ -267,7 +270,7 @@ function Contact() {
                   name="destination"
                   value={formData.destination}
                   onChange={updateField}
-                  placeholder="Annapurna Base Camp, Mustang, Europe..."
+                  placeholder="Annapurna, Mustang, Europe, Japan, anywhere..."
                   className="mt-2 w-full rounded-lg border border-zinc-200 px-4 py-3 text-sm text-gray-950 outline-none transition focus:border-green-500 focus:ring-2 focus:ring-green-100"
                 />
               </label>
@@ -282,6 +285,7 @@ function Contact() {
                   onChange={updateField}
                   required
                   rows={5}
+                  placeholder="Tell us your dates, number of travelers, budget range, travel style, and must-see places."
                   className="mt-2 w-full resize-none rounded-lg border border-zinc-200 px-4 py-3 text-sm text-gray-950 outline-none transition focus:border-green-500 focus:ring-2 focus:ring-green-100"
                 />
               </label>

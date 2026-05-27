@@ -19,7 +19,7 @@ function formatDifficulty(difficulty = "") {
 }
 
 function NepalTourAccordion({ tours = [] }) {
-  const [openTourId, setOpenTourId] = useState(tours[0]?.id ?? null);
+  const [openTourId, setOpenTourId] = useState(null);
 
   if (!tours.length) return null;
 
