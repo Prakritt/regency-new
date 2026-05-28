@@ -8,6 +8,7 @@ import CustomTourCallout from "../components/CustomTourCallout";
 import NepalTourAccordion from "../components/NepalTourAccordion";
 import StyledCard from "../components/StyledCard";
 import { useTour } from "../context/TourProvider";
+import usePageMeta from "../utils/usePageMeta";
 
 function Tours() {
   const { data } = useTour();
@@ -55,16 +56,24 @@ function Tours() {
     sections.reduce((count, section) => count + section.tours.length, 0) +
     nepalTourOptions.length;
 
+  usePageMeta({
+    title: "Tour Packages for Nepal, Asia and Europe",
+    description:
+      "Browse internal Nepal tours, Himalayan treks, Asia itineraries, Europe tours, and custom travel options from Regency Nepal Travels.",
+    image: "/images/tours/annapurna_base_camp.jpg",
+    path: "/tours",
+  });
+
   return (
     <main className="bg-white">
-      <section className="border-b border-emerald-900 bg-emerald-950 py-12 text-white sm:py-16">
+      <section className="border-b border-emerald-900 bg-emerald-950 py-10 text-white sm:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-emerald-200">
             Curated travel catalogue
           </p>
           <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
             <div>
-              <h1 className="max-w-3xl text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
+              <h1 className="max-w-3xl text-2xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
                 Tours for Nepal, Asia, and Europe
               </h1>
               <p className="mt-5 max-w-3xl text-base leading-7 text-emerald-50 sm:text-lg sm:leading-8">
@@ -101,7 +110,7 @@ function Tours() {
       {sections.map((section) => (
         <section
           key={section.key}
-          className={`border-b border-zinc-200 py-12 sm:py-16 ${section.sectionClassName}`}
+          className={`border-b border-zinc-200 py-10 sm:py-16 ${section.sectionClassName}`}
         >
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mb-8 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
@@ -109,7 +118,7 @@ function Tours() {
                 <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-green-700">
                   {section.eyebrow}
                 </p>
-                <h2 className="text-2xl font-bold leading-tight text-gray-950 sm:text-3xl">
+                <h2 className="text-[1.625rem] font-bold leading-tight text-gray-950 sm:text-3xl">
                   {section.title}
                 </h2>
                 <p className="mt-4 text-base leading-7 text-gray-700">
@@ -141,7 +150,7 @@ function Tours() {
         </section>
       ))}
 
-      <section className="bg-zinc-950 py-12 sm:py-16">
+      <section className="bg-zinc-950 py-10 sm:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <CustomTourCallout tone="dark" />
         </div>

@@ -15,7 +15,7 @@ function SectionHeading({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay: animationDelay }}
-      className={`mb-6 text-center text-2xl font-bold leading-tight sm:text-3xl lg:text-4xl ${toneClassName} ${className}`}
+      className={`mb-4 text-center text-[1.625rem] font-bold leading-tight sm:mb-6 sm:text-3xl lg:text-4xl ${toneClassName} ${className}`}
     >
       {title}
     </motion.h2>

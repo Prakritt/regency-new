@@ -8,6 +8,7 @@ import {
   PhoneIcon,
 } from "@heroicons/react/24/outline";
 import CustomTourCallout from "../components/CustomTourCallout";
+import usePageMeta from "../utils/usePageMeta";
 
 const contactCards = [
   {
@@ -64,6 +65,14 @@ const initialFormState = {
 function Contact() {
   const [formData, setFormData] = useState(initialFormState);
 
+  usePageMeta({
+    title: "Contact Regency Nepal Travels",
+    description:
+      "Contact Regency Nepal Travels in Hattisar, Kathmandu for tours, ticketing, custom itineraries, WhatsApp support, and travel assistance.",
+    image: "/logo.png",
+    path: "/contacts",
+  });
+
   const updateField = (event) => {
     const { name, value } = event.target;
     setFormData((current) => ({ ...current, [name]: value }));
@@ -91,13 +100,13 @@ function Contact() {
 
   return (
     <main className="bg-white">
-      <section className="border-b border-emerald-900 bg-emerald-950 py-12 text-white sm:py-16">
+      <section className="border-b border-emerald-900 bg-emerald-950 py-10 text-white sm:py-16">
         <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-8">
           <div>
             <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-emerald-200">
               Regency Nepal Travels And Tours
             </p>
-            <h1 className="max-w-3xl text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
+            <h1 className="max-w-3xl text-2xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
               Let us help plan your next journey
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-7 text-emerald-50 sm:text-lg sm:leading-8">
@@ -130,7 +139,7 @@ function Contact() {
         </div>
       </section>
 
-      <section className="bg-zinc-50 py-10 sm:py-14">
+      <section className="bg-zinc-50 py-8 sm:py-14">
         <div className="mx-auto grid max-w-7xl gap-4 px-4 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8">
           {contactCards.map(({ icon: Icon, label, value, href, action, external }) => (
             <a
@@ -158,7 +167,7 @@ function Contact() {
         </div>
       </section>
 
-      <section className="bg-white py-12 sm:py-16">
+      <section className="bg-white py-10 sm:py-16">
         <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.92fr_1.08fr] lg:px-8">
           <aside className="space-y-5">
             <div className="rounded-lg border border-zinc-200 bg-zinc-50 p-6">

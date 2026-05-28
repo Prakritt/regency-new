@@ -16,15 +16,24 @@ import FullWidthSection from "../components/FullWidthSection";
 import JourneyCTA from "../components/JourneyCTA";
 import CulturalExperienceHero from "../components/CulturalExperienceHero";
 import BulletTrainBooking from "../components/BulletTrainBooking";
+import usePageMeta from "../utils/usePageMeta";
 
 function Home() {
   const { data } = useTour();
+
+  usePageMeta({
+    title: "Nepal, Asia and Europe Tours",
+    description:
+      "Plan Nepal treks, Asia and Europe tours, flight ticketing, car rental, helicopter charter, cruise and rail support with Regency Nepal Travels.",
+    image: "/logo.png",
+    path: "/home",
+  });
 
   return (
     <>
       <Cover />
       <JourneyCTA />
-      <section className="border-y border-zinc-800 bg-zinc-900 py-14 sm:py-16 md:py-20">
+      <section className="border-y border-zinc-800 bg-zinc-900 py-10 sm:py-16 md:py-20">
         <div className="mx-auto grid max-w-[1140px] grid-cols-1 gap-4 px-4 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:gap-6">
           {[
             {
@@ -50,7 +59,7 @@ function Home() {
           ].map(({ Icon, title, desc }) => (
             <article
               key={title}
-              className="flex min-h-[11rem] flex-col items-center justify-center gap-3 rounded-lg border border-white/10 bg-white p-6 text-center shadow-sm"
+              className="flex min-h-[9.5rem] flex-col items-center justify-center gap-3 rounded-lg border border-white/10 bg-white p-5 text-center shadow-sm sm:min-h-[11rem] sm:p-6"
             >
               <Icon className="text-4xl text-green-500" aria-hidden="true" />
               <h3 className="text-base font-semibold text-gray-950">
@@ -62,7 +71,7 @@ function Home() {
         </div>
       </section>
 
-      <section className="bg-zinc-50 py-14 sm:py-20">
+      <section className="bg-zinc-50 py-12 sm:py-20">
         <div className="mx-auto max-w-[1140px] px-4 sm:px-6">
           <SectionHeading title="Traveler's Favorites" animationDelay={0.3} />
           <AnimatedSubtitle animationDelay={0.9}>
@@ -83,7 +92,7 @@ function Home() {
         </div>
       </section>
 
-      <section className="border-y border-emerald-900 bg-emerald-950 py-14 sm:py-20">
+      <section className="border-y border-emerald-900 bg-emerald-950 py-12 sm:py-20">
         <div className="mx-auto max-w-[1140px] px-4 sm:px-6">
           <SectionHeading
             title="Explore Nepal With Us"
@@ -111,7 +120,7 @@ function Home() {
 
       <Testimonial />
 
-      <section className="mx-auto bg-white py-14 sm:py-20">
+      <section className="mx-auto bg-white py-12 sm:py-20">
         <SectionHeading title="Europe Tour" animationDelay={0.3} />
         <AnimatedSubtitle animationDelay={0.9}>
           Popular Destinations In Europe
@@ -145,7 +154,7 @@ function Home() {
       </section>
       <CulturalExperienceHero className="bg-emerald-950 text-white" />
 
-      <section className="border-y border-zinc-200 bg-zinc-100 py-14 sm:py-20">
+      <section className="border-y border-zinc-200 bg-zinc-100 py-12 sm:py-20">
         <div className="mx-auto max-w-[1140px] px-4 sm:px-6">
           <SectionHeading title="Additional Travel Services" />
           <AnimatedSubtitle animationDelay={0.4}>

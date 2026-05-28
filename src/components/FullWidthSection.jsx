@@ -8,9 +8,9 @@ function FullWidthSection({
   reverse = false,
 }) {
   return (
-    <article className="w-full py-5 sm:py-6">
+    <article className="w-full py-4 sm:py-6">
       <div
-        className={`mx-4 grid max-w-7xl gap-8 rounded-lg border border-zinc-200 bg-white p-4 shadow-sm sm:mx-6 sm:p-6 lg:mx-auto lg:grid-cols-2 lg:items-center lg:p-8 ${
+        className={`mx-4 grid max-w-7xl gap-6 rounded-lg border border-zinc-200 bg-white p-4 shadow-sm sm:mx-6 sm:gap-8 sm:p-6 lg:mx-auto lg:grid-cols-2 lg:items-center lg:p-8 ${
           reverse ? "lg:[&>div:first-child]:order-2" : ""
         }`}
       >
@@ -19,7 +19,9 @@ function FullWidthSection({
             <img
               src={img}
               alt={title}
-              className="aspect-[16/10] w-full rounded-lg object-cover"
+              className="aspect-[4/3] w-full rounded-lg object-cover sm:aspect-[16/10]"
+              loading="lazy"
+              decoding="async"
             />
           </div>
         )}
@@ -36,12 +38,12 @@ function FullWidthSection({
           )}
 
           {subtitle && (
-            <p className="mb-5 text-base font-medium leading-7 text-gray-600">
+            <p className="mb-4 text-sm font-medium leading-6 text-gray-600 sm:mb-5 sm:text-base sm:leading-7">
               {subtitle}
             </p>
           )}
 
-          <div className="text-base leading-7 text-gray-700 [&_strong]:font-semibold [&_strong]:text-gray-950">
+          <div className="text-sm leading-6 text-gray-700 sm:text-base sm:leading-7 [&_strong]:font-semibold [&_strong]:text-gray-950">
             {desc}
           </div>
         </div>

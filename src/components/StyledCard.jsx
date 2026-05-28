@@ -22,11 +22,13 @@ function StyledCard({ img, dest, desc, to = "", className = "" }) {
       tabIndex={to ? undefined : 0}
       role="group"
     >
-      <div className="relative aspect-[4/3] min-h-[13rem] overflow-hidden bg-gray-100 sm:aspect-[16/11]">
+      <div className="relative aspect-[4/3] min-h-[11rem] overflow-hidden bg-gray-100 sm:aspect-[16/11] sm:min-h-[13rem]">
         <img
           src={img}
           alt={dest ? `${dest} tour` : "Travel tour"}
           className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+          loading="lazy"
+          decoding="async"
         />
         <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/55 to-transparent" />
         <span className="absolute left-4 top-4 inline-flex max-w-[calc(100%-2rem)] items-center gap-1 rounded-md bg-white/95 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-green-700 shadow-sm">
@@ -35,12 +37,12 @@ function StyledCard({ img, dest, desc, to = "", className = "" }) {
         </span>
       </div>
 
-      <div className="flex min-h-[15rem] flex-1 flex-col p-5 sm:p-6">
+      <div className="flex min-h-[12.5rem] flex-1 flex-col p-4 sm:min-h-[15rem] sm:p-6">
         <Typography
           as="h3"
           variant="h5"
           color="blue-gray"
-          className="mb-3 line-clamp-2 text-xl font-bold leading-snug"
+          className="mb-3 line-clamp-2 text-lg font-bold leading-snug sm:text-xl"
           title={dest}
         >
           {dest}
@@ -50,7 +52,7 @@ function StyledCard({ img, dest, desc, to = "", className = "" }) {
           {getShortText(desc)}
         </Typography>
 
-        <div className="mt-6 inline-flex items-center justify-between border-t border-gray-100 pt-4 text-sm font-semibold text-green-700">
+        <div className="mt-5 inline-flex items-center justify-between border-t border-gray-100 pt-4 text-sm font-semibold text-green-700 sm:mt-6">
           <span>View tour</span>
           <span className="grid h-9 w-9 place-items-center rounded-md bg-green-50 text-green-700 transition group-hover:bg-green-600 group-hover:text-white">
             <ArrowRightIcon className="h-4 w-4" aria-hidden="true" />

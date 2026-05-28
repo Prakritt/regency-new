@@ -10,6 +10,7 @@ import {
   SparklesIcon,
 } from "@heroicons/react/24/outline";
 import StyledNavLink from "../components/StyledNavLink";
+import usePageMeta from "../utils/usePageMeta";
 
 const categoryLabels = {
   asia: "Asia tour",
@@ -18,16 +19,44 @@ const categoryLabels = {
 };
 
 function Cultural() {
-  const { data } = useTour();
+  const { data, isLoading } = useTour();
   const { dest, id } = useParams();
+  const tourEntry = data?.[dest]?.[id];
+  const currentTour = tourEntry?.content;
 
-  if (!data || !data[dest] || !data[dest][id]) {
+  usePageMeta({
+    title: currentTour?.title_main || "Tour Details",
+    description:
+      currentTour?.summary ||
+      "Explore detailed tour itineraries, destinations, and travel highlights from Regency Nepal Travels.",
+    image: currentTour?.cover?.[0]
+      ? `/images/tours/${currentTour.cover[0]}`
+      : "/logo.png",
+    path: `/tours/${dest}/${id}`,
+    type: "article",
+  });
+
+  if (isLoading) {
+    return (
+      <main className="grid min-h-[55svh] place-items-center bg-white px-4 py-16 text-center">
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-wide text-green-700">
+            Loading tour details
+          </p>
+          <p className="mt-3 text-base font-medium text-zinc-600">
+            Preparing the itinerary...
+          </p>
+        </div>
+      </main>
+    );
+  }
+
+  if (!currentTour) {
     return (
       <p className="text-center py-10 text-red-500">Tour data not available.</p>
     );
   }
 
-  const currentTour = data[dest][id].content;
   const itinerary = currentTour.itenary || [];
   const destinations = currentTour.destinations || [];
   const categoryLabel = categoryLabels[dest] || "Curated tour";
@@ -49,13 +78,13 @@ function Cultural() {
     <main className="bg-white">
       <section
         aria-label="Tour overview"
-        className="border-b border-emerald-900 bg-emerald-950 py-10 text-white sm:py-14 lg:py-16"
+        className="border-b border-emerald-900 bg-emerald-950 py-8 text-white sm:py-14 lg:py-16"
       >
         <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:px-8">
           <div>
             <StyledNavLink
               to="/tours"
-              className="mb-6 inline-flex items-center gap-2 text-sm font-semibold text-emerald-100 transition hover:text-white"
+              className="mb-5 inline-flex items-center gap-2 text-sm font-semibold text-emerald-100 transition hover:text-white sm:mb-6"
             >
               <ArrowLeftIcon className="h-4 w-4" aria-hidden="true" />
               Back to tours
@@ -64,11 +93,11 @@ function Cultural() {
             <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-emerald-200">
               {categoryLabel}
             </p>
-            <h1 className="max-w-3xl text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
+            <h1 className="max-w-3xl text-2xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
               {currentTour.title_main}
             </h1>
             {currentTour.title_sub && (
-              <p className="mt-4 max-w-2xl text-lg font-medium leading-8 text-emerald-100">
+              <p className="mt-4 max-w-2xl text-base font-medium leading-7 text-emerald-100 sm:text-lg sm:leading-8">
                 {currentTour.title_sub}
               </p>
             )}
@@ -76,7 +105,7 @@ function Cultural() {
               {currentTour.summary}
             </p>
 
-            <div className="mt-8 grid gap-3 sm:grid-cols-3">
+            <div className="mt-6 grid gap-3 sm:mt-8 sm:grid-cols-3">
               {[
                 {
                   icon: MapPinIcon,
@@ -114,14 +143,14 @@ function Cultural() {
           </div>
 
           <div className="overflow-hidden rounded-lg border border-white/10 bg-white/10 p-2 shadow-xl">
-            <div className="h-72 overflow-hidden rounded-md sm:h-96 lg:h-[30rem]">
+            <div className="h-60 overflow-hidden rounded-md sm:h-96 lg:h-[30rem]">
               <CarouselDefault images={currentTour.cover || []} />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-zinc-50 py-12 sm:py-16">
+      <section className="bg-zinc-50 py-10 sm:py-16">
         <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.85fr_1.15fr] lg:px-8">
           <aside className="rounded-lg border border-zinc-200 bg-white p-6 shadow-sm">
             <p className="text-sm font-semibold uppercase tracking-wide text-green-700">
@@ -158,7 +187,7 @@ function Cultural() {
             <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-green-700">
               Trip overview
             </p>
-            <h2 className="max-w-3xl text-2xl font-bold leading-tight text-gray-950 sm:text-3xl">
+            <h2 className="max-w-3xl text-[1.625rem] font-bold leading-tight text-gray-950 sm:text-3xl">
               A complete look at this journey
             </h2>
             <p className="mt-5 max-w-4xl text-base leading-7 text-gray-700">
@@ -182,14 +211,14 @@ function Cultural() {
         <section
           id="tour-itinerary"
           aria-label="Tour itinerary"
-          className="bg-white py-12 sm:py-16"
+          className="bg-white py-10 sm:py-16"
         >
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mb-8 max-w-3xl">
               <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-green-700">
                 Itinerary
               </p>
-              <h2 className="text-2xl font-bold leading-tight text-gray-950 sm:text-3xl">
+              <h2 className="text-[1.625rem] font-bold leading-tight text-gray-950 sm:text-3xl">
                 Follow the journey day by day
               </h2>
             </div>
@@ -227,14 +256,14 @@ function Cultural() {
 
       <section
         aria-label="Tour destinations"
-        className="border-t border-zinc-200 bg-zinc-100 py-12 sm:py-16"
+        className="border-t border-zinc-200 bg-zinc-100 py-10 sm:py-16"
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-8 max-w-3xl">
             <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-green-700">
               Highlights
             </p>
-            <h2 className="text-2xl font-bold leading-tight text-gray-950 sm:text-3xl">
+            <h2 className="text-[1.625rem] font-bold leading-tight text-gray-950 sm:text-3xl">
               Places you will experience
             </h2>
           </div>

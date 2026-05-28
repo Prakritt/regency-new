@@ -3,6 +3,7 @@
   font-style: normal;
   font-weight: 400;
   src: url("./Roboto-Regular.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
@@ -10,6 +11,7 @@
   font-style: italic;
   font-weight: 400;
   src: url("./Roboto-Italic.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
@@ -17,12 +19,14 @@
   font-style: normal;
   font-weight: 700;
   src: url("./Roboto-Bold.ttf") format("truetype");
+  font-display: swap;
 }
 @font-face {
   font-family: "Cursive";
   font-style: normal;
   font-weight: 400;
   src: url("./PlaywriteES-Regular.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
@@ -30,4 +34,5 @@
   font-style: normal;
   font-weight: 700;
   src: url("./PTSerif-BoldItalic.ttf") format("truetype");
+  font-display: swap;
 }
