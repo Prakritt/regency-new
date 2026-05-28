@@ -49,7 +49,7 @@ const Cover = () => (
 
         <div className="mt-10 grid max-w-2xl gap-3 sm:grid-cols-3">
           {[
-            ["20+ years", "Travel expertise"],
+            ["25 years", "Travel expertise"],
             // ["Nepal tours", "ABC, Mustang, Muktinath"],
             ["Global trips", "Asia and Europe"],
           ].map(([value, label]) => (

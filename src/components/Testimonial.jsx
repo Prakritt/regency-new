@@ -18,7 +18,7 @@ export default function AboutUs() {
           <div className="space-y-5 text-base leading-7 text-gray-700">
             <p>
               Established in <strong>2001</strong>, Regency Nepal Travels has
-              been delivering world-class travel services for over two decades.
+              been delivering world-class travel services for 25 years.
               As an <strong>IATA Accredited Travel Agency</strong>, we are
               committed to reliable, transparent, and memorable travel planning.
             </p>
@@ -31,7 +31,7 @@ export default function AboutUs() {
           </div>
 
           <blockquote className="mt-7 border-l-4 border-green-500 pl-5 text-base font-medium leading-7 text-gray-800">
-            For over 20 years, we have helped travelers explore the world with
+            For 25 years, we have helped travelers explore the world with
             confidence, comfort, and care.
           </blockquote>
         </div>
